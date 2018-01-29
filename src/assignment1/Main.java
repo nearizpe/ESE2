@@ -12,6 +12,8 @@ import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import Controller.MenuController;
+
 public class Main extends Application {
 	
 	private static Logger logger = LogManager.getLogger(Main.class);
@@ -26,7 +28,7 @@ public class Main extends Application {
 	public void start(Stage stage) throws Exception {
 		
 		//load main view (the top-level container for View1 and View2)
-				URL fxmlFile = this.getClass().getResource("/assignment1/MainView.fxml");
+				URL fxmlFile = this.getClass().getResource("/View/MainView.fxml");
 				FXMLLoader loader = new FXMLLoader(fxmlFile);
 				
 				BorderPane rootNode = loader.load();
@@ -39,7 +41,7 @@ public class Main extends Application {
 				MenuController controller = new MenuController();
 				controller.setRootNode((BorderPane) rootNode);
 
-				fxmlFile = this.getClass().getResource("/assignment1/Menu.fxml");
+				fxmlFile = this.getClass().getResource("/View/Menu.fxml");
 				loader = new FXMLLoader(fxmlFile);
 			
 				loader.setController(controller);

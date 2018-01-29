@@ -348,3 +348,34 @@
 17:38:19.442 INFO  assignment1.UsefulFunctions : Swithching Views
 17:38:32.471 ERROR assignment1.Main : error Couldnt load window
 17:38:36.466 INFO  assignment1.UsefulFunctions : Swithching Views
+14:42:35.112 ERROR assignment1.Main : error Couldnt load window
+14:49:16.140 ERROR assignment1.Main : error Couldnt load window
+14:50:19.881 ERROR assignment1.Main : error Couldnt load window
+14:51:22.150 ERROR assignment1.Main : error Couldnt load window
+14:53:46.698 ERROR assignment1.Main : error Couldnt load window
+14:54:25.830 INFO  assignment1.UsefulFunctions : Swithching Views
+14:54:26.882 INFO  Controller.AuthorListController : Double Clicked
+14:54:26.900 INFO  assignment1.UsefulFunctions : Swithching Views
+14:54:28.054 INFO  Controller.AuthorDetailViewController : clicked save
+14:54:28.447 INFO  Controller.AuthorDetailViewController : clicked save
+14:54:28.602 INFO  Controller.AuthorDetailViewController : clicked save
+14:54:29.749 INFO  assignment1.UsefulFunctions : Swithching Views
+15:08:11.098 INFO  assignment1.UsefulFunctions : Swithching Views
+15:08:12.636 INFO  Controller.AuthorListController : Double Clicked
+15:08:12.655 INFO  assignment1.UsefulFunctions : Swithching Views
+15:08:17.955 INFO  assignment1.UsefulFunctions : Swithching Views
+15:08:19.521 INFO  assignment1.UsefulFunctions : Swithching Views
+15:08:21.054 INFO  assignment1.UsefulFunctions : Swithching Views
+15:08:23.243 INFO  Controller.AuthorListController : Double Clicked
+15:08:23.250 INFO  assignment1.UsefulFunctions : Swithching Views
+15:08:31.423 INFO  assignment1.UsefulFunctions : Swithching Views
+15:08:32.667 INFO  Controller.AuthorListController : Double Clicked
+15:08:32.673 INFO  assignment1.UsefulFunctions : Swithching Views
+15:08:34.288 INFO  Controller.AuthorDetailViewController : clicked save
+15:08:34.479 INFO  Controller.AuthorDetailViewController : clicked save
+15:08:34.672 INFO  Controller.AuthorDetailViewController : clicked save
+15:08:34.878 INFO  Controller.AuthorDetailViewController : clicked save
+15:08:35.026 INFO  Controller.AuthorDetailViewController : clicked save
+15:08:35.198 INFO  Controller.AuthorDetailViewController : clicked save
+15:08:35.360 INFO  Controller.AuthorDetailViewController : clicked save
+15:08:35.558 INFO  Controller.AuthorDetailViewController : clicked save

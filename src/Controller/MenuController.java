@@ -1,11 +1,11 @@
-package assignment1;
+package Controller;
 
 import java.io.IOException;
 import java.net.URL;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
+import assignment1.UsefulFunctions;
 import javafx.event.ActionEvent;
 
 import javafx.fxml.FXML;
@@ -38,7 +38,7 @@ public class MenuController extends ViewController {
         	else{
         		UsefulFunctions functions = UsefulFunctions.getInstance();
         		AuthorListController controller = new AuthorListController();
-        		functions.SwitchView(this,controller,"/assignment1/AuthorListView.fxml");
+        		functions.SwitchView(this,controller,"/View/AuthorListView.fxml");
 
         	}
 		} catch (Exception e) {

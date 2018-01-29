@@ -1,4 +1,4 @@
-package assignment1;
+package Controller;
 
 import javafx.scene.layout.BorderPane;
 

@@ -1,4 +1,4 @@
-package assignment1;
+package Controller;
 
 import javafx.event.ActionEvent;
 import java.net.URL;
@@ -7,6 +7,8 @@ import java.util.ResourceBundle;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import assignment1.Main;
+import assignment1.UsefulFunctions;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
@@ -39,7 +41,7 @@ public class AuthorListController extends ViewController{
 				logger.info("Double Clicked");
 				UsefulFunctions functions = UsefulFunctions.getInstance();
 				AuthorDetailViewController detailViewController = new AuthorDetailViewController();
-				functions.SwitchView(this, detailViewController,"/assignment1/AuthorDetailView.fxml");
+				functions.SwitchView(this, detailViewController,"/View/AuthorDetailView.fxml");
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
