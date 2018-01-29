@@ -1,0 +1,350 @@
+13:16:18.070 ERROR assignment1.UsefulFunctions : Blah
+13:16:18.073 ERROR assignment1.UsefulFunctions : Yeah
+13:20:37.353 ERROR assignment1.UsefulFunctions : Blah
+13:20:37.356 ERROR assignment1.UsefulFunctions : Yeah
+13:20:47.834 ERROR assignment1.UsefulFunctions : Blah
+13:20:47.837 ERROR assignment1.UsefulFunctions : Yeah
+13:26:21.209 ERROR assignment1.UsefulFunctions : Blah
+13:26:21.212 ERROR assignment1.UsefulFunctions : Yeah
+13:26:24.278 ERROR assignment1.AuthorListController : clicked
+13:26:25.009 ERROR assignment1.AuthorListController : clicked
+13:26:26.174 ERROR assignment1.AuthorListController : clicked
+13:26:26.764 ERROR assignment1.AuthorListController : clicked
+13:26:30.726 ERROR assignment1.AuthorListController : clicked
+13:26:31.348 ERROR assignment1.AuthorListController : clicked
+14:37:12.639 ERROR assignment1.UsefulFunctions : Blah
+14:37:12.642 ERROR assignment1.UsefulFunctions : Yeah
+14:39:14.150 ERROR assignment1.UsefulFunctions : Blah
+14:39:14.154 ERROR assignment1.UsefulFunctions : Yeah
+14:39:16.472 ERROR assignment1.AuthorListController : clicked
+14:39:17.966 ERROR assignment1.AuthorListController : clicked
+14:39:28.756 ERROR assignment1.UsefulFunctions : Blah
+14:39:28.760 ERROR assignment1.UsefulFunctions : Yeah
+14:39:30.014 ERROR assignment1.AuthorListController : clicked
+14:39:31.507 ERROR assignment1.AuthorListController : clicked
+14:39:31.957 ERROR assignment1.AuthorListController : clicked
+14:39:32.171 ERROR assignment1.AuthorListController : clicked
+14:39:32.343 ERROR assignment1.AuthorListController : clicked
+14:39:33.137 ERROR assignment1.AuthorListController : clicked
+14:39:33.423 ERROR assignment1.AuthorListController : clicked
+14:41:51.496 ERROR assignment1.UsefulFunctions : Blah
+14:41:51.499 ERROR assignment1.UsefulFunctions : Yeah
+14:41:53.027 ERROR assignment1.AuthorListController : ACTION
+14:41:53.833 ERROR assignment1.AuthorListController : ACTION
+14:41:54.364 ERROR assignment1.AuthorListController : ACTION
+14:41:54.668 ERROR assignment1.AuthorListController : ACTION
+14:41:54.864 ERROR assignment1.AuthorListController : ACTION
+14:41:55.176 ERROR assignment1.AuthorListController : ACTION
+14:49:56.315 ERROR assignment1.UsefulFunctions : Blah
+14:49:56.318 ERROR assignment1.UsefulFunctions : Yeah
+14:49:57.438 ERROR assignment1.AuthorListController : javafx.event.ActionEvent[source=Button[id=Poe, styleClass=button]'Edger Allen Poe']
+14:50:56.081 ERROR assignment1.UsefulFunctions : Blah
+14:50:56.084 ERROR assignment1.UsefulFunctions : Yeah
+14:50:57.308 ERROR assignment1.AuthorListController : wow
+14:50:58.372 ERROR assignment1.AuthorListController : wow
+14:51:02.879 ERROR assignment1.AuthorListController : javafx.event.ActionEvent[source=Button[id=Akira, styleClass=button]'Akira Toryama']
+14:51:04.108 ERROR assignment1.AuthorListController : javafx.event.ActionEvent[source=Button[id=George, styleClass=button]'George Owell']
+14:51:07.461 ERROR assignment1.AuthorListController : wow
+14:51:08.361 ERROR assignment1.AuthorListController : wow
+14:51:08.745 ERROR assignment1.AuthorListController : wow
+14:54:07.354 ERROR assignment1.UsefulFunctions : Blah
+14:54:07.357 ERROR assignment1.UsefulFunctions : Yeah
+15:05:15.178 ERROR assignment1.UsefulFunctions : Blah
+15:05:15.181 ERROR assignment1.UsefulFunctions : Yeah
+15:05:17.995 ERROR assignment1.AuthorListController : Clicked
+15:05:18.823 ERROR assignment1.AuthorListController : Clicked
+15:05:19.765 ERROR assignment1.AuthorListController : Clicked
+15:05:20.525 ERROR assignment1.AuthorListController : Clicked
+15:05:21.415 ERROR assignment1.AuthorListController : Clicked
+15:05:23.085 ERROR assignment1.AuthorListController : Clicked
+15:05:23.979 ERROR assignment1.AuthorListController : Clicked
+15:19:39.006 ERROR assignment1.UsefulFunctions : Blah
+15:19:39.010 ERROR assignment1.UsefulFunctions : Yeah
+15:28:23.793 ERROR assignment1.UsefulFunctions : Blah
+15:28:23.796 ERROR assignment1.UsefulFunctions : Yeah
+15:28:27.706 ERROR assignment1.AuthorListController : Double Clicked
+15:28:27.731 ERROR assignment1.UsefulFunctions : Blah
+15:28:27.734 ERROR assignment1.UsefulFunctions : Yeah
+15:28:35.615 ERROR assignment1.UsefulFunctions : Blah
+15:28:35.616 ERROR assignment1.UsefulFunctions : Yeah
+15:28:37.219 ERROR assignment1.AuthorListController : Double Clicked
+15:28:37.227 ERROR assignment1.UsefulFunctions : Blah
+15:28:37.229 ERROR assignment1.UsefulFunctions : Yeah
+15:28:42.621 ERROR assignment1.UsefulFunctions : Blah
+15:28:42.622 ERROR assignment1.UsefulFunctions : Yeah
+15:32:05.506 ERROR assignment1.UsefulFunctions : Blah
+15:32:05.510 ERROR assignment1.UsefulFunctions : Yeah
+15:32:09.528 ERROR assignment1.AuthorListController : Double Clicked
+15:32:09.547 ERROR assignment1.UsefulFunctions : Blah
+15:32:09.550 ERROR assignment1.UsefulFunctions : Yeah
+15:33:33.046 ERROR assignment1.UsefulFunctions : Swithching Views
+15:33:34.638 ERROR assignment1.AuthorListController : Double Clicked
+15:33:36.583 ERROR assignment1.AuthorListController : Double Clicked
+15:33:37.623 ERROR assignment1.AuthorListController : Double Clicked
+15:36:54.663 ERROR assignment1.UsefulFunctions : Swithching Views
+15:36:55.834 ERROR assignment1.AuthorListController : Double Clicked
+15:38:21.708 ERROR assignment1.UsefulFunctions : Swithching Views
+15:38:22.827 ERROR assignment1.AuthorListController : Double Clicked
+15:39:48.296 ERROR assignment1.UsefulFunctions : Swithching Views
+15:39:49.652 ERROR assignment1.AuthorListController : Double Clicked
+15:40:06.954 ERROR assignment1.UsefulFunctions : Swithching Views
+15:40:08.237 ERROR assignment1.AuthorListController : Double Clicked
+15:40:21.877 ERROR assignment1.UsefulFunctions : Swithching Views
+15:40:23.028 ERROR assignment1.AuthorListController : Double Clicked
+15:40:24.479 ERROR assignment1.AuthorListController : Double Clicked
+15:41:43.785 ERROR assignment1.UsefulFunctions : Swithching Views
+15:41:44.609 ERROR assignment1.AuthorListController : Double Clicked
+15:41:44.627 ERROR assignment1.UsefulFunctions : Swithching Views
+15:41:46.513 ERROR assignment1.AuthorDetailViewController : Clicked Save
+15:41:47.216 ERROR assignment1.AuthorDetailViewController : Clicked Save
+15:41:47.544 ERROR assignment1.AuthorDetailViewController : Clicked Save
+15:41:47.740 ERROR assignment1.AuthorDetailViewController : Clicked Save
+15:41:47.912 ERROR assignment1.AuthorDetailViewController : Clicked Save
+15:41:48.100 ERROR assignment1.AuthorDetailViewController : Clicked Save
+15:41:48.248 ERROR assignment1.AuthorDetailViewController : Clicked Save
+15:48:38.197 ERROR assignment1.Main : error
+15:49:10.592 ERROR assignment1.Main : error Couldnt load window
+15:51:01.375 ERROR assignment1.Main : error Couldnt load window
+13:07:03.851 ERROR assignment1.UsefulFunctions : Swithching Views
+13:07:18.811 ERROR assignment1.AuthorListController : Double Clicked
+13:07:18.837 ERROR assignment1.UsefulFunctions : Swithching Views
+13:07:20.621 ERROR assignment1.AuthorDetailViewController : Clicked Save
+13:07:21.337 ERROR assignment1.AuthorDetailViewController : Clicked Save
+13:07:21.591 ERROR assignment1.AuthorDetailViewController : Clicked Save
+13:07:21.779 ERROR assignment1.AuthorDetailViewController : Clicked Save
+13:12:04.160 ERROR assignment1.UsefulFunctions : Swithching Views
+13:12:07.184 ERROR assignment1.AuthorListController : Double Clicked
+13:12:07.202 ERROR assignment1.UsefulFunctions : Swithching Views
+13:12:13.742 ERROR assignment1.Main : error Couldnt load window
+13:14:05.077 INFO  assignment1.Main : HELP
+13:14:12.699 ERROR assignment1.Main : error Couldnt load window
+13:15:04.399 INFO  assignment1.Main : HELP
+13:15:06.512 ERROR assignment1.UsefulFunctions : Swithching Views
+13:15:08.509 ERROR assignment1.AuthorListController : Double Clicked
+13:15:08.527 ERROR assignment1.UsefulFunctions : Swithching Views
+13:15:09.954 INFO  assignment1.AuthorDetailViewController : clicked save
+13:15:11.561 INFO  assignment1.AuthorDetailViewController : clicked save
+13:15:12.594 ERROR assignment1.Main : error Couldnt load window
+13:15:19.576 INFO  assignment1.Main : HELP
+13:15:21.340 ERROR assignment1.UsefulFunctions : Swithching Views
+13:15:22.725 ERROR assignment1.AuthorListController : Double Clicked
+13:15:22.746 ERROR assignment1.UsefulFunctions : Swithching Views
+13:15:24.259 INFO  assignment1.AuthorDetailViewController : clicked save
+13:15:25.177 INFO  assignment1.AuthorDetailViewController : clicked save
+13:15:26.596 ERROR assignment1.Main : error Couldnt load window
+13:15:32.881 INFO  assignment1.Main : HELP
+13:15:34.476 ERROR assignment1.UsefulFunctions : Swithching Views
+13:15:35.532 ERROR assignment1.AuthorListController : Double Clicked
+13:15:35.551 ERROR assignment1.UsefulFunctions : Swithching Views
+13:15:36.584 INFO  assignment1.AuthorDetailViewController : clicked save
+13:15:37.518 INFO  assignment1.AuthorDetailViewController : clicked save
+13:15:37.780 INFO  assignment1.AuthorDetailViewController : clicked save
+13:15:38.034 INFO  assignment1.AuthorDetailViewController : clicked save
+13:15:39.305 ERROR assignment1.Main : error Couldnt load window
+13:15:46.641 INFO  assignment1.Main : HELP
+13:15:51.936 ERROR assignment1.UsefulFunctions : Swithching Views
+13:16:34.549 ERROR assignment1.AuthorListController : Double Clicked
+13:16:34.568 ERROR assignment1.UsefulFunctions : Swithching Views
+13:16:55.042 ERROR assignment1.UsefulFunctions : Swithching Views
+13:17:04.183 ERROR assignment1.UsefulFunctions : Swithching Views
+13:17:05.992 ERROR assignment1.AuthorListController : Double Clicked
+13:17:06.000 ERROR assignment1.UsefulFunctions : Swithching Views
+13:17:20.383 INFO  assignment1.AuthorDetailViewController : clicked save
+13:17:21.097 INFO  assignment1.AuthorDetailViewController : clicked save
+13:17:22.480 INFO  assignment1.AuthorDetailViewController : clicked save
+13:17:23.087 INFO  assignment1.AuthorDetailViewController : clicked save
+13:17:24.729 INFO  assignment1.AuthorDetailViewController : clicked save
+13:53:35.783 ERROR assignment1.Main : error Couldnt load window
+13:56:26.919 INFO  assignment1.Main : HELP
+13:56:29.604 ERROR assignment1.UsefulFunctions : Swithching Views
+13:56:31.119 ERROR assignment1.AuthorListController : Double Clicked
+13:56:31.138 ERROR assignment1.UsefulFunctions : Swithching Views
+13:56:33.015 INFO  assignment1.AuthorDetailViewController : clicked save
+13:56:34.048 ERROR assignment1.Main : error Couldnt load window
+13:58:23.071 INFO  assignment1.Main : HELP
+13:58:25.775 ERROR assignment1.UsefulFunctions : Swithching Views
+13:58:28.341 ERROR assignment1.AuthorListController : Double Clicked
+13:58:28.359 ERROR assignment1.UsefulFunctions : Swithching Views
+13:58:30.503 ERROR assignment1.UsefulFunctions : Swithching Views
+13:58:34.721 ERROR assignment1.AuthorListController : Double Clicked
+13:58:34.729 ERROR assignment1.UsefulFunctions : Swithching Views
+14:03:03.093 INFO  assignment1.Main : HELP
+14:03:06.454 ERROR assignment1.UsefulFunctions : Swithching Views
+14:03:13.631 ERROR assignment1.AuthorListController : Double Clicked
+14:03:13.648 ERROR assignment1.UsefulFunctions : Swithching Views
+14:03:17.853 ERROR assignment1.UsefulFunctions : Swithching Views
+14:04:23.924 ERROR assignment1.Main : error Couldnt load window
+14:04:34.509 INFO  assignment1.Main : HELP
+14:04:37.376 ERROR assignment1.UsefulFunctions : Swithching Views
+14:04:39.559 ERROR assignment1.AuthorListController : Double Clicked
+14:04:39.578 ERROR assignment1.UsefulFunctions : Swithching Views
+14:05:36.294 ERROR assignment1.UsefulFunctions : Swithching Views
+14:05:45.597 ERROR assignment1.AuthorListController : Double Clicked
+14:05:45.608 ERROR assignment1.UsefulFunctions : Swithching Views
+14:06:21.977 ERROR assignment1.Main : error Couldnt load window
+14:06:23.957 INFO  assignment1.Main : HELP
+14:06:31.171 ERROR assignment1.UsefulFunctions : Swithching Views
+14:06:32.643 ERROR assignment1.AuthorListController : Double Clicked
+14:06:32.661 ERROR assignment1.UsefulFunctions : Swithching Views
+14:06:34.648 ERROR assignment1.UsefulFunctions : Swithching Views
+14:06:55.456 ERROR assignment1.Main : error Couldnt load window
+14:07:06.976 INFO  assignment1.Main : HELP
+14:07:09.189 ERROR assignment1.UsefulFunctions : Swithching Views
+14:07:15.292 ERROR assignment1.Main : error Couldnt load window
+14:08:57.931 INFO  assignment1.Main : HELP
+14:08:59.994 ERROR assignment1.UsefulFunctions : Swithching Views
+14:09:07.399 ERROR assignment1.Main : error Couldnt load window
+14:09:26.785 INFO  assignment1.Main : HELP
+14:09:28.750 ERROR assignment1.UsefulFunctions : Swithching Views
+14:09:36.825 ERROR assignment1.AuthorListController : Double Clicked
+14:09:36.843 ERROR assignment1.UsefulFunctions : Swithching Views
+14:09:38.896 ERROR assignment1.UsefulFunctions : Swithching Views
+14:09:53.386 ERROR assignment1.Main : error Couldnt load window
+14:10:37.965 INFO  assignment1.Main : HELP
+14:10:40.339 ERROR assignment1.UsefulFunctions : Swithching Views
+14:10:43.901 ERROR assignment1.Main : error Couldnt load window
+14:11:15.256 INFO  assignment1.Main : HELP
+14:11:18.676 ERROR assignment1.UsefulFunctions : Swithching Views
+14:11:20.585 ERROR assignment1.UsefulFunctions : Swithching Views
+14:11:22.115 ERROR assignment1.AuthorListController : Double Clicked
+14:11:22.134 ERROR assignment1.UsefulFunctions : Swithching Views
+14:11:53.605 ERROR assignment1.Main : error Couldnt load window
+14:12:03.565 INFO  assignment1.Main : HELP
+14:12:05.987 INFO  assignment1.UsefulFunctions : Swithching Views
+14:12:11.908 ERROR assignment1.AuthorListController : Double Clicked
+14:12:11.926 INFO  assignment1.UsefulFunctions : Swithching Views
+14:12:16.829 ERROR assignment1.Main : error Couldnt load window
+14:12:40.977 INFO  assignment1.Main : HELP
+14:12:43.048 INFO  assignment1.UsefulFunctions : Swithching Views
+14:12:44.677 INFO  assignment1.AuthorListController : Double Clicked
+14:12:44.696 INFO  assignment1.UsefulFunctions : Swithching Views
+14:12:49.728 ERROR assignment1.Main : error Couldnt load window
+14:13:35.058 INFO  assignment1.Main : HELP
+14:13:38.943 INFO  assignment1.UsefulFunctions : Swithching Views
+14:13:43.486 INFO  assignment1.AuthorListController : Double Clicked
+14:13:43.504 INFO  assignment1.UsefulFunctions : Swithching Views
+14:13:45.206 INFO  assignment1.UsefulFunctions : Swithching Views
+14:19:39.784 ERROR assignment1.Main : error Couldnt load window
+14:19:45.564 INFO  assignment1.Main : HELP
+14:19:47.626 INFO  assignment1.UsefulFunctions : Swithching Views
+14:19:51.565 INFO  assignment1.AuthorListController : Double Clicked
+14:19:51.583 INFO  assignment1.UsefulFunctions : Swithching Views
+14:19:53.424 ERROR assignment1.Main : error Couldnt load window
+14:20:34.444 INFO  assignment1.Main : HELP
+14:20:36.631 INFO  assignment1.UsefulFunctions : Swithching Views
+14:20:40.990 INFO  assignment1.AuthorListController : Double Clicked
+14:20:41.009 INFO  assignment1.UsefulFunctions : Swithching Views
+14:20:43.575 INFO  assignment1.UsefulFunctions : Swithching Views
+14:20:45.526 ERROR assignment1.Main : error Couldnt load window
+14:20:57.609 INFO  assignment1.Main : HELP
+14:20:59.520 INFO  assignment1.UsefulFunctions : Swithching Views
+14:21:02.182 ERROR assignment1.Main : error Couldnt load window
+14:21:30.433 INFO  assignment1.Main : HELP
+14:21:32.157 INFO  assignment1.UsefulFunctions : Swithching Views
+14:21:34.746 ERROR assignment1.Main : error Couldnt load window
+14:22:21.506 INFO  assignment1.Main : HELP
+14:22:23.502 INFO  assignment1.UsefulFunctions : Swithching Views
+14:22:26.433 INFO  assignment1.AuthorListController : Double Clicked
+14:22:26.452 INFO  assignment1.UsefulFunctions : Swithching Views
+14:22:28.606 INFO  assignment1.UsefulFunctions : Swithching Views
+14:22:30.777 INFO  assignment1.AuthorListController : Double Clicked
+14:22:30.786 INFO  assignment1.UsefulFunctions : Swithching Views
+14:22:32.130 ERROR assignment1.Main : error Couldnt load window
+14:22:58.616 INFO  assignment1.Main : HELP
+14:23:00.986 INFO  assignment1.UsefulFunctions : Swithching Views
+14:23:03.302 INFO  assignment1.AuthorListController : Double Clicked
+14:23:03.321 INFO  assignment1.UsefulFunctions : Swithching Views
+14:23:06.744 ERROR assignment1.Main : error Couldnt load window
+14:23:26.162 INFO  assignment1.Main : HELP
+14:23:28.005 INFO  assignment1.UsefulFunctions : Swithching Views
+14:23:29.919 INFO  assignment1.AuthorListController : Double Clicked
+14:23:29.938 INFO  assignment1.UsefulFunctions : Swithching Views
+14:23:31.854 INFO  assignment1.UsefulFunctions : Swithching Views
+14:23:33.713 INFO  assignment1.AuthorListController : Double Clicked
+14:23:33.721 INFO  assignment1.UsefulFunctions : Swithching Views
+14:23:35.722 ERROR assignment1.Main : error Couldnt load window
+14:24:00.635 INFO  assignment1.Main : HELP
+14:24:02.562 INFO  assignment1.UsefulFunctions : Swithching Views
+14:24:03.870 INFO  assignment1.AuthorListController : Double Clicked
+14:24:03.888 INFO  assignment1.UsefulFunctions : Swithching Views
+14:24:05.805 INFO  assignment1.UsefulFunctions : Swithching Views
+14:24:06.788 INFO  assignment1.AuthorListController : Double Clicked
+14:24:06.796 INFO  assignment1.UsefulFunctions : Swithching Views
+14:24:08.525 INFO  assignment1.UsefulFunctions : Swithching Views
+14:27:36.313 INFO  assignment1.UsefulFunctions : Swithching Views
+14:27:37.674 INFO  assignment1.AuthorListController : Double Clicked
+14:27:37.681 INFO  assignment1.UsefulFunctions : Swithching Views
+14:27:40.269 INFO  assignment1.UsefulFunctions : Swithching Views
+14:27:42.343 INFO  assignment1.AuthorListController : Double Clicked
+14:27:42.352 INFO  assignment1.UsefulFunctions : Swithching Views
+14:27:54.720 ERROR assignment1.Main : error Couldnt load window
+14:29:51.780 INFO  assignment1.Main : HELP
+14:29:53.588 INFO  assignment1.UsefulFunctions : Swithching Views
+14:29:54.283 INFO  assignment1.AuthorListController : Double Clicked
+14:29:54.301 INFO  assignment1.UsefulFunctions : Swithching Views
+14:29:55.355 INFO  assignment1.AuthorDetailViewController : clicked save
+14:30:12.812 INFO  assignment1.UsefulFunctions : Swithching Views
+14:30:14.472 INFO  assignment1.AuthorListController : Double Clicked
+14:30:14.481 INFO  assignment1.UsefulFunctions : Swithching Views
+14:30:35.427 ERROR assignment1.Main : error Couldnt load window
+14:30:40.995 INFO  assignment1.Main : HELP
+14:30:47.323 INFO  assignment1.UsefulFunctions : Swithching Views
+14:30:48.846 INFO  assignment1.AuthorListController : Double Clicked
+14:31:35.461 INFO  assignment1.Main : HELP
+14:31:37.040 INFO  assignment1.UsefulFunctions : Swithching Views
+14:31:38.856 INFO  assignment1.AuthorListController : Double Clicked
+14:31:46.696 ERROR assignment1.Main : error Couldnt load window
+14:31:54.790 INFO  assignment1.Main : HELP
+14:31:56.421 ERROR assignment1.Main : error Couldnt load window
+14:32:23.987 INFO  assignment1.Main : HELP
+14:32:27.011 INFO  assignment1.UsefulFunctions : Swithching Views
+14:32:35.651 INFO  assignment1.AuthorListController : Double Clicked
+14:32:35.670 INFO  assignment1.UsefulFunctions : Swithching Views
+14:32:37.961 INFO  assignment1.AuthorDetailViewController : clicked save
+14:32:38.770 INFO  assignment1.AuthorDetailViewController : clicked save
+14:32:38.967 INFO  assignment1.AuthorDetailViewController : clicked save
+14:32:39.165 INFO  assignment1.AuthorDetailViewController : clicked save
+14:32:47.597 INFO  assignment1.Main : HELP
+14:32:48.864 ERROR assignment1.Main : error Couldnt load window
+14:33:35.661 INFO  assignment1.UsefulFunctions : Swithching Views
+14:33:36.705 INFO  assignment1.AuthorListController : Double Clicked
+14:33:36.724 INFO  assignment1.UsefulFunctions : Swithching Views
+14:33:38.417 INFO  assignment1.AuthorDetailViewController : clicked save
+14:36:25.879 ERROR assignment1.Main : error Couldnt load window
+14:40:21.789 INFO  assignment1.UsefulFunctions : Swithching Views
+14:40:24.079 INFO  assignment1.AuthorListController : Double Clicked
+14:40:24.098 INFO  assignment1.UsefulFunctions : Swithching Views
+14:40:28.390 ERROR assignment1.Main : error Couldnt load window
+14:40:35.944 ERROR assignment1.MenuController : couldnt find filexs
+14:40:40.319 ERROR assignment1.Main : error Couldnt load window
+14:43:33.220 INFO  assignment1.UsefulFunctions : Swithching Views
+14:43:35.510 INFO  assignment1.AuthorListController : Double Clicked
+14:43:35.529 INFO  assignment1.UsefulFunctions : Swithching Views
+14:43:41.998 INFO  assignment1.AuthorDetailViewController : clicked save
+14:43:43.562 ERROR assignment1.Main : error Couldnt load window
+14:43:53.415 INFO  assignment1.UsefulFunctions : Swithching Views
+14:43:54.642 INFO  assignment1.AuthorListController : Double Clicked
+14:43:54.643 ERROR assignment1.AuthorListController : couldnt find files
+14:43:57.500 INFO  assignment1.AuthorListController : Double Clicked
+14:43:57.500 ERROR assignment1.AuthorListController : couldnt find files
+14:43:59.369 ERROR assignment1.Main : error Couldnt load window
+14:45:09.324 ERROR assignment1.Main : error Couldnt load window
+14:45:21.036 ERROR assignment1.Main : error Couldnt load window
+16:47:54.691 ERROR assignment1.Main : error Couldnt load window
+16:47:55.706 ERROR assignment1.Main : error Couldnt load window
+17:02:55.748 INFO  assignment1.UsefulFunctions : Swithching Views
+17:02:56.964 INFO  assignment1.AuthorListController : Double Clicked
+17:02:56.982 INFO  assignment1.UsefulFunctions : Swithching Views
+17:02:58.206 INFO  assignment1.AuthorDetailViewController : clicked save
+17:03:00.442 INFO  assignment1.UsefulFunctions : Swithching Views
+17:03:08.403 ERROR assignment1.Main : error Couldnt load window
+17:24:08.902 INFO  assignment1.UsefulFunctions : Swithching Views
+17:24:09.816 INFO  assignment1.AuthorListController : Double Clicked
+17:24:09.836 INFO  assignment1.UsefulFunctions : Swithching Views
+17:24:10.954 INFO  assignment1.AuthorDetailViewController : clicked save
+17:24:12.294 INFO  assignment1.UsefulFunctions : Swithching Views
+17:38:12.862 INFO  assignment1.UsefulFunctions : Swithching Views
+17:38:19.423 INFO  assignment1.AuthorListController : Double Clicked
+17:38:19.442 INFO  assignment1.UsefulFunctions : Swithching Views
+17:38:32.471 ERROR assignment1.Main : error Couldnt load window
+17:38:36.466 INFO  assignment1.UsefulFunctions : Swithching Views
