@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
-  <content>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="599.0">
-         <children>
-            <Button fx:id="Poe" layoutX="179.0" layoutY="26.0" mnemonicParsing="false" onMouseClicked="#DoubleClickHandler" text="Edger Allen Poe" />
-            <Button fx:id="Akira" layoutX="176.0" layoutY="61.0" mnemonicParsing="false" onMouseClicked="#DoubleClickHandler" text="Akira Toryama" />
-            <Button fx:id="George" layoutX="180.0" layoutY="109.0" mnemonicParsing="false" onMouseClicked="#DoubleClickHandler" text="George Owell" />
-            <Button fx:id="Hat" layoutX="179.0" layoutY="158.0" mnemonicParsing="false" onMouseClicked="#DoubleClickHandler" text="Dr.Seuss" />
-            <Button fx:id="Professor" layoutX="179.0" layoutY="199.0" mnemonicParsing="false" onMouseClicked="#DoubleClickHandler" text="Dr.MakeYouBuyBook" />
-         </children></AnchorPane>
-  </content>
-</ScrollPane>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ListView fx:id="ListView" prefHeight="200.0" prefWidth="600.0" />
+   </children>
+</HBox>

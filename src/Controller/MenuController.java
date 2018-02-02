@@ -42,13 +42,14 @@ public class MenuController extends ViewController {
         	}
         	else{
         		UsefulFunctions functions = UsefulFunctions.getInstance();
+        		//System.out.println(centerPane);
         		AuthorListController controller = new AuthorListController(authors.getAuthors());
         		functions.SwitchView(this,controller,"/View/AuthorListView.fxml");
 
         	}
 		} catch (Exception e) {
 			// TODO: handle exception
-			logger.error("couldnt find files");
+			logger.error("couldnt find files MenuController");
 		}
 
     }

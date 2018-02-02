@@ -1,10 +1,12 @@
 package Controller;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-
+import javafx.scene.control.ScrollPane;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -17,29 +19,19 @@ import javafx.scene.input.MouseEvent;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.layout.GridPane;
+import javafx.scene.control.ListView;
 
 public class AuthorListController extends ViewController{
 	private static Logger logger = LogManager.getLogger(Main.class);
+	private ObservableList<Button> buttons = FXCollections.observableArrayList();
+	private ArrayList<Author> authors;
 
 	@FXML
-	private Button Poe;
-
-	@FXML
-	private Button Akira;
-
-	@FXML
-	private Button George;
-
-	@FXML
-	private Button Hat;
-
-	@FXML
-	private Button Professor;
-
+    private ListView<Button> ListView;
+	
 	public AuthorListController(ArrayList<Author> authors){
-		for(int i = 0; i < authors.size();i++){
-			System.out.println(authors.get(i).getId());
-		}
+		this.authors= authors;
 	}
 	
 	
@@ -49,8 +41,8 @@ public class AuthorListController extends ViewController{
 			if (event.getClickCount() == 2) {
 				logger.info("Double Clicked");
 				UsefulFunctions functions = UsefulFunctions.getInstance();
-				AuthorDetailViewController detailViewController = new AuthorDetailViewController();
-				functions.SwitchView(this, detailViewController,"/View/AuthorDetailView.fxml");
+				AuthorDetailViewController detailViewController = new AuthorDetailViewController(authors.get(0));
+				functions.SwitchView(this, detailViewController,"/View/fxml");
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -59,6 +51,14 @@ public class AuthorListController extends ViewController{
 		
     }
 	
-	
+	public void initialize(){//URL location, ResourceBundle resources
+		for(int i = 0; i < authors.size();i++){
+			Button newButton = new Button();
+			newButton.setText(authors.get(i).getFirstName().getValue() + " " + authors.get(i).getLastName().getValue());
+			System.out.println(authors.get(i).getId());
+			buttons.add(newButton);			
+		}
+		ListView.setItems(buttons);
+	}
 
 }

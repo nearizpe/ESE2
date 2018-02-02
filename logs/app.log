@@ -379,3 +379,97 @@
 15:08:35.198 INFO  Controller.AuthorDetailViewController : clicked save
 15:08:35.360 INFO  Controller.AuthorDetailViewController : clicked save
 15:08:35.558 INFO  Controller.AuthorDetailViewController : clicked save
+12:59:42.807 INFO  assignment1.UsefulFunctions : Swithching Views
+12:59:43.847 INFO  Controller.AuthorListController : Double Clicked
+12:59:43.871 INFO  assignment1.UsefulFunctions : Swithching Views
+12:59:46.096 INFO  assignment1.UsefulFunctions : Swithching Views
+12:59:49.094 ERROR assignment1.Main : error Couldnt load window
+13:08:02.939 INFO  assignment1.UsefulFunctions : Swithching Views
+13:08:05.044 ERROR assignment1.Main : error Couldnt load window
+13:16:29.155 ERROR Controller.MenuController : couldnt find files
+13:16:31.046 ERROR Controller.MenuController : couldnt find files
+13:16:34.126 ERROR Controller.MenuController : couldnt find files
+13:16:35.081 ERROR Controller.MenuController : couldnt find files
+13:16:36.730 ERROR assignment1.Main : error Couldnt load window
+13:16:53.046 ERROR Controller.MenuController : couldnt find files
+13:17:06.299 ERROR assignment1.Main : error Couldnt load window
+13:20:46.908 ERROR assignment1.Main : error Couldnt load window
+13:20:52.319 ERROR Controller.MenuController : couldnt find files
+13:20:55.547 ERROR assignment1.Main : error Couldnt load window
+13:21:02.660 INFO  assignment1.UsefulFunctions : Swithching Views
+13:21:04.057 ERROR assignment1.Main : error Couldnt load window
+13:21:10.746 ERROR Controller.MenuController : couldnt find files
+13:21:12.437 ERROR assignment1.Main : error Couldnt load window
+13:21:37.957 ERROR Controller.MenuController : couldnt find files
+13:21:44.147 ERROR assignment1.Main : error Couldnt load window
+13:21:59.658 ERROR Controller.MenuController : couldnt find files
+13:22:06.532 ERROR assignment1.Main : error Couldnt load window
+13:23:04.162 INFO  assignment1.UsefulFunctions : Swithching Views
+13:23:05.415 ERROR assignment1.Main : error Couldnt load window
+13:25:15.025 ERROR Controller.MenuController : couldnt find files
+13:25:16.881 ERROR assignment1.Main : error Couldnt load window
+13:25:22.293 ERROR Controller.MenuController : couldnt find files
+13:25:24.583 ERROR assignment1.Main : error Couldnt load window
+13:27:29.348 ERROR Controller.MenuController : couldnt find files
+13:27:33.667 ERROR Controller.MenuController : couldnt find files
+13:27:35.254 ERROR Controller.MenuController : couldnt find files
+13:27:36.101 ERROR assignment1.Main : error Couldnt load window
+13:27:57.732 ERROR Controller.MenuController : couldnt find files
+13:28:01.724 ERROR assignment1.Main : error Couldnt load window
+13:28:13.648 INFO  assignment1.UsefulFunctions : Swithching Views
+13:28:20.948 ERROR assignment1.Main : error Couldnt load window
+13:28:48.004 ERROR Controller.MenuController : couldnt find files
+13:28:52.794 ERROR assignment1.Main : error Couldnt load window
+13:29:48.526 ERROR Controller.MenuController : couldnt find files MenuController
+13:29:50.934 ERROR assignment1.Main : error Couldnt load window
+13:31:52.012 INFO  assignment1.UsefulFunctions : Swithching Views
+13:31:59.909 ERROR assignment1.Main : error Couldnt load window
+13:34:02.961 ERROR Controller.MenuController : couldnt find files MenuController
+13:34:06.435 ERROR assignment1.Main : error Couldnt load window
+13:35:12.345 INFO  assignment1.UsefulFunctions : Swithching Views
+13:36:02.722 INFO  assignment1.UsefulFunctions : Swithching Views
+13:36:04.937 ERROR assignment1.Main : error Couldnt load window
+13:36:41.678 INFO  assignment1.UsefulFunctions : Swithching Views
+13:36:43.416 ERROR assignment1.Main : error Couldnt load window
+13:49:04.529 ERROR Controller.MenuController : couldnt find files MenuController
+13:49:07.044 ERROR assignment1.Main : error Couldnt load window
+13:55:41.777 INFO  assignment1.UsefulFunctions : Swithching Views
+13:55:44.455 ERROR assignment1.Main : error Couldnt load window
+13:56:00.020 INFO  assignment1.UsefulFunctions : Swithching Views
+13:57:39.164 INFO  assignment1.UsefulFunctions : Swithching Views
+13:57:43.874 INFO  assignment1.UsefulFunctions : Swithching Views
+13:57:57.952 ERROR assignment1.Main : error Couldnt load window
+13:58:17.609 INFO  assignment1.UsefulFunctions : Swithching Views
+13:58:27.608 ERROR assignment1.Main : error Couldnt load window
+13:58:53.382 INFO  assignment1.UsefulFunctions : Swithching Views
+13:58:57.514 ERROR assignment1.Main : error Couldnt load window
+13:59:16.102 INFO  assignment1.UsefulFunctions : Swithching Views
+13:59:18.461 ERROR assignment1.Main : error Couldnt load window
+13:59:29.920 INFO  assignment1.UsefulFunctions : Swithching Views
+13:59:33.109 ERROR assignment1.Main : error Couldnt load window
+13:59:40.803 INFO  assignment1.UsefulFunctions : Swithching Views
+13:59:55.124 ERROR assignment1.Main : error Couldnt load window
+14:00:03.170 INFO  assignment1.UsefulFunctions : Swithching Views
+14:00:07.818 ERROR assignment1.Main : error Couldnt load window
+14:00:19.272 INFO  assignment1.UsefulFunctions : Swithching Views
+14:00:30.384 ERROR assignment1.Main : error Couldnt load window
+14:00:43.322 INFO  assignment1.UsefulFunctions : Swithching Views
+14:00:45.444 ERROR assignment1.Main : error Couldnt load window
+14:00:57.446 INFO  assignment1.UsefulFunctions : Swithching Views
+14:01:05.811 ERROR assignment1.Main : error Couldnt load window
+14:04:33.022 INFO  assignment1.UsefulFunctions : Swithching Views
+14:05:02.575 INFO  assignment1.UsefulFunctions : Swithching Views
+14:05:03.892 ERROR assignment1.Main : error Couldnt load window
+14:20:09.529 INFO  assignment1.UsefulFunctions : Swithching Views
+14:20:24.410 ERROR assignment1.Main : error Couldnt load window
+14:29:01.140 INFO  assignment1.UsefulFunctions : Swithching Views
+14:29:16.838 ERROR assignment1.Main : error Couldnt load window
+14:49:01.306 ERROR assignment1.UsefulFunctions : error couldnt switch view
+14:49:02.521 ERROR assignment1.Main : error Couldnt load window
+14:49:16.631 ERROR assignment1.UsefulFunctions : error couldnt switch view
+14:49:18.752 ERROR assignment1.UsefulFunctions : error couldnt switch view
+14:49:19.373 ERROR assignment1.Main : error Couldnt load window
+14:49:25.259 ERROR assignment1.UsefulFunctions : error couldnt switch view
+14:49:25.829 ERROR assignment1.Main : error Couldnt load window
+14:50:39.017 INFO  assignment1.UsefulFunctions : Swithching Views
+14:50:47.124 ERROR assignment1.Main : error Couldnt load window
