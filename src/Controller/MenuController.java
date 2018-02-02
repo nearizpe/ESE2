@@ -2,9 +2,13 @@ package Controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import Model.Author;
+import Model.AuthorTableGateway;
 import assignment1.UsefulFunctions;
 import javafx.event.ActionEvent;
 
@@ -19,7 +23,8 @@ public class MenuController extends ViewController {
 	
 	private static Logger logger = LogManager.getLogger();
 
-
+	AuthorTableGateway authors = new AuthorTableGateway();
+	
     @FXML
     private MenuItem AuthorListMenuItem;
 
@@ -37,7 +42,7 @@ public class MenuController extends ViewController {
         	}
         	else{
         		UsefulFunctions functions = UsefulFunctions.getInstance();
-        		AuthorListController controller = new AuthorListController();
+        		AuthorListController controller = new AuthorListController(authors.getAuthors());
         		functions.SwitchView(this,controller,"/View/AuthorListView.fxml");
 
         	}

@@ -2,11 +2,13 @@ package Controller;
 
 import javafx.event.ActionEvent;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import Model.Author;
 import assignment1.Main;
 import assignment1.UsefulFunctions;
 import javafx.fxml.FXML;
@@ -34,6 +36,13 @@ public class AuthorListController extends ViewController{
 	@FXML
 	private Button Professor;
 
+	public AuthorListController(ArrayList<Author> authors){
+		for(int i = 0; i < authors.size();i++){
+			System.out.println(authors.get(i).getId());
+		}
+	}
+	
+	
 	@FXML
     void DoubleClickHandler(MouseEvent event) {
 		try {
@@ -49,6 +58,7 @@ public class AuthorListController extends ViewController{
 		}
 		
     }
+	
 	
 
 }
