@@ -1,4 +1,4 @@
-package Model;
+package DataBase;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,6 +8,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+
+import Model.Author;
 
 public class AuthorTableGateway {
 	public ArrayList<Author> getAuthors() {
@@ -22,15 +24,22 @@ public class AuthorTableGateway {
 		ds.setUser("fis637");
 		ds.setPassword("BVJcwouxMz0sv48zrttX");
 
+		/*ds.setURL("jdbc:mysql://easel2.fulgentcorp.com:3306/dky407");
+		ds.setUser("dky407");
+		ds.setPassword("change_me");*/
+		
 		// creating connection
 		Connection conn;
 		try {
+			System.out.println("$$$$$$$$$$");
 			conn = ds.getConnection();
+			System.out.println("%%%%%%%%%");
 			// fetch data
 			try {
+				System.out.println("~~~~~~~~");
 				stmt = conn.prepareStatement("SELECT * FROM AuthorDB");
 				rs = stmt.executeQuery();
-				
+				System.out.println("!!!!!!!!!!!!!!!");
 				while (rs.next()) {
 					Author temp = new Author();
 					temp.setId(rs.getInt("id"));
@@ -54,7 +63,7 @@ public class AuthorTableGateway {
 					}
 				}
 			}
-
+			System.out.println("@@@@@@@@@@@@");
 			if (stmt != null) {
 				try {
 					stmt.close();
@@ -75,7 +84,7 @@ public class AuthorTableGateway {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-
+		System.out.println("~~~~~~~~");
 		return authors;
 	}
 }

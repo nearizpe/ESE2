@@ -7,8 +7,8 @@ import java.util.ArrayList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import DataBase.AuthorTableGateway;
 import Model.Author;
-import Model.AuthorTableGateway;
 import assignment1.UsefulFunctions;
 import javafx.event.ActionEvent;
 
@@ -42,8 +42,9 @@ public class MenuController extends ViewController {
         	}
         	else{
         		UsefulFunctions functions = UsefulFunctions.getInstance();
-        		//System.out.println(centerPane);
+        		
         		AuthorListController controller = new AuthorListController(authors.getAuthors());
+        		System.out.println("!!!!!!!!!!!!!!!");
         		functions.SwitchView(this,controller,"/View/AuthorListView.fxml");
 
         	}
