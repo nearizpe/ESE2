@@ -2,6 +2,7 @@ package Controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
 import java.util.ArrayList;
 
 import org.apache.logging.log4j.LogManager;
@@ -21,9 +22,11 @@ import javafx.scene.layout.Pane;
 
 public class MenuController extends ViewController {
 	
+	private Connection conn;
+	
 	private static Logger logger = LogManager.getLogger();
 
-	AuthorTableGateway authors = new AuthorTableGateway();
+	
 	
     @FXML
     private MenuItem AuthorListMenuItem;
@@ -41,20 +44,27 @@ public class MenuController extends ViewController {
             	System.exit(0);
         	}
         	else{
+        		AuthorTableGateway authors = new AuthorTableGateway(conn);
         		UsefulFunctions functions = UsefulFunctions.getInstance();
-        		
         		AuthorListController controller = new AuthorListController(authors.getAuthors());
-        		System.out.println("!!!!!!!!!!!!!!!");
         		functions.SwitchView(this,controller,"/View/AuthorListView.fxml");
 
         	}
 		} catch (Exception e) {
 			// TODO: handle exception
-			logger.error("couldnt find files MenuController");
+			e.printStackTrace();
+			logger.error("couldnt find files. MenuController");
 		}
 
     }
 
+    public void setConnection(Connection conn){
+    	this.conn = conn;
+    }
+    
+    public Connection getConnection(){
+    	return conn;
+    }
 }
 
 

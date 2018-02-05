@@ -55,7 +55,7 @@ public class AuthorListController extends ViewController{
 		for(int i = 0; i < authors.size();i++){
 			Button newButton = new Button();
 			newButton.setText(authors.get(i).getFirstName().getValue() + " " + authors.get(i).getLastName().getValue());
-			System.out.println(authors.get(i).getId());
+			
 			buttons.add(newButton);			
 		}
 		ListView.setItems(buttons);

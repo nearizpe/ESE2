@@ -37,7 +37,7 @@ public class AuthorDetailViewController extends ViewController{
     }
     
     public AuthorDetailViewController(Author author){
-    	author = new Author();
+    	this.author = author;
     	
     }
 }

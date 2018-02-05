@@ -1,6 +1,7 @@
 package assignment1;
 
 import java.net.URL;
+import java.sql.Connection;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,9 +14,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import Controller.MenuController;
+import DataBase.ConnectionFactory;
 
 public class Main extends Application {
 	
+	private Connection conn;
 	private static Logger logger = LogManager.getLogger(Main.class);
 	
 	@Override
@@ -39,6 +42,7 @@ public class Main extends Application {
 
 				//now load View1
 				MenuController controller = new MenuController();
+				controller.setConnection(conn); //set connection
 				controller.setRootNode((BorderPane) rootNode);
 
 				fxmlFile = this.getClass().getResource("/View/Menu.fxml");
@@ -50,8 +54,21 @@ public class Main extends Application {
 				
 				rootNode.setTop(contentView);
 
+				
 	}
 
+	public void init() throws Exception{
+		super.init();
+		
+		logger.info("Creating connection");
+		try{
+			conn = ConnectionFactory.createConnection();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+	
 	public static void main(String[] args) {
 		
 		//main thread blocks until launch returns (JAT thread terminates)
