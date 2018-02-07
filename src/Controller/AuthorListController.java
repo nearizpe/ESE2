@@ -36,6 +36,21 @@ public class AuthorListController extends ViewController{
 	
 	
 	@FXML
+	void ListClick(MouseEvent event) {
+		try {
+			if (event.getClickCount() > 1) {
+				logger.info("Double Clicked");
+				UsefulFunctions functions = UsefulFunctions.getInstance();
+				//Author temp = authors;
+				AuthorDetailViewController detailViewController = new AuthorDetailViewController(authors.get(1));
+				functions.SwitchView(this, detailViewController, "/View/fxml");
+			}
+		} catch (Exception e) {
+			logger.error("couldnt find files");
+		}
+	}
+
+	@FXML
     void DoubleClickHandler(MouseEvent event) {
 		try {
 			if (event.getClickCount() == 2) {

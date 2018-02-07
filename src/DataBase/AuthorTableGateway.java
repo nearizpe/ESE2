@@ -26,9 +26,6 @@ public class AuthorTableGateway {
 		ResultSet rs = null;
 
 		try {
-			System.out.println("abocve");
-			//System.out.println(conn.prepareStatement(""));
-			System.out.println("below");
 			stmt = conn.prepareStatement("Select * From AuthorDB");
 			rs = stmt.executeQuery();
 			while (rs.next()) {
@@ -55,7 +52,7 @@ public class AuthorTableGateway {
 				}
 			}
 		}
-		System.out.println("@@@@@@@@@@@@");
+
 		if (stmt != null) {
 			try {
 				stmt.close();
