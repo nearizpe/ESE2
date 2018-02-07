@@ -3,6 +3,8 @@ package Controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -50,27 +52,38 @@ public class AuthorListController extends ViewController{
 		}
 	}
 
-	@FXML
-    void DoubleClickHandler(MouseEvent event) {
-		try {
-			if (event.getClickCount() == 2) {
-				logger.info("Double Clicked");
-				UsefulFunctions functions = UsefulFunctions.getInstance();
-				AuthorDetailViewController detailViewController = new AuthorDetailViewController(authors.get(0));
-				functions.SwitchView(this, detailViewController,"/View/fxml");
+	
+	EventHandler<MouseEvent> buttonHandler = new EventHandler<MouseEvent>() {
+	    @Override
+	    public void handle(MouseEvent event) {
+	        //label.setText("Accepted");
+			try {
+				if (event.getClickCount() == 2) {
+					Button btn = (Button) event.getSource();
+					String id = btn.getId();
+					logger.info("Double Clicked id is " + id);
+					changeView(Integer.valueOf(id));
+				}
+			} catch (Exception e) {
+				// TODO: handle exception
+				logger.error("couldnt find files");
 			}
-		} catch (Exception e) {
-			// TODO: handle exception
-			logger.error("couldnt find files");
-		}
-		
-    }
+	    }
+	};
+	
+	private void changeView(int id){
+		AuthorDetailViewController detailViewController = new AuthorDetailViewController(authors.get(id));
+		UsefulFunctions functions = UsefulFunctions.getInstance();
+		functions.SwitchView(this, detailViewController,"/View/AuthorDetailView.fxml");
+	}
 	
 	public void initialize(){//URL location, ResourceBundle resources
 		for(int i = 0; i < authors.size();i++){
 			Button newButton = new Button();
 			newButton.setText(authors.get(i).getFirstName().getValue() + " " + authors.get(i).getLastName().getValue());
-			
+			newButton.setOnMouseClicked(buttonHandler);
+			newButton.setId(Integer.toString(i));
+			logger.info("id is " + newButton.getId());
 			buttons.add(newButton);			
 		}
 		ListView.setItems(buttons);

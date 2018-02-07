@@ -38,6 +38,13 @@ public class AuthorDetailViewController extends ViewController{
     
     public AuthorDetailViewController(Author author){
     	this.author = author;
-    	
     }
+    
+    public void initialize() {
+    	this.FirstName.setText(author.getFirstName().getValue());
+    	this.LastName.setText(author.getLastName().getValue());
+    	this.Birthday.setText(author.getDateOfBirth().getValue().toString());
+    	this.Gender.setText(author.getGender().getValue());
+    	this.Website.setText(author.getWebSite().getValue());
+	}
 }

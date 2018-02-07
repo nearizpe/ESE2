@@ -35,7 +35,7 @@ public class AuthorTableGateway {
 				temp.setLastName(rs.getString("last_name"));
 				temp.setDateOfBirth(rs.getDate("dob").toLocalDate());
 				temp.setGender(rs.getString("gender"));
-				temp.setWebSite(rs.getString("last_name"));
+				temp.setWebSite(rs.getString("web_site"));
 				authors.add(temp);
 			}
 		} catch (SQLException e) {
