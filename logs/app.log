@@ -908,3 +908,76 @@
 13:55:31.758 INFO  assignment1.UsefulFunctions : Swithching Views
 13:55:38.032 ERROR assignment1.Main : error Couldnt load window
 14:14:41.540 INFO  assignment1.Main : Creating connection
+11:35:24.721 INFO  assignment1.Main : Creating connection
+11:35:28.961 FATAL DataBase.ConnectionFactory : Could not establish connection
+
+11:36:12.458 INFO  assignment1.Main : Creating connection
+11:36:17.646 FATAL DataBase.ConnectionFactory : Could not establish connection
+
+13:12:16.070 INFO  assignment1.Main : Creating connection
+13:12:19.227 INFO  Controller.AuthorListController : id is 0
+13:12:19.227 INFO  Controller.AuthorListController : id is 1
+13:12:19.227 INFO  Controller.AuthorListController : id is 2
+13:12:19.228 INFO  Controller.AuthorListController : id is 3
+13:12:19.228 INFO  Controller.AuthorListController : id is 4
+13:12:19.228 INFO  Controller.AuthorListController : id is 5
+13:12:19.229 INFO  Controller.AuthorListController : id is 6
+13:12:19.229 INFO  Controller.AuthorListController : id is 7
+13:12:19.229 INFO  Controller.AuthorListController : id is 8
+13:12:19.230 INFO  assignment1.UsefulFunctions : Swithching Views
+13:12:21.014 INFO  Controller.AuthorListController$1 : Double Clicked id is 0
+13:12:21.038 INFO  assignment1.UsefulFunctions : Swithching Views
+13:12:22.897 ERROR assignment1.Main : error Couldnt load window
+13:37:30.603 INFO  assignment1.Main : Creating connection
+13:37:34.688 INFO  assignment1.Main : Creating connection
+13:37:37.109 INFO  Controller.AuthorListController : id is 0
+13:37:37.110 INFO  Controller.AuthorListController : id is 1
+13:37:37.110 INFO  Controller.AuthorListController : id is 2
+13:37:37.110 INFO  Controller.AuthorListController : id is 3
+13:37:37.110 INFO  Controller.AuthorListController : id is 4
+13:37:37.111 INFO  Controller.AuthorListController : id is 5
+13:37:37.111 INFO  Controller.AuthorListController : id is 6
+13:37:37.111 INFO  Controller.AuthorListController : id is 7
+13:37:37.112 INFO  Controller.AuthorListController : id is 8
+13:37:37.112 INFO  assignment1.UsefulFunctions : Swithching Views
+13:37:37.950 INFO  Controller.AuthorListController$1 : Double Clicked id is 0
+13:37:37.967 INFO  assignment1.UsefulFunctions : Swithching Views
+13:37:38.993 INFO  Controller.AuthorDetailViewController : clicked save
+13:37:39.007 INFO  Controller.AuthorDetailViewController : 2018-01-09
+13:37:40.605 INFO  Controller.AuthorDetailViewController : clicked save
+13:37:40.606 INFO  Controller.AuthorDetailViewController : 2018-01-09
+13:37:41.013 INFO  Controller.AuthorDetailViewController : clicked save
+13:37:41.014 INFO  Controller.AuthorDetailViewController : 2018-01-09
+13:37:41.269 INFO  Controller.AuthorDetailViewController : clicked save
+13:37:41.269 INFO  Controller.AuthorDetailViewController : 2018-01-09
+13:37:41.557 INFO  Controller.AuthorDetailViewController : clicked save
+13:37:41.557 INFO  Controller.AuthorDetailViewController : 2018-01-09
+13:37:42.758 ERROR assignment1.Main : error Couldnt load window
+14:06:20.357 INFO  assignment1.Main : Creating connection
+14:06:22.360 INFO  Controller.AuthorListController : id is 0
+14:06:22.361 INFO  Controller.AuthorListController : id is 1
+14:06:22.361 INFO  Controller.AuthorListController : id is 2
+14:06:22.362 INFO  Controller.AuthorListController : id is 3
+14:06:22.362 INFO  Controller.AuthorListController : id is 4
+14:06:22.362 INFO  Controller.AuthorListController : id is 5
+14:06:22.363 INFO  Controller.AuthorListController : id is 6
+14:06:22.363 INFO  Controller.AuthorListController : id is 7
+14:06:22.363 INFO  Controller.AuthorListController : id is 8
+14:06:22.364 INFO  assignment1.UsefulFunctions : Swithching Views
+14:06:23.429 INFO  Controller.AuthorListController$1 : Double Clicked id is 1
+14:06:23.447 INFO  assignment1.UsefulFunctions : Swithching Views
+14:06:28.400 INFO  Controller.AuthorDetailViewController : clicked save
+14:06:28.412 INFO  Controller.AuthorDetailViewController : 2018-01-03
+14:06:30.206 INFO  Controller.AuthorListController : id is 0
+14:06:30.206 INFO  Controller.AuthorListController : id is 1
+14:06:30.207 INFO  Controller.AuthorListController : id is 2
+14:06:30.207 INFO  Controller.AuthorListController : id is 3
+14:06:30.208 INFO  Controller.AuthorListController : id is 4
+14:06:30.208 INFO  Controller.AuthorListController : id is 5
+14:06:30.208 INFO  Controller.AuthorListController : id is 6
+14:06:30.208 INFO  Controller.AuthorListController : id is 7
+14:06:30.209 INFO  Controller.AuthorListController : id is 8
+14:06:30.209 INFO  assignment1.UsefulFunctions : Swithching Views
+14:06:33.577 INFO  Controller.AuthorListController$1 : Double Clicked id is 1
+14:06:33.585 INFO  assignment1.UsefulFunctions : Swithching Views
+14:06:35.752 ERROR assignment1.Main : error Couldnt load window

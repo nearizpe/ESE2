@@ -1,6 +1,9 @@
 package Model;
 
 import java.util.Date;
+
+import DataBase.AuthorTableGateway;
+
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -15,8 +18,18 @@ public class Author {
 	private SimpleObjectProperty<LocalDate> dateOfBirth;
 	private SimpleStringProperty gender;
 	private SimpleStringProperty webSite;
+	private AuthorTableGateway gateway;
 	
-	public Author(){
+	public AuthorTableGateway getGateway() {
+		return gateway;
+	}
+
+	public void setGateway(AuthorTableGateway gateway) {
+		this.gateway = gateway;
+	}
+
+	public Author(AuthorTableGateway gateway){
+		this.gateway = gateway;
 		//initialize
 		firstName = new SimpleStringProperty();
 	    lastName = new SimpleStringProperty();
@@ -108,5 +121,16 @@ public class Author {
 			return true;	
 		}
 		return false;
+	}
+	
+	public Author clone(Author a){
+		Author author = new Author(a.getGateway());
+		author.setFirstName(a.getFirstName().getValue());
+		author.setLastName(a.getLastName().getValue());
+		author.setGender(a.getGender().getValue());
+		author.setWebSite(a.getWebSite().getValue());
+		author.setDateOfBirth(a.getDateOfBirth().getValue());
+
+		return author;
 	}
 }

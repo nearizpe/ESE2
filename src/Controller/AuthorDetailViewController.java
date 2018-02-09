@@ -1,5 +1,11 @@
 package Controller;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.ZoneId;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -39,50 +45,80 @@ public class AuthorDetailViewController extends ViewController{
     	msg.setTitle("Error!");
     	msg.setHeaderText("Format Error");
     	
+    	Boolean valid = true;
+    	
     	if(!author.isValidFirstName(FirstName.getText())){
     		logger.error("Invalid First Name");
     		msg.setContentText("Invalid First Name");
     		msg.showAndWait();
+    		valid = false;
     	}
     	if(!author.isValidLastName(LastName.getText())){
     		logger.error("Invalid Last Name");
     		msg.setContentText("Invalid Last Name");
     		msg.showAndWait();
+    		valid = false;
     	}
     	if(!author.isValidDate(Birthday.getText())){
     		logger.error("Invalid Birthday");
     		msg.setContentText("Invalid Birthday");
     		msg.showAndWait();
+    		valid = false;
     	}
     	if(!author.isValidGender(Gender.getText())){
     		logger.error("Invalid Gender");
     		msg.setContentText("Invalid Gender");
     		msg.showAndWait();
+    		valid = false;
     	}
     	if(!author.isValidWebSite(Website.getText())){
     		logger.error("Invalid Website");
     		msg.setContentText("Invalid WebSite");
     		msg.showAndWait();
+    		valid = false;
     	}
     	if(!author.isValidId(author.getId())){
     		logger.error("Invalid Id");
     		msg.setContentText("Invalid Id");
     		msg.showAndWait();
+    		valid = false;
     	}
     	
-    	logger.info("clicked save");
+    	if (valid){
+    		logger.info("clicked save");
+    		author.setFirstName(this.FirstName.getText());
+    		author.setLastName(this.LastName.getText());
+    		author.setGender(this.Gender.getText());
+    		author.setWebSite(this.Website.getText());
+    		LocalDate date ;
+    		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+    		try {
+				date =  df.parse(this.Birthday.getText()).toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+	    		author.setDateOfBirth(date);
+	    		logger.info(date);
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    		
+    		author.getGateway().updateAuthor();
+    	}
+    	
     	
     }
     
     public AuthorDetailViewController(Author author){
-    	this.author = author;
+    	this.author.clone(author);
     }
     
     public void initialize() {
-    	this.FirstName.setText(author.getFirstName().getValue());
-    	this.LastName.setText(author.getLastName().getValue());
+    	//dogName.textProperty().bindBidirectional(dog.dogNameProperty());
+    	this.FirstName.textProperty().bindBidirectional(author.getFirstName());
+    	this.LastName.textProperty().bindBidirectional(author.getLastName());
+    	this.Gender.textProperty().bindBidirectional(author.getGender());
+    	this.Website.textProperty().bindBidirectional(author.getWebSite());
+
+    	//bind later
     	this.Birthday.setText(author.getDateOfBirth().getValue().toString());
-    	this.Gender.setText(author.getGender().getValue());
-    	this.Website.setText(author.getWebSite().getValue());
 	}
 }

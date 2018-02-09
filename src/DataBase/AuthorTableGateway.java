@@ -29,7 +29,7 @@ public class AuthorTableGateway {
 			stmt = conn.prepareStatement("Select * From AuthorDB");
 			rs = stmt.executeQuery();
 			while (rs.next()) {
-				Author temp = new Author();
+				Author temp = new Author(this);
 				temp.setId(rs.getInt("id"));
 				temp.setFirstName(rs.getString("first_name"));
 				temp.setLastName(rs.getString("last_name"));
@@ -62,6 +62,10 @@ public class AuthorTableGateway {
 			}
 		}
 		return authors;
+	}
+	
+	public void updateAuthor (){
+		
 	}
 	
 
