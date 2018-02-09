@@ -64,9 +64,25 @@ public class AuthorTableGateway {
 		return authors;
 	}
 	
-	public void updateAuthor (){
-		
+	public void updateAuthor (Author author) throws Exception{
+		PreparedStatement st = null;
+		try {
+			st = conn.prepareStatement("update dog set dog_name = ? where id = ?");//change database and add more updates for stuff like lastname
+			st.setString(1, author.getFirstName().getValue());
+			st.setInt(2,author.getId());
+			st.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new Exception(e);
+		} finally {
+			try {
+				if(st != null)
+					st.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+				throw new Exception(e);
+			}
+		}
 	}
 	
-
 }

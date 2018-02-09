@@ -101,7 +101,13 @@ public class AuthorDetailViewController extends ViewController{
 				e.printStackTrace();
 			}
     		
-    		author.getGateway().updateAuthor();
+    		try {
+				author.getGateway().updateAuthor(author);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				logger.error("couldnt update database");
+				e.printStackTrace();
+			}
     	}
     	
     	
