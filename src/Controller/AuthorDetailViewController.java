@@ -114,7 +114,7 @@ public class AuthorDetailViewController extends ViewController{
     }
     
     public AuthorDetailViewController(Author author){
-    	this.author.clone(author);
+    	this.author = author.clone(author);
     }
     
     public void initialize() {
@@ -125,6 +125,7 @@ public class AuthorDetailViewController extends ViewController{
     	this.Website.textProperty().bindBidirectional(author.getWebSite());
 
     	//bind later
+    	//this.Birthday.textProperty().bin
     	this.Birthday.setText(author.getDateOfBirth().getValue().toString());
 	}
 }
