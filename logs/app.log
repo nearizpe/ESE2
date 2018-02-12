@@ -1242,3 +1242,80 @@
 12:48:52.308 INFO  Controller.AuthorDetailViewController : 2018-01-03
 12:48:52.314 ERROR Controller.AuthorDetailViewController : couldnt update database
 12:48:59.829 ERROR assignment1.Main : error Couldnt load window
+13:02:29.316 INFO  assignment1.Main : Creating connection
+13:02:31.260 INFO  Controller.AuthorListController : id is 0
+13:02:31.260 INFO  Controller.AuthorListController : id is 1
+13:02:31.261 INFO  Controller.AuthorListController : id is 2
+13:02:31.261 INFO  Controller.AuthorListController : id is 3
+13:02:31.261 INFO  Controller.AuthorListController : id is 4
+13:02:31.261 INFO  Controller.AuthorListController : id is 5
+13:02:31.262 INFO  Controller.AuthorListController : id is 6
+13:02:31.262 INFO  Controller.AuthorListController : id is 7
+13:02:31.262 INFO  Controller.AuthorListController : id is 8
+13:02:31.263 INFO  assignment1.UsefulFunctions : Swithching Views
+13:02:31.917 INFO  Controller.AuthorListController$1 : Double Clicked id is 1
+13:02:31.918 INFO  Controller.AuthorListController : sda
+13:02:31.935 ERROR assignment1.UsefulFunctions : error couldnt switch view
+13:02:32.998 ERROR assignment1.Main : error Couldnt load window
+13:33:46.877 INFO  assignment1.Main : Creating connection
+13:33:48.992 INFO  Controller.AuthorListController : id is 0
+13:33:48.996 INFO  Controller.AuthorListController : id is 1
+13:33:48.997 INFO  Controller.AuthorListController : id is 2
+13:33:48.998 INFO  Controller.AuthorListController : id is 3
+13:33:48.998 INFO  Controller.AuthorListController : id is 4
+13:33:48.998 INFO  Controller.AuthorListController : id is 5
+13:33:48.999 INFO  Controller.AuthorListController : id is 6
+13:33:48.999 INFO  Controller.AuthorListController : id is 7
+13:33:48.999 INFO  Controller.AuthorListController : id is 8
+13:33:49.000 INFO  assignment1.UsefulFunctions : Swithching Views
+13:33:49.603 INFO  Controller.AuthorListController$1 : Double Clicked id is 1
+13:33:49.604 INFO  Controller.AuthorListController : sda
+13:33:49.621 INFO  assignment1.UsefulFunctions : Swithching Views
+13:33:50.408 ERROR assignment1.Main : error Couldnt load window
+13:36:11.307 INFO  assignment1.Main : Creating connection
+13:36:13.180 INFO  Controller.AuthorListController : id is 0
+13:36:13.181 INFO  Controller.AuthorListController : id is 1
+13:36:13.181 INFO  Controller.AuthorListController : id is 2
+13:36:13.181 INFO  Controller.AuthorListController : id is 3
+13:36:13.181 INFO  Controller.AuthorListController : id is 4
+13:36:13.182 INFO  Controller.AuthorListController : id is 5
+13:36:13.182 INFO  Controller.AuthorListController : id is 6
+13:36:13.182 INFO  Controller.AuthorListController : id is 7
+13:36:13.183 INFO  Controller.AuthorListController : id is 8
+13:36:13.183 INFO  assignment1.UsefulFunctions : Swithching Views
+13:36:14.078 INFO  Controller.AuthorListController$1 : Double Clicked id is 0
+13:36:14.079 INFO  Controller.AuthorListController : sda
+13:36:14.095 INFO  assignment1.UsefulFunctions : Swithching Views
+13:36:17.376 INFO  Controller.AuthorDetailViewController : clicked save
+13:36:17.387 INFO  Controller.AuthorDetailViewController : 2018-01-09
+13:36:19.012 INFO  Controller.AuthorListController : id is 0
+13:36:19.012 INFO  Controller.AuthorListController : id is 1
+13:36:19.013 INFO  Controller.AuthorListController : id is 2
+13:36:19.013 INFO  Controller.AuthorListController : id is 3
+13:36:19.013 INFO  Controller.AuthorListController : id is 4
+13:36:19.014 INFO  Controller.AuthorListController : id is 5
+13:36:19.014 INFO  Controller.AuthorListController : id is 6
+13:36:19.014 INFO  Controller.AuthorListController : id is 7
+13:36:19.014 INFO  Controller.AuthorListController : id is 8
+13:36:19.015 INFO  assignment1.UsefulFunctions : Swithching Views
+13:36:23.035 INFO  Controller.AuthorListController$1 : Double Clicked id is 0
+13:36:23.035 INFO  Controller.AuthorListController : sda
+13:36:23.044 INFO  assignment1.UsefulFunctions : Swithching Views
+13:36:28.050 ERROR Controller.AuthorDetailViewController : Invalid Gender
+13:36:33.781 ERROR Controller.AuthorDetailViewController : Invalid Gender
+13:36:41.467 ERROR Controller.AuthorDetailViewController : Invalid Gender
+13:36:47.056 INFO  Controller.AuthorDetailViewController : clicked save
+13:36:47.057 INFO  Controller.AuthorDetailViewController : 2018-01-09
+13:36:49.448 INFO  Controller.AuthorListController : id is 0
+13:36:49.448 INFO  Controller.AuthorListController : id is 1
+13:36:49.449 INFO  Controller.AuthorListController : id is 2
+13:36:49.449 INFO  Controller.AuthorListController : id is 3
+13:36:49.449 INFO  Controller.AuthorListController : id is 4
+13:36:49.449 INFO  Controller.AuthorListController : id is 5
+13:36:49.450 INFO  Controller.AuthorListController : id is 6
+13:36:49.450 INFO  Controller.AuthorListController : id is 7
+13:36:49.450 INFO  Controller.AuthorListController : id is 8
+13:36:49.451 INFO  assignment1.UsefulFunctions : Swithching Views
+13:36:50.883 INFO  Controller.AuthorListController$1 : Double Clicked id is 0
+13:36:50.884 INFO  Controller.AuthorListController : sda
+13:36:50.889 INFO  assignment1.UsefulFunctions : Swithching Views

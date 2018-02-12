@@ -16,6 +16,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.util.converter.LocalDateTimeStringConverter;
 
 public class AuthorDetailViewController extends ViewController{
 	
@@ -124,8 +125,9 @@ public class AuthorDetailViewController extends ViewController{
     	this.Gender.textProperty().bindBidirectional(author.getGender());
     	this.Website.textProperty().bindBidirectional(author.getWebSite());
 
-    	//this.Birthday.textProperty().bindBidirectional(article.dateTimeProperty(), new LocalDateTimeStringConverter())
     	//DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+
+    	//this.Birthday.textProperty().bindBidirectional(author.getDateOfBirth());
     	//this.Birthday.textProperty().bindBidirectional(author.getDateOfBirth());
     	this.Birthday.setText(author.getDateOfBirth().getValue().toString());
 	}
