@@ -1,11 +1,14 @@
 package DataBase;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+
 
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
@@ -66,10 +69,18 @@ public class AuthorTableGateway {
 	
 	public void updateAuthor (Author author) throws Exception{
 		PreparedStatement st = null;
+		java.util.Date rdob = null;
+		java.sql.Date newD = null;
 		try {
-			st = conn.prepareStatement("update dog set dog_name = ? where id = ?");//change database and add more updates for stuff like lastname
+			st = conn.prepareStatement("update AuthorDB set first_name = ?,last_name = ?,dob = ?,gender = ?, Web_site = ? where id = ?");//change database and add more updates for stuff like lastname
 			st.setString(1, author.getFirstName().getValue());
-			st.setInt(2,author.getId());
+			st.setString(2, author.getLastName().getValue());
+			rdob = new SimpleDateFormat("yyyy-MM-dd").parse(author.getDateOfBirth().getValue().toString());
+			newD = new Date(rdob.getTime());
+			st.setDate(3, newD);
+			st.setString(4, author.getGender().getValue());
+			st.setString(5, author.getWebSite().getValue());
+			st.setInt(6,author.getId());
 			st.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();

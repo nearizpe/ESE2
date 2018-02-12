@@ -127,6 +127,6 @@ public class AuthorDetailViewController extends ViewController{
     	//this.Birthday.textProperty().bindBidirectional(article.dateTimeProperty(), new LocalDateTimeStringConverter())
     	//DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
     	//this.Birthday.textProperty().bindBidirectional(author.getDateOfBirth());
-    	//this.Birthday.setText(author.getDateOfBirth().getValue().toString());
+    	this.Birthday.setText(author.getDateOfBirth().getValue().toString());
 	}
 }
