@@ -2109,3 +2109,138 @@
 15:32:05.364 INFO  Controller.AuthorDetailViewController : clicked save
 15:32:05.364 INFO  Controller.AuthorDetailViewController : yyyy-MM-dd
 15:32:05.365 INFO  Controller.AuthorDetailViewController : 2018-02-05
+15:38:06.703 INFO  assignment1.Main : Creating connection
+15:38:08.708 ERROR assignment1.Main : error Couldnt load window
+15:38:15.099 INFO  assignment1.Main : Creating connection
+15:38:18.322 ERROR assignment1.Main : error Couldnt load window
+15:38:19.601 ERROR assignment1.Main : error Couldnt load window
+15:38:23.004 INFO  Controller.AuthorListController : id is 0
+15:38:23.005 INFO  Controller.AuthorListController : id is 1
+15:38:23.005 INFO  Controller.AuthorListController : id is 2
+15:38:23.005 INFO  Controller.AuthorListController : id is 3
+15:38:23.006 INFO  Controller.AuthorListController : id is 4
+15:38:23.006 INFO  Controller.AuthorListController : id is 5
+15:38:23.006 INFO  Controller.AuthorListController : id is 6
+15:38:23.007 INFO  Controller.AuthorListController : id is 7
+15:38:23.007 INFO  Controller.AuthorListController : id is 8
+15:38:23.007 INFO  assignment1.UsefulFunctions : Swithching Views
+15:38:24.040 INFO  Controller.AuthorListController$1 : Double Clicked id is 1
+15:38:24.067 INFO  assignment1.UsefulFunctions : Swithching Views
+15:38:25.947 INFO  Controller.AuthorDetailViewController : clicked save
+15:38:25.948 INFO  Controller.AuthorDetailViewController : yyyy-MM-dd
+15:38:25.948 INFO  Controller.AuthorDetailViewController : 2018-01-03
+15:38:32.565 INFO  assignment1.UsefulFunctions : Swithching Views
+15:38:33.654 ERROR Controller.AuthorDetailViewController : Invalid First Name
+15:38:34.629 ERROR Controller.AuthorDetailViewController : Invalid Last Name
+15:38:35.074 ERROR Controller.AuthorDetailViewController : Invalid Birthday
+15:38:35.281 ERROR Controller.AuthorDetailViewController : Invalid Gender
+15:38:35.475 ERROR Controller.AuthorDetailViewController : Invalid Website
+15:38:45.705 INFO  Controller.AuthorDetailViewController : clicked save
+15:38:45.706 INFO  Controller.AuthorDetailViewController : yyyy-MM-dd
+15:38:45.706 INFO  Controller.AuthorDetailViewController : 2018-02-01
+15:38:49.251 ERROR assignment1.Main : error Couldnt load window
+15:40:05.485 INFO  assignment1.Main : Creating connection
+15:40:08.493 INFO  assignment1.UsefulFunctions : Swithching Views
+15:40:17.154 INFO  Controller.AuthorDetailViewController : clicked save
+15:40:17.155 INFO  Controller.AuthorDetailViewController : yyyy-MM-dd
+15:40:17.155 INFO  Controller.AuthorDetailViewController : 2018-01-31
+15:40:21.397 ERROR assignment1.Main : error Couldnt load window
+15:47:05.521 INFO  assignment1.Main : Creating connection
+15:47:08.286 INFO  assignment1.UsefulFunctions : Swithching Views
+15:47:46.464 INFO  Controller.AuthorDetailViewController : clicked save
+15:47:46.464 INFO  Controller.AuthorDetailViewController : yyyy-MM-dd
+15:47:46.465 INFO  Controller.AuthorDetailViewController : 2017-12-25
+15:47:46.475 ERROR Controller.AuthorDetailViewController : couldnt update database
+15:48:36.325 ERROR assignment1.Main : error Couldnt load window
+15:48:38.415 INFO  assignment1.Main : Creating connection
+15:48:41.497 INFO  Controller.AuthorListController : id is 0
+15:48:41.498 INFO  Controller.AuthorListController : id is 1
+15:48:41.498 INFO  Controller.AuthorListController : id is 2
+15:48:41.498 INFO  Controller.AuthorListController : id is 3
+15:48:41.499 INFO  Controller.AuthorListController : id is 4
+15:48:41.499 INFO  Controller.AuthorListController : id is 5
+15:48:41.499 INFO  Controller.AuthorListController : id is 6
+15:48:41.500 INFO  Controller.AuthorListController : id is 7
+15:48:41.500 INFO  Controller.AuthorListController : id is 8
+15:48:41.500 INFO  assignment1.UsefulFunctions : Swithching Views
+15:48:43.442 INFO  assignment1.UsefulFunctions : Swithching Views
+15:49:02.120 INFO  Controller.AuthorDetailViewController : clicked save
+15:49:02.121 INFO  Controller.AuthorDetailViewController : yyyy-MM-dd
+15:49:02.121 INFO  Controller.AuthorDetailViewController : 2018-01-25
+15:49:02.127 ERROR Controller.AuthorDetailViewController : couldnt update database
+15:51:00.268 INFO  assignment1.Main : Creating connection
+15:51:02.933 INFO  assignment1.UsefulFunctions : Swithching Views
+15:51:22.605 INFO  Controller.AuthorDetailViewController : clicked save
+15:51:22.605 INFO  Controller.AuthorDetailViewController : yyyy-MM-dd
+15:51:22.606 INFO  Controller.AuthorDetailViewController : 2018-01-25
+15:51:22.621 ERROR Controller.AuthorDetailViewController : couldnt update database
+15:51:24.817 ERROR assignment1.Main : error Couldnt load window
+15:51:25.807 ERROR assignment1.Main : error Couldnt load window
+15:57:55.434 INFO  assignment1.Main : Creating connection
+15:57:59.026 INFO  Controller.AuthorListController : id is 0
+15:57:59.027 INFO  Controller.AuthorListController : id is 1
+15:57:59.027 INFO  Controller.AuthorListController : id is 2
+15:57:59.027 INFO  Controller.AuthorListController : id is 3
+15:57:59.028 INFO  Controller.AuthorListController : id is 4
+15:57:59.028 INFO  Controller.AuthorListController : id is 5
+15:57:59.028 INFO  Controller.AuthorListController : id is 6
+15:57:59.029 INFO  Controller.AuthorListController : id is 7
+15:57:59.029 INFO  Controller.AuthorListController : id is 8
+15:57:59.029 INFO  assignment1.UsefulFunctions : Swithching Views
+15:58:01.527 INFO  assignment1.UsefulFunctions : Swithching Views
+15:58:12.317 INFO  Controller.AuthorDetailViewController : clicked save
+15:58:12.317 INFO  Controller.AuthorDetailViewController : yyyy-MM-dd
+15:58:12.318 INFO  Controller.AuthorDetailViewController : 2018-02-04
+15:58:12.326 ERROR Controller.AuthorDetailViewController : couldnt update database
+15:58:14.215 ERROR assignment1.Main : error Couldnt load window
+15:58:53.119 INFO  assignment1.Main : Creating connection
+15:58:57.126 INFO  Controller.AuthorListController : id is 0
+15:58:57.127 INFO  Controller.AuthorListController : id is 1
+15:58:57.127 INFO  Controller.AuthorListController : id is 2
+15:58:57.127 INFO  Controller.AuthorListController : id is 3
+15:58:57.128 INFO  Controller.AuthorListController : id is 4
+15:58:57.128 INFO  Controller.AuthorListController : id is 5
+15:58:57.128 INFO  Controller.AuthorListController : id is 6
+15:58:57.128 INFO  Controller.AuthorListController : id is 7
+15:58:57.129 INFO  Controller.AuthorListController : id is 8
+15:58:57.129 INFO  assignment1.UsefulFunctions : Swithching Views
+15:58:59.018 INFO  assignment1.UsefulFunctions : Swithching Views
+15:59:19.857 INFO  Controller.AuthorDetailViewController : clicked save
+15:59:19.857 INFO  Controller.AuthorDetailViewController : yyyy-MM-dd
+15:59:19.858 INFO  Controller.AuthorDetailViewController : 2017-12-25
+15:59:33.841 INFO  Controller.AuthorListController : id is 0
+15:59:33.842 INFO  Controller.AuthorListController : id is 1
+15:59:33.842 INFO  Controller.AuthorListController : id is 2
+15:59:33.842 INFO  Controller.AuthorListController : id is 3
+15:59:33.843 INFO  Controller.AuthorListController : id is 4
+15:59:33.843 INFO  Controller.AuthorListController : id is 5
+15:59:33.844 INFO  Controller.AuthorListController : id is 6
+15:59:33.844 INFO  Controller.AuthorListController : id is 7
+15:59:33.844 INFO  Controller.AuthorListController : id is 8
+15:59:33.845 INFO  Controller.AuthorListController : id is 9
+15:59:33.845 INFO  assignment1.UsefulFunctions : Swithching Views
+15:59:40.274 INFO  assignment1.UsefulFunctions : Swithching Views
+15:59:51.548 INFO  Controller.AuthorDetailViewController : clicked save
+15:59:51.548 INFO  Controller.AuthorDetailViewController : yyyy-MM-dd
+15:59:51.549 INFO  Controller.AuthorDetailViewController : 2018-02-06
+15:59:52.154 INFO  Controller.AuthorDetailViewController : clicked save
+15:59:52.154 INFO  Controller.AuthorDetailViewController : yyyy-MM-dd
+15:59:52.155 INFO  Controller.AuthorDetailViewController : 2018-02-06
+15:59:52.834 INFO  Controller.AuthorDetailViewController : clicked save
+15:59:52.837 INFO  Controller.AuthorDetailViewController : yyyy-MM-dd
+15:59:52.837 INFO  Controller.AuthorDetailViewController : 2018-02-06
+15:59:54.733 INFO  Controller.AuthorListController : id is 0
+15:59:54.733 INFO  Controller.AuthorListController : id is 1
+15:59:54.734 INFO  Controller.AuthorListController : id is 2
+15:59:54.734 INFO  Controller.AuthorListController : id is 3
+15:59:54.734 INFO  Controller.AuthorListController : id is 4
+15:59:54.735 INFO  Controller.AuthorListController : id is 5
+15:59:54.735 INFO  Controller.AuthorListController : id is 6
+15:59:54.735 INFO  Controller.AuthorListController : id is 7
+15:59:54.735 INFO  Controller.AuthorListController : id is 8
+15:59:54.736 INFO  Controller.AuthorListController : id is 9
+15:59:54.736 INFO  Controller.AuthorListController : id is 10
+15:59:54.736 INFO  Controller.AuthorListController : id is 11
+15:59:54.737 INFO  Controller.AuthorListController : id is 12
+15:59:54.737 INFO  assignment1.UsefulFunctions : Swithching Views
+16:00:11.910 ERROR assignment1.Main : error Couldnt load window
