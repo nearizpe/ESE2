@@ -76,7 +76,7 @@ public class Author {
 	}
 	
 	public boolean isValidId(int id){
-		if(id > 0){
+		if(id >= 0){
 			return true;	
 		}
 		return false;
@@ -123,13 +123,14 @@ public class Author {
 		return false;
 	}
 	
-	public Author clone(Author a){
-		Author author = new Author(a.getGateway());
-		author.setFirstName(a.getFirstName().getValue());
-		author.setLastName(a.getLastName().getValue());
-		author.setGender(a.getGender().getValue());
-		author.setWebSite(a.getWebSite().getValue());
-		author.setDateOfBirth(a.getDateOfBirth().getValue());
+	public Author clone(){
+		Author author = new Author(this.getGateway());
+		author.setFirstName(this.getFirstName().getValue());
+		author.setLastName(this.getLastName().getValue());
+		author.setGender(this.getGender().getValue());
+		author.setWebSite(this.getWebSite().getValue());
+		author.setDateOfBirth(this.getDateOfBirth().getValue());
+		author.setId(id);
 
 		return author;
 	}

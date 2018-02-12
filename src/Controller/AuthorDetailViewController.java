@@ -114,7 +114,7 @@ public class AuthorDetailViewController extends ViewController{
     }
     
     public AuthorDetailViewController(Author author){
-    	this.author = author.clone(author);
+    	this.author = author.clone();
     }
     
     public void initialize() {
@@ -124,8 +124,9 @@ public class AuthorDetailViewController extends ViewController{
     	this.Gender.textProperty().bindBidirectional(author.getGender());
     	this.Website.textProperty().bindBidirectional(author.getWebSite());
 
-    	//bind later
-    	//this.Birthday.textProperty().bin
-    	this.Birthday.setText(author.getDateOfBirth().getValue().toString());
+    	//this.Birthday.textProperty().bindBidirectional(article.dateTimeProperty(), new LocalDateTimeStringConverter())
+    	//DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+    	//this.Birthday.textProperty().bindBidirectional(author.getDateOfBirth());
+    	//this.Birthday.setText(author.getDateOfBirth().getValue().toString());
 	}
 }
