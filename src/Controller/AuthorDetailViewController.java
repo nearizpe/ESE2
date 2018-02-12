@@ -14,6 +14,7 @@ import assignment1.Main;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.util.converter.LocalDateTimeStringConverter;
@@ -21,7 +22,7 @@ import javafx.util.converter.LocalDateTimeStringConverter;
 public class AuthorDetailViewController extends ViewController{
 	
 	private static Logger logger = LogManager.getLogger(Main.class);
-	
+	private final String dateFormat = "yyyy-MM-dd";
 	private Author author;
 
 	@FXML
@@ -31,7 +32,7 @@ public class AuthorDetailViewController extends ViewController{
     private TextField LastName;
 
     @FXML
-    private TextField Birthday;
+    private DatePicker Birthday;
 
     @FXML
     private TextField Gender;
@@ -60,7 +61,7 @@ public class AuthorDetailViewController extends ViewController{
     		msg.showAndWait();
     		valid = false;
     	}
-    	if(!author.isValidDate(Birthday.getText())){
+    	if(!author.isValidDate(Birthday)){
     		logger.error("Invalid Birthday");
     		msg.setContentText("Invalid Birthday");
     		msg.showAndWait();
@@ -92,15 +93,11 @@ public class AuthorDetailViewController extends ViewController{
     		author.setGender(this.Gender.getText());
     		author.setWebSite(this.Website.getText());
     		LocalDate date ;
-    		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-    		try {
-				date =  df.parse(this.Birthday.getText()).toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+    		logger.info(dateFormat);
+    		
+    			date = this.Birthday.getValue();
 	    		author.setDateOfBirth(date);
 	    		logger.info(date);
-			} catch (ParseException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
     		
     		try {
 				author.getGateway().updateAuthor(author);
@@ -124,11 +121,6 @@ public class AuthorDetailViewController extends ViewController{
     	this.LastName.textProperty().bindBidirectional(author.getLastName());
     	this.Gender.textProperty().bindBidirectional(author.getGender());
     	this.Website.textProperty().bindBidirectional(author.getWebSite());
-
-    	//DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-
-    	//this.Birthday.textProperty().bindBidirectional(author.getDateOfBirth());
-    	//this.Birthday.textProperty().bindBidirectional(author.getDateOfBirth());
-    	this.Birthday.setText(author.getDateOfBirth().getValue().toString());
+    	this.Birthday.valueProperty().bindBidirectional(author.getDateOfBirth());
 	}
 }

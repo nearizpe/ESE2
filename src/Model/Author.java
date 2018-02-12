@@ -10,8 +10,10 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.control.DatePicker;
 
 public class Author {
+	private final String dateFormat = "yyyy-MM-dd";
 	private int id;
 	private SimpleStringProperty firstName;
 	private SimpleStringProperty lastName;
@@ -82,44 +84,71 @@ public class Author {
 		return false;
 	}
 	public boolean isValidFirstName(String firstName){
-		if(firstName.length() > 0 && firstName.length() <= 100){
-			return true;	
+		try{
+			if(firstName.length() > 0 && firstName.length() <= 100){
+				return true;	
+			}
+		}
+		catch(Exception e){
+			
 		}
 		return false;
 	}
 	public boolean isValidLastName(String lastName){
-		if(lastName.length() > 0 && lastName.length() <= 100){
-			return true;	
+		try{
+			if(lastName.length() > 0 && lastName.length() <= 100){
+				return true;	
+			}
 		}
+		catch(Exception e){
+			
+		}
+
 		return false;
 	}
-	public boolean isValidDate(String dob){
-		Date newdob;
-		Date current = new Date();
-		DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-		try {
-			newdob = df.parse(dob);
-			if(newdob.before(current)){
-				return true;
-			}else{
+	public boolean isValidDate(DatePicker dob){
+		try{
+			Date newdob;
+			Date current = new Date();
+			DateFormat df = new SimpleDateFormat(dateFormat);
+			try {
+				newdob = df.parse(dob.getValue().toString());
+				if (newdob.before(current)) {
+					return true;
+				} else {
+					return false;
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
 				return false;
-			}	
-		}catch(ParseException e){
-			e.printStackTrace();
+			}
+		}
+		catch(Exception e){
+			
 		}
 		return false;
 	}
 	public boolean isValidGender(String gender){
-		gender.toLowerCase();
-		if(gender.equals("male") || gender.equals("female") || gender.equals("unknown")){
-			return true;	
+		try {
+			gender.toLowerCase();
+			if(gender.equals("male") || gender.equals("female") || gender.equals("unknown")){
+				return true;	
+			}
 		}
+		catch(Exception e){
+		}
+
 		return false;
 	}
 	public boolean isValidWebSite(String url){
-		if(url.length() <= 100){
-			return true;	
+		try {
+			if(url.length() <= 100){
+				return true;	
+			}
 		}
+		catch(Exception e){
+		}
+
 		return false;
 	}
 	

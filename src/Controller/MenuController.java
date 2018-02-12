@@ -27,6 +27,8 @@ public class MenuController extends ViewController {
 	private static Logger logger = LogManager.getLogger();
 
 	
+	@FXML
+	private MenuItem AddAuthorMenuItem;
 	
     @FXML
     private MenuItem AuthorListMenuItem;
@@ -40,13 +42,20 @@ public class MenuController extends ViewController {
     @FXML
     void MenuHandler(ActionEvent event) {
     	try {
+    		AuthorTableGateway authorGateWay = new AuthorTableGateway(conn);
+    		
         	if(event.getSource() == closeMenuItem){
             	System.exit(0);
         	}
-        	else{
-        		AuthorTableGateway authors = new AuthorTableGateway(conn);
+        	else if(event.getSource() == AddAuthorMenuItem){
+        		Author author = new Author(authorGateWay);
+        		AuthorDetailViewController detailViewController = new AuthorDetailViewController(author);
         		UsefulFunctions functions = UsefulFunctions.getInstance();
-        		AuthorListController controller = new AuthorListController(authors.getAuthors());
+        		functions.SwitchView(this, detailViewController,"/View/AuthorDetailView.fxml");
+        	}
+        	else{
+        		UsefulFunctions functions = UsefulFunctions.getInstance();
+        		AuthorListController controller = new AuthorListController(authorGateWay.getAuthors());
         		functions.SwitchView(this,controller,"/View/AuthorListView.fxml");
 
         	}

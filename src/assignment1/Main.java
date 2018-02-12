@@ -25,6 +25,7 @@ public class Main extends Application {
 	public void stop() throws Exception {
 		logger.error("error Couldnt load window");
 		super.stop();
+		conn.close();
 	}
 
 	@Override

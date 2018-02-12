@@ -15,7 +15,7 @@ import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import Model.Author;
 
 public class AuthorTableGateway {
-	
+	private final String dateFormat = "yyyy-MM-dd";
 	private Connection conn;
 	
 	public AuthorTableGateway(Connection conn){
@@ -71,19 +71,22 @@ public class AuthorTableGateway {
 		PreparedStatement st = null;
 		java.util.Date rdob = null;
 		java.sql.Date newD = null;
+		
 		try {
+			System.out.println("WDWADASSADSASDA "+author.getId());
 			st = conn.prepareStatement("update AuthorDB set first_name = ?,last_name = ?,dob = ?,gender = ?, Web_site = ? where id = ?");//change database and add more updates for stuff like lastname
 			st.setString(1, author.getFirstName().getValue());
 			st.setString(2, author.getLastName().getValue());
-			rdob = new SimpleDateFormat("yyyy-MM-dd").parse(author.getDateOfBirth().getValue().toString());
+			rdob = new SimpleDateFormat(dateFormat).parse(author.getDateOfBirth().getValue().toString());
 			newD = new Date(rdob.getTime());
 			st.setDate(3, newD);
 			st.setString(4, author.getGender().getValue());
 			st.setString(5, author.getWebSite().getValue());
 			st.setInt(6,author.getId());
 			st.executeUpdate();
+			
 		} catch (SQLException e) {
-			e.printStackTrace();
+			e.printStackTrace();		
 			throw new Exception(e);
 		} finally {
 			try {

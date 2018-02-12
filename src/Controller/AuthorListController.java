@@ -74,7 +74,6 @@ public class AuthorListController extends ViewController{
 	
 	private void changeView(int id){
 		AuthorDetailViewController detailViewController = new AuthorDetailViewController(authors.get(id));
-		logger.info("sda");
 		UsefulFunctions functions = UsefulFunctions.getInstance();
 		functions.SwitchView(this, detailViewController,"/View/AuthorDetailView.fxml");
 	}

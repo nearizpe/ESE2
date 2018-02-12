@@ -5,11 +5,16 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 
-<MenuBar xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+<MenuBar xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <menus>
       <Menu mnemonicParsing="false" text="Menu">
          <items>
-            <MenuItem fx:id="AuthorListMenuItem" mnemonicParsing="false" onAction="#MenuHandler" text="Author List" />
+            <Menu mnemonicParsing="false" text="Authors">
+              <items>
+                  <MenuItem fx:id="AuthorListMenuItem" mnemonicParsing="false" onAction="#MenuHandler" text="Author List" />
+                  <MenuItem fx:id="AddAuthorMenuItem" mnemonicParsing="false" onAction="#MenuHandler" text="Add Author" />
+              </items>
+            </Menu>
             <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" onAction="#MenuHandler" text="Close" />
          </items>
       </Menu>
