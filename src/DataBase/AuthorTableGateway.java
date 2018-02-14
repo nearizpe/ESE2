@@ -67,16 +67,14 @@ public class AuthorTableGateway {
 		return authors;
 	}
 	
-	public void updateAuthor (Author author) throws Exception{
+	public void updateAuthor(Author author) throws Exception {
 		PreparedStatement st = null;
 		java.util.Date rdob = null;
 		java.sql.Date newD = null;
-		
-		
-		
-		if(author.getId()==0){
-			st = conn.prepareStatement("insert into AuthorDB (first_name, last_name, dob, gender, web_site) "
-					+ "values (?, ?, ?, ?, ?)");
+
+		if (author.getId() == 0) {
+			st = conn.prepareStatement(
+					"insert into AuthorDB (first_name, last_name, dob, gender, web_site) " + "values (?, ?, ?, ?, ?)");
 			st.setString(1, author.getFirstName().getValue());
 			st.setString(2, author.getLastName().getValue());
 			rdob = new SimpleDateFormat(dateFormat).parse(author.getDateOfBirth().getValue().toString());
@@ -86,11 +84,20 @@ public class AuthorTableGateway {
 			st.setString(5, author.getWebSite().getValue());
 			st.executeUpdate();
 			System.out.println("Clicked save in add");
-		}
-		else{
+		} else {
 			try {
-				System.out.println("WDWADASSADSASDA "+author.getId());
-				st = conn.prepareStatement("update AuthorDB set first_name = ?,last_name = ?,dob = ?,gender = ?, Web_site = ? where id = ?");//change database and add more updates for stuff like lastname
+				System.out.println("WDWADASSADSASDA " + author.getId());
+				st = conn.prepareStatement(
+						"update AuthorDB set first_name = ?,last_name = ?,dob = ?,gender = ?, Web_site = ? where id = ?");// change
+																															// database
+																															// and
+																															// add
+																															// more
+																															// updates
+																															// for
+																															// stuff
+																															// like
+																															// lastname
 				st.setString(1, author.getFirstName().getValue());
 				st.setString(2, author.getLastName().getValue());
 				rdob = new SimpleDateFormat(dateFormat).parse(author.getDateOfBirth().getValue().toString());
@@ -98,15 +105,15 @@ public class AuthorTableGateway {
 				st.setDate(3, newD);
 				st.setString(4, author.getGender().getValue());
 				st.setString(5, author.getWebSite().getValue());
-				st.setInt(6,author.getId());
+				st.setInt(6, author.getId());
 				st.executeUpdate();
-				
+
 			} catch (SQLException e) {
-				e.printStackTrace();		
+				e.printStackTrace();
 				throw new Exception(e);
 			} finally {
 				try {
-					if(st != null)
+					if (st != null)
 						st.close();
 				} catch (SQLException e) {
 					e.printStackTrace();
@@ -114,8 +121,16 @@ public class AuthorTableGateway {
 				}
 			}
 		}
-		
-		
 	}
-	
+	public void deleteAuthor (Author author) throws Exception{
+		PreparedStatement st = null;
+		try{
+		st = conn.prepareStatement("delete from AuthorDB where id = ?");
+		st.setInt(1, author.getId());
+		st.executeQuery();
+		}catch(SQLException e){
+			e.printStackTrace();
+			throw new Exception(e);
+		}
+	}
 }

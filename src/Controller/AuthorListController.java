@@ -30,6 +30,7 @@ public class AuthorListController extends ViewController{
 	private static Logger logger = LogManager.getLogger(Main.class);
 	private ObservableList<Button> buttons = FXCollections.observableArrayList();
 	private ArrayList<Author> authors;
+	private int deleteKey = -1;
 
 	@FXML
     private TextField SelectedAuthor;
@@ -48,9 +49,20 @@ public class AuthorListController extends ViewController{
 	
 
     @FXML
-    void DeleteHandler(ActionEvent event) {
-    	logger.info("delete");
-    }
+	void DeleteHandler(ActionEvent event) {
+		logger.info("delete clicked");
+		if (deleteKey >= 0) {
+			logger.info("Proper Delete Execution");
+			try{
+				authors.get(deleteKey).getGateway().deleteAuthor(authors.get(deleteKey));
+			}catch(Exception e){
+				e.printStackTrace();
+				logger.error("Could not delete author");
+			}
+		} else {
+			logger.info("No author set to Delete");
+		}
+	}
 	
 	@FXML
 	void ListClick(MouseEvent event) {
@@ -78,6 +90,13 @@ public class AuthorListController extends ViewController{
 					String id = btn.getId();
 					logger.info("Double Clicked id is " + id);
 					changeView(Integer.valueOf(id));
+				}else if(event.getClickCount() == 1){
+					logger.info("Single Click");
+					Button btn = (Button) event.getSource();
+					String id = btn.getId();
+					SelectedAuthor.setText(authors.get(Integer.parseInt(id)).getLastName().getValue());
+					deleteKey = authors.get(Integer.parseInt(id)).getId();
+					System.out.println("~~~~~~"+deleteKey);
 				}
 			} catch (Exception e) {
 				// TODO: handle exception
