@@ -51,10 +51,15 @@ public class AuthorListController extends ViewController{
     @FXML
 	void DeleteHandler(ActionEvent event) {
 		logger.info("delete clicked");
-		if (deleteKey >= 0) {
+		if (deleteKey > 0) {
 			logger.info("Proper Delete Execution");
 			try{
 				authors.get(deleteKey).getGateway().deleteAuthor(authors.get(deleteKey));
+				/*logger.info("HERE");
+				authors.remove(authors.get(deleteKey));
+				UsefulFunctions functions = UsefulFunctions.getInstance();
+				AuthorListController newListCntrl = new AuthorListController(authors);
+				functions.SwitchView(this, newListCntrl, "/View/AuthorListView.fxml");	*/	
 			}catch(Exception e){
 				e.printStackTrace();
 				logger.error("Could not delete author");
@@ -66,17 +71,16 @@ public class AuthorListController extends ViewController{
 	
 	@FXML
 	void ListClick(MouseEvent event) {
-		try {
+		/*try {
 			if (event.getClickCount() > 1) {
 				logger.info("Double Clicked");
 				UsefulFunctions functions = UsefulFunctions.getInstance();
-				//Author temp = authors;
 				AuthorDetailViewController detailViewController = new AuthorDetailViewController(authors.get(1));
 				functions.SwitchView(this, detailViewController, "/View/fxml");
 			}
 		} catch (Exception e) {
 			logger.error("couldnt find files");
-		}
+		}*/
 	}
 
 	

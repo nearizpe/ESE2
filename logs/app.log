@@ -2606,3 +2606,392 @@
 14:04:08.771 INFO  Controller.AuthorListController : id is 12
 14:04:08.771 INFO  assignment1.UsefulFunctions : Swithching Views
 14:04:30.553 ERROR assignment1.Main : error Couldnt load window
+16:40:05.185 INFO  assignment1.Main : Creating connection
+16:40:08.199 INFO  Controller.AuthorListController : id is 0
+16:40:08.200 INFO  Controller.AuthorListController : id is 1
+16:40:08.200 INFO  Controller.AuthorListController : id is 2
+16:40:08.200 INFO  Controller.AuthorListController : id is 3
+16:40:08.201 INFO  Controller.AuthorListController : id is 4
+16:40:08.201 INFO  Controller.AuthorListController : id is 5
+16:40:08.201 INFO  Controller.AuthorListController : id is 6
+16:40:08.201 INFO  Controller.AuthorListController : id is 7
+16:40:08.202 INFO  Controller.AuthorListController : id is 8
+16:40:08.202 INFO  Controller.AuthorListController : id is 9
+16:40:08.202 INFO  Controller.AuthorListController : id is 10
+16:40:08.203 INFO  Controller.AuthorListController : id is 11
+16:40:08.203 INFO  Controller.AuthorListController : id is 12
+16:40:08.203 INFO  assignment1.UsefulFunctions : Swithching Views
+16:40:10.915 INFO  Controller.AuthorListController$1 : Single Click
+16:40:15.737 INFO  Controller.AuthorListController$1 : Single Click
+16:40:20.493 INFO  Controller.AuthorListController$1 : Single Click
+16:40:21.440 INFO  Controller.AuthorListController : delete clicked
+16:40:21.441 INFO  Controller.AuthorListController : Proper Delete Execution
+16:40:21.447 ERROR Controller.AuthorListController : Could not delete author
+16:40:24.763 ERROR assignment1.Main : error Couldnt load window
+16:41:36.429 INFO  assignment1.Main : Creating connection
+16:41:38.626 INFO  Controller.AuthorListController : id is 0
+16:41:38.626 INFO  Controller.AuthorListController : id is 1
+16:41:38.627 INFO  Controller.AuthorListController : id is 2
+16:41:38.627 INFO  Controller.AuthorListController : id is 3
+16:41:38.627 INFO  Controller.AuthorListController : id is 4
+16:41:38.628 INFO  Controller.AuthorListController : id is 5
+16:41:38.628 INFO  Controller.AuthorListController : id is 6
+16:41:38.628 INFO  Controller.AuthorListController : id is 7
+16:41:38.628 INFO  Controller.AuthorListController : id is 8
+16:41:38.629 INFO  Controller.AuthorListController : id is 9
+16:41:38.629 INFO  Controller.AuthorListController : id is 10
+16:41:38.629 INFO  Controller.AuthorListController : id is 11
+16:41:38.630 INFO  Controller.AuthorListController : id is 12
+16:41:38.630 INFO  assignment1.UsefulFunctions : Swithching Views
+16:41:39.776 INFO  Controller.AuthorListController$1 : Single Click
+16:41:41.846 INFO  Controller.AuthorListController$1 : Single Click
+16:41:45.060 INFO  Controller.AuthorListController : delete clicked
+16:41:45.064 INFO  Controller.AuthorListController : Proper Delete Execution
+16:41:45.070 ERROR Controller.AuthorListController : Could not delete author
+16:41:46.724 ERROR assignment1.Main : error Couldnt load window
+16:42:13.089 INFO  assignment1.Main : Creating connection
+16:42:15.449 INFO  Controller.AuthorListController : id is 0
+16:42:15.450 INFO  Controller.AuthorListController : id is 1
+16:42:15.450 INFO  Controller.AuthorListController : id is 2
+16:42:15.450 INFO  Controller.AuthorListController : id is 3
+16:42:15.451 INFO  Controller.AuthorListController : id is 4
+16:42:15.451 INFO  Controller.AuthorListController : id is 5
+16:42:15.451 INFO  Controller.AuthorListController : id is 6
+16:42:15.452 INFO  Controller.AuthorListController : id is 7
+16:42:15.452 INFO  Controller.AuthorListController : id is 8
+16:42:15.452 INFO  Controller.AuthorListController : id is 9
+16:42:15.453 INFO  Controller.AuthorListController : id is 10
+16:42:15.453 INFO  Controller.AuthorListController : id is 11
+16:42:15.453 INFO  Controller.AuthorListController : id is 12
+16:42:15.454 INFO  assignment1.UsefulFunctions : Swithching Views
+16:42:17.460 INFO  Controller.AuthorListController$1 : Single Click
+16:42:18.193 INFO  Controller.AuthorListController : delete clicked
+16:42:18.194 INFO  Controller.AuthorListController : Proper Delete Execution
+16:42:18.199 ERROR Controller.AuthorListController : Could not delete author
+16:42:19.292 ERROR assignment1.Main : error Couldnt load window
+16:42:34.738 INFO  assignment1.Main : Creating connection
+16:42:36.872 INFO  Controller.AuthorListController : id is 0
+16:42:36.873 INFO  Controller.AuthorListController : id is 1
+16:42:36.873 INFO  Controller.AuthorListController : id is 2
+16:42:36.873 INFO  Controller.AuthorListController : id is 3
+16:42:36.874 INFO  Controller.AuthorListController : id is 4
+16:42:36.874 INFO  Controller.AuthorListController : id is 5
+16:42:36.874 INFO  Controller.AuthorListController : id is 6
+16:42:36.875 INFO  Controller.AuthorListController : id is 7
+16:42:36.875 INFO  Controller.AuthorListController : id is 8
+16:42:36.875 INFO  Controller.AuthorListController : id is 9
+16:42:36.876 INFO  Controller.AuthorListController : id is 10
+16:42:36.876 INFO  Controller.AuthorListController : id is 11
+16:42:36.876 INFO  Controller.AuthorListController : id is 12
+16:42:36.877 INFO  assignment1.UsefulFunctions : Swithching Views
+16:42:38.295 INFO  Controller.AuthorListController$1 : Single Click
+16:42:38.438 INFO  Controller.AuthorListController$1 : Double Clicked id is 1
+16:42:38.462 INFO  assignment1.UsefulFunctions : Swithching Views
+16:42:40.677 INFO  Controller.AuthorListController : id is 0
+16:42:40.677 INFO  Controller.AuthorListController : id is 1
+16:42:40.677 INFO  Controller.AuthorListController : id is 2
+16:42:40.678 INFO  Controller.AuthorListController : id is 3
+16:42:40.678 INFO  Controller.AuthorListController : id is 4
+16:42:40.678 INFO  Controller.AuthorListController : id is 5
+16:42:40.678 INFO  Controller.AuthorListController : id is 6
+16:42:40.679 INFO  Controller.AuthorListController : id is 7
+16:42:40.679 INFO  Controller.AuthorListController : id is 8
+16:42:40.679 INFO  Controller.AuthorListController : id is 9
+16:42:40.680 INFO  Controller.AuthorListController : id is 10
+16:42:40.680 INFO  Controller.AuthorListController : id is 11
+16:42:40.680 INFO  Controller.AuthorListController : id is 12
+16:42:40.681 INFO  assignment1.UsefulFunctions : Swithching Views
+16:42:42.130 INFO  Controller.AuthorListController$1 : Single Click
+16:42:42.936 INFO  Controller.AuthorListController : delete clicked
+16:42:42.936 INFO  Controller.AuthorListController : Proper Delete Execution
+16:42:42.942 ERROR Controller.AuthorListController : Could not delete author
+16:42:44.078 ERROR assignment1.Main : error Couldnt load window
+16:47:42.329 INFO  assignment1.Main : Creating connection
+16:47:44.515 INFO  Controller.AuthorListController : id is 0
+16:47:44.519 INFO  Controller.AuthorListController : id is 1
+16:47:44.519 INFO  Controller.AuthorListController : id is 2
+16:47:44.520 INFO  Controller.AuthorListController : id is 3
+16:47:44.520 INFO  Controller.AuthorListController : id is 4
+16:47:44.521 INFO  Controller.AuthorListController : id is 5
+16:47:44.521 INFO  Controller.AuthorListController : id is 6
+16:47:44.521 INFO  Controller.AuthorListController : id is 7
+16:47:44.521 INFO  Controller.AuthorListController : id is 8
+16:47:44.522 INFO  Controller.AuthorListController : id is 9
+16:47:44.522 INFO  Controller.AuthorListController : id is 10
+16:47:44.522 INFO  Controller.AuthorListController : id is 11
+16:47:44.523 INFO  Controller.AuthorListController : id is 12
+16:47:44.523 INFO  assignment1.UsefulFunctions : Swithching Views
+16:47:46.361 INFO  Controller.AuthorListController$1 : Single Click
+16:47:47.209 INFO  Controller.AuthorListController : delete clicked
+16:47:47.209 INFO  Controller.AuthorListController : Proper Delete Execution
+16:47:50.977 INFO  Controller.AuthorListController : id is 0
+16:47:50.978 INFO  Controller.AuthorListController : id is 1
+16:47:50.978 INFO  Controller.AuthorListController : id is 2
+16:47:50.979 INFO  Controller.AuthorListController : id is 3
+16:47:50.979 INFO  Controller.AuthorListController : id is 4
+16:47:50.979 INFO  Controller.AuthorListController : id is 5
+16:47:50.980 INFO  Controller.AuthorListController : id is 6
+16:47:50.980 INFO  Controller.AuthorListController : id is 7
+16:47:50.980 INFO  Controller.AuthorListController : id is 8
+16:47:50.980 INFO  Controller.AuthorListController : id is 9
+16:47:50.981 INFO  Controller.AuthorListController : id is 10
+16:47:50.981 INFO  Controller.AuthorListController : id is 11
+16:47:50.982 INFO  assignment1.UsefulFunctions : Swithching Views
+16:47:55.833 INFO  Controller.AuthorListController$1 : Single Click
+16:47:57.067 INFO  Controller.AuthorListController : delete clicked
+16:47:57.068 INFO  Controller.AuthorListController : Proper Delete Execution
+16:47:58.644 INFO  Controller.AuthorListController : id is 0
+16:47:58.645 INFO  Controller.AuthorListController : id is 1
+16:47:58.645 INFO  Controller.AuthorListController : id is 2
+16:47:58.645 INFO  Controller.AuthorListController : id is 3
+16:47:58.645 INFO  Controller.AuthorListController : id is 4
+16:47:58.646 INFO  Controller.AuthorListController : id is 5
+16:47:58.646 INFO  Controller.AuthorListController : id is 6
+16:47:58.646 INFO  Controller.AuthorListController : id is 7
+16:47:58.646 INFO  Controller.AuthorListController : id is 8
+16:47:58.647 INFO  Controller.AuthorListController : id is 9
+16:47:58.647 INFO  Controller.AuthorListController : id is 10
+16:47:58.648 INFO  assignment1.UsefulFunctions : Swithching Views
+16:48:04.650 ERROR assignment1.Main : error Couldnt load window
+16:52:35.040 INFO  assignment1.Main : Creating connection
+16:52:39.265 INFO  Controller.AuthorListController : id is 0
+16:52:39.266 INFO  Controller.AuthorListController : id is 1
+16:52:39.266 INFO  Controller.AuthorListController : id is 2
+16:52:39.266 INFO  Controller.AuthorListController : id is 3
+16:52:39.266 INFO  Controller.AuthorListController : id is 4
+16:52:39.267 INFO  Controller.AuthorListController : id is 5
+16:52:39.267 INFO  Controller.AuthorListController : id is 6
+16:52:39.267 INFO  Controller.AuthorListController : id is 7
+16:52:39.268 INFO  Controller.AuthorListController : id is 8
+16:52:39.268 INFO  Controller.AuthorListController : id is 9
+16:52:39.268 INFO  Controller.AuthorListController : id is 10
+16:52:39.269 INFO  assignment1.UsefulFunctions : Swithching Views
+16:52:41.364 INFO  Controller.AuthorListController$1 : Single Click
+16:52:42.426 INFO  Controller.AuthorListController : delete clicked
+16:52:42.429 INFO  Controller.AuthorListController : Proper Delete Execution
+16:52:42.432 ERROR Controller.AuthorListController : Could not delete author
+16:53:00.796 INFO  Controller.AuthorListController : id is 0
+16:53:00.797 INFO  Controller.AuthorListController : id is 1
+16:53:00.797 INFO  Controller.AuthorListController : id is 2
+16:53:00.798 INFO  Controller.AuthorListController : id is 3
+16:53:00.798 INFO  Controller.AuthorListController : id is 4
+16:53:00.798 INFO  Controller.AuthorListController : id is 5
+16:53:00.799 INFO  Controller.AuthorListController : id is 6
+16:53:00.799 INFO  Controller.AuthorListController : id is 7
+16:53:00.799 INFO  Controller.AuthorListController : id is 8
+16:53:00.799 INFO  Controller.AuthorListController : id is 9
+16:53:00.800 INFO  Controller.AuthorListController : id is 10
+16:53:00.800 INFO  assignment1.UsefulFunctions : Swithching Views
+16:53:03.261 INFO  Controller.AuthorListController$1 : Single Click
+16:53:03.985 INFO  Controller.AuthorListController : delete clicked
+16:53:03.985 INFO  Controller.AuthorListController : Proper Delete Execution
+16:53:03.988 ERROR Controller.AuthorListController : Could not delete author
+16:53:06.406 INFO  Controller.AuthorListController : id is 0
+16:53:06.406 INFO  Controller.AuthorListController : id is 1
+16:53:06.406 INFO  Controller.AuthorListController : id is 2
+16:53:06.407 INFO  Controller.AuthorListController : id is 3
+16:53:06.407 INFO  Controller.AuthorListController : id is 4
+16:53:06.407 INFO  Controller.AuthorListController : id is 5
+16:53:06.408 INFO  Controller.AuthorListController : id is 6
+16:53:06.408 INFO  Controller.AuthorListController : id is 7
+16:53:06.408 INFO  Controller.AuthorListController : id is 8
+16:53:06.408 INFO  Controller.AuthorListController : id is 9
+16:53:06.409 INFO  Controller.AuthorListController : id is 10
+16:53:06.409 INFO  assignment1.UsefulFunctions : Swithching Views
+16:53:08.324 ERROR assignment1.Main : error Couldnt load window
+16:55:14.611 INFO  assignment1.Main : Creating connection
+16:55:17.912 INFO  Controller.AuthorListController : id is 0
+16:55:17.913 INFO  Controller.AuthorListController : id is 1
+16:55:17.913 INFO  Controller.AuthorListController : id is 2
+16:55:17.914 INFO  Controller.AuthorListController : id is 3
+16:55:17.914 INFO  Controller.AuthorListController : id is 4
+16:55:17.914 INFO  Controller.AuthorListController : id is 5
+16:55:17.915 INFO  Controller.AuthorListController : id is 6
+16:55:17.915 INFO  Controller.AuthorListController : id is 7
+16:55:17.915 INFO  Controller.AuthorListController : id is 8
+16:55:17.916 INFO  Controller.AuthorListController : id is 9
+16:55:17.916 INFO  Controller.AuthorListController : id is 10
+16:55:17.916 INFO  assignment1.UsefulFunctions : Swithching Views
+16:55:19.819 INFO  Controller.AuthorListController$1 : Single Click
+16:55:20.664 INFO  Controller.AuthorListController : delete clicked
+16:55:20.667 INFO  Controller.AuthorListController : Proper Delete Execution
+16:55:20.669 ERROR Controller.AuthorListController : Could not delete author
+16:55:33.070 ERROR assignment1.Main : error Couldnt load window
+16:57:58.520 INFO  assignment1.Main : Creating connection
+17:09:24.680 INFO  Controller.AuthorListController : id is 0
+17:09:24.680 INFO  Controller.AuthorListController : id is 1
+17:09:24.681 INFO  Controller.AuthorListController : id is 2
+17:09:24.681 INFO  Controller.AuthorListController : id is 3
+17:09:24.681 INFO  Controller.AuthorListController : id is 4
+17:09:24.682 INFO  Controller.AuthorListController : id is 5
+17:09:24.682 INFO  Controller.AuthorListController : id is 6
+17:09:24.682 INFO  Controller.AuthorListController : id is 7
+17:09:24.683 INFO  Controller.AuthorListController : id is 8
+17:09:24.683 INFO  Controller.AuthorListController : id is 9
+17:09:24.683 INFO  Controller.AuthorListController : id is 10
+17:09:24.684 INFO  assignment1.UsefulFunctions : Swithching Views
+17:09:27.573 INFO  Controller.AuthorListController$1 : Single Click
+17:09:27.733 INFO  Controller.AuthorListController$1 : Double Clicked id is 0
+17:09:27.751 INFO  assignment1.UsefulFunctions : Swithching Views
+17:09:29.889 INFO  Controller.AuthorListController : id is 0
+17:09:29.890 INFO  Controller.AuthorListController : id is 1
+17:09:29.890 INFO  Controller.AuthorListController : id is 2
+17:09:29.891 INFO  Controller.AuthorListController : id is 3
+17:09:29.891 INFO  Controller.AuthorListController : id is 4
+17:09:29.891 INFO  Controller.AuthorListController : id is 5
+17:09:29.891 INFO  Controller.AuthorListController : id is 6
+17:09:29.892 INFO  Controller.AuthorListController : id is 7
+17:09:29.892 INFO  Controller.AuthorListController : id is 8
+17:09:29.892 INFO  Controller.AuthorListController : id is 9
+17:09:29.892 INFO  Controller.AuthorListController : id is 10
+17:09:29.893 INFO  assignment1.UsefulFunctions : Swithching Views
+17:09:31.091 INFO  Controller.AuthorListController$1 : Single Click
+17:09:31.874 INFO  Controller.AuthorListController : delete clicked
+17:09:31.875 INFO  Controller.AuthorListController : Proper Delete Execution
+17:09:31.877 ERROR Controller.AuthorListController : Could not delete author
+17:09:34.534 INFO  Controller.AuthorListController : id is 0
+17:09:34.535 INFO  Controller.AuthorListController : id is 1
+17:09:34.535 INFO  Controller.AuthorListController : id is 2
+17:09:34.535 INFO  Controller.AuthorListController : id is 3
+17:09:34.535 INFO  Controller.AuthorListController : id is 4
+17:09:34.536 INFO  Controller.AuthorListController : id is 5
+17:09:34.536 INFO  Controller.AuthorListController : id is 6
+17:09:34.536 INFO  Controller.AuthorListController : id is 7
+17:09:34.536 INFO  Controller.AuthorListController : id is 8
+17:09:34.537 INFO  Controller.AuthorListController : id is 9
+17:09:34.537 INFO  Controller.AuthorListController : id is 10
+17:09:34.538 INFO  assignment1.UsefulFunctions : Swithching Views
+17:09:36.337 ERROR assignment1.Main : error Couldnt load window
+17:11:58.561 INFO  assignment1.Main : Creating connection
+17:12:00.964 INFO  Controller.AuthorListController : id is 0
+17:12:00.965 INFO  Controller.AuthorListController : id is 1
+17:12:00.965 INFO  Controller.AuthorListController : id is 2
+17:12:00.966 INFO  Controller.AuthorListController : id is 3
+17:12:00.966 INFO  Controller.AuthorListController : id is 4
+17:12:00.966 INFO  Controller.AuthorListController : id is 5
+17:12:00.967 INFO  Controller.AuthorListController : id is 6
+17:12:00.967 INFO  Controller.AuthorListController : id is 7
+17:12:00.967 INFO  Controller.AuthorListController : id is 8
+17:12:00.968 INFO  Controller.AuthorListController : id is 9
+17:12:00.968 INFO  Controller.AuthorListController : id is 10
+17:12:00.968 INFO  assignment1.UsefulFunctions : Swithching Views
+17:12:02.754 INFO  Controller.AuthorListController$1 : Single Click
+17:12:03.370 INFO  Controller.AuthorListController : delete clicked
+17:12:03.374 INFO  Controller.AuthorListController : Proper Delete Execution
+17:12:03.376 ERROR Controller.AuthorListController : Could not delete author
+17:12:05.823 ERROR assignment1.Main : error Couldnt load window
+17:12:26.254 INFO  assignment1.Main : Creating connection
+17:12:28.350 INFO  Controller.AuthorListController : id is 0
+17:12:28.351 INFO  Controller.AuthorListController : id is 1
+17:12:28.351 INFO  Controller.AuthorListController : id is 2
+17:12:28.351 INFO  Controller.AuthorListController : id is 3
+17:12:28.352 INFO  Controller.AuthorListController : id is 4
+17:12:28.352 INFO  Controller.AuthorListController : id is 5
+17:12:28.352 INFO  Controller.AuthorListController : id is 6
+17:12:28.352 INFO  Controller.AuthorListController : id is 7
+17:12:28.353 INFO  Controller.AuthorListController : id is 8
+17:12:28.353 INFO  Controller.AuthorListController : id is 9
+17:12:28.353 INFO  Controller.AuthorListController : id is 10
+17:12:28.354 INFO  assignment1.UsefulFunctions : Swithching Views
+17:12:29.931 INFO  Controller.AuthorListController$1 : Single Click
+17:12:32.367 INFO  Controller.AuthorListController$1 : Single Click
+17:12:33.155 INFO  Controller.AuthorListController$1 : Single Click
+17:12:34.089 INFO  Controller.AuthorListController : delete clicked
+17:12:34.089 INFO  Controller.AuthorListController : Proper Delete Execution
+17:12:37.608 INFO  Controller.AuthorListController : id is 0
+17:12:37.608 INFO  Controller.AuthorListController : id is 1
+17:12:37.609 INFO  Controller.AuthorListController : id is 2
+17:12:37.609 INFO  Controller.AuthorListController : id is 3
+17:12:37.609 INFO  Controller.AuthorListController : id is 4
+17:12:37.610 INFO  Controller.AuthorListController : id is 5
+17:12:37.610 INFO  Controller.AuthorListController : id is 6
+17:12:37.610 INFO  Controller.AuthorListController : id is 7
+17:12:37.610 INFO  Controller.AuthorListController : id is 8
+17:12:37.611 INFO  Controller.AuthorListController : id is 9
+17:12:37.612 INFO  assignment1.UsefulFunctions : Swithching Views
+17:12:41.819 INFO  Controller.AuthorListController$1 : Single Click
+17:12:45.090 INFO  Controller.AuthorListController$1 : Single Click
+17:12:46.460 INFO  Controller.AuthorListController$1 : Single Click
+17:12:47.340 INFO  Controller.AuthorListController$1 : Single Click
+17:12:49.568 INFO  Controller.AuthorListController$1 : Single Click
+17:12:51.994 INFO  Controller.AuthorListController : delete clicked
+17:12:51.995 INFO  Controller.AuthorListController : Proper Delete Execution
+17:12:51.998 ERROR Controller.AuthorListController : Could not delete author
+17:12:58.615 INFO  Controller.AuthorListController : id is 0
+17:12:58.615 INFO  Controller.AuthorListController : id is 1
+17:12:58.616 INFO  Controller.AuthorListController : id is 2
+17:12:58.616 INFO  Controller.AuthorListController : id is 3
+17:12:58.616 INFO  Controller.AuthorListController : id is 4
+17:12:58.617 INFO  Controller.AuthorListController : id is 5
+17:12:58.617 INFO  Controller.AuthorListController : id is 6
+17:12:58.617 INFO  Controller.AuthorListController : id is 7
+17:12:58.617 INFO  Controller.AuthorListController : id is 8
+17:12:58.618 INFO  Controller.AuthorListController : id is 9
+17:12:58.618 INFO  assignment1.UsefulFunctions : Swithching Views
+17:13:03.284 INFO  Controller.AuthorListController$1 : Single Click
+17:13:05.467 INFO  Controller.AuthorListController : delete clicked
+17:13:05.467 INFO  Controller.AuthorListController : Proper Delete Execution
+17:13:08.296 INFO  Controller.AuthorListController : id is 0
+17:13:08.296 INFO  Controller.AuthorListController : id is 1
+17:13:08.297 INFO  Controller.AuthorListController : id is 2
+17:13:08.297 INFO  Controller.AuthorListController : id is 3
+17:13:08.297 INFO  Controller.AuthorListController : id is 4
+17:13:08.298 INFO  Controller.AuthorListController : id is 5
+17:13:08.298 INFO  Controller.AuthorListController : id is 6
+17:13:08.298 INFO  Controller.AuthorListController : id is 7
+17:13:08.298 INFO  Controller.AuthorListController : id is 8
+17:13:08.299 INFO  assignment1.UsefulFunctions : Swithching Views
+17:13:13.914 INFO  Controller.AuthorListController : id is 0
+17:13:13.914 INFO  Controller.AuthorListController : id is 1
+17:13:13.915 INFO  Controller.AuthorListController : id is 2
+17:13:13.915 INFO  Controller.AuthorListController : id is 3
+17:13:13.915 INFO  Controller.AuthorListController : id is 4
+17:13:13.916 INFO  Controller.AuthorListController : id is 5
+17:13:13.916 INFO  Controller.AuthorListController : id is 6
+17:13:13.916 INFO  Controller.AuthorListController : id is 7
+17:13:13.916 INFO  Controller.AuthorListController : id is 8
+17:13:13.917 INFO  assignment1.UsefulFunctions : Swithching Views
+17:13:18.528 INFO  Controller.AuthorListController : id is 0
+17:13:18.528 INFO  Controller.AuthorListController : id is 1
+17:13:18.528 INFO  Controller.AuthorListController : id is 2
+17:13:18.529 INFO  Controller.AuthorListController : id is 3
+17:13:18.529 INFO  Controller.AuthorListController : id is 4
+17:13:18.529 INFO  Controller.AuthorListController : id is 5
+17:13:18.529 INFO  Controller.AuthorListController : id is 6
+17:13:18.529 INFO  Controller.AuthorListController : id is 7
+17:13:18.530 INFO  Controller.AuthorListController : id is 8
+17:13:18.530 INFO  assignment1.UsefulFunctions : Swithching Views
+17:13:21.141 INFO  Controller.AuthorListController : id is 0
+17:13:21.142 INFO  Controller.AuthorListController : id is 1
+17:13:21.142 INFO  Controller.AuthorListController : id is 2
+17:13:21.142 INFO  Controller.AuthorListController : id is 3
+17:13:21.143 INFO  Controller.AuthorListController : id is 4
+17:13:21.143 INFO  Controller.AuthorListController : id is 5
+17:13:21.143 INFO  Controller.AuthorListController : id is 6
+17:13:21.143 INFO  Controller.AuthorListController : id is 7
+17:13:21.144 INFO  Controller.AuthorListController : id is 8
+17:13:21.144 INFO  assignment1.UsefulFunctions : Swithching Views
+17:13:23.483 INFO  Controller.AuthorListController : id is 0
+17:13:23.483 INFO  Controller.AuthorListController : id is 1
+17:13:23.483 INFO  Controller.AuthorListController : id is 2
+17:13:23.484 INFO  Controller.AuthorListController : id is 3
+17:13:23.484 INFO  Controller.AuthorListController : id is 4
+17:13:23.484 INFO  Controller.AuthorListController : id is 5
+17:13:23.484 INFO  Controller.AuthorListController : id is 6
+17:13:23.485 INFO  Controller.AuthorListController : id is 7
+17:13:23.485 INFO  Controller.AuthorListController : id is 8
+17:13:23.485 INFO  assignment1.UsefulFunctions : Swithching Views
+17:13:26.147 INFO  Controller.AuthorListController$1 : Single Click
+17:13:26.331 INFO  Controller.AuthorListController$1 : Double Clicked id is 8
+17:13:26.347 INFO  assignment1.UsefulFunctions : Swithching Views
+17:13:30.405 INFO  Controller.AuthorListController : id is 0
+17:13:30.405 INFO  Controller.AuthorListController : id is 1
+17:13:30.405 INFO  Controller.AuthorListController : id is 2
+17:13:30.406 INFO  Controller.AuthorListController : id is 3
+17:13:30.406 INFO  Controller.AuthorListController : id is 4
+17:13:30.406 INFO  Controller.AuthorListController : id is 5
+17:13:30.406 INFO  Controller.AuthorListController : id is 6
+17:13:30.407 INFO  Controller.AuthorListController : id is 7
+17:13:30.407 INFO  Controller.AuthorListController : id is 8
+17:13:30.407 INFO  assignment1.UsefulFunctions : Swithching Views
+17:13:32.679 ERROR assignment1.Main : error Couldnt load window
