@@ -72,6 +72,8 @@ public class AuthorTableGateway {
 		java.util.Date rdob = null;
 		java.sql.Date newD = null;
 		
+		
+		
 		if(author.getId()==0){
 			st = conn.prepareStatement("insert into AuthorDB (first_name, last_name, dob, gender, web_site) "
 					+ "values (?, ?, ?, ?, ?)");
@@ -83,6 +85,7 @@ public class AuthorTableGateway {
 			st.setString(4, author.getGender().getValue());
 			st.setString(5, author.getWebSite().getValue());
 			st.executeUpdate();
+			System.out.println("Clicked save in add");
 		}
 		else{
 			try {

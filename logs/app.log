@@ -2244,3 +2244,141 @@
 15:59:54.737 INFO  Controller.AuthorListController : id is 12
 15:59:54.737 INFO  assignment1.UsefulFunctions : Swithching Views
 16:00:11.910 ERROR assignment1.Main : error Couldnt load window
+12:48:54.167 INFO  assignment1.Main : Creating connection
+12:49:06.694 INFO  assignment1.UsefulFunctions : Swithching Views
+12:49:49.154 ERROR Controller.AuthorDetailViewController : Invalid Gender
+12:50:02.991 INFO  Controller.AuthorDetailViewController : clicked save
+12:50:02.991 INFO  Controller.AuthorDetailViewController : yyyy-MM-dd
+12:50:02.992 INFO  Controller.AuthorDetailViewController : 2018-01-01
+12:50:03.263 INFO  Controller.AuthorDetailViewController : clicked save
+12:50:03.264 INFO  Controller.AuthorDetailViewController : yyyy-MM-dd
+12:50:03.264 INFO  Controller.AuthorDetailViewController : 2018-01-01
+12:50:03.573 INFO  Controller.AuthorDetailViewController : clicked save
+12:50:03.573 INFO  Controller.AuthorDetailViewController : yyyy-MM-dd
+12:50:03.574 INFO  Controller.AuthorDetailViewController : 2018-01-01
+12:50:03.877 INFO  Controller.AuthorDetailViewController : clicked save
+12:50:03.877 INFO  Controller.AuthorDetailViewController : yyyy-MM-dd
+12:50:03.877 INFO  Controller.AuthorDetailViewController : 2018-01-01
+12:50:04.189 INFO  Controller.AuthorDetailViewController : clicked save
+12:50:04.189 INFO  Controller.AuthorDetailViewController : yyyy-MM-dd
+12:50:04.190 INFO  Controller.AuthorDetailViewController : 2018-01-01
+12:50:23.191 INFO  Controller.AuthorDetailViewController : clicked save
+12:50:23.192 INFO  Controller.AuthorDetailViewController : yyyy-MM-dd
+12:50:23.192 INFO  Controller.AuthorDetailViewController : 2018-01-01
+12:51:07.631 ERROR assignment1.Main : error Couldnt load window
+12:56:19.694 INFO  assignment1.Main : Creating connection
+12:56:22.611 INFO  Controller.AuthorListController : id is 0
+12:56:22.611 INFO  Controller.AuthorListController : id is 1
+12:56:22.612 INFO  Controller.AuthorListController : id is 2
+12:56:22.612 INFO  Controller.AuthorListController : id is 3
+12:56:22.612 INFO  Controller.AuthorListController : id is 4
+12:56:22.613 INFO  Controller.AuthorListController : id is 5
+12:56:22.613 INFO  Controller.AuthorListController : id is 6
+12:56:22.613 INFO  Controller.AuthorListController : id is 7
+12:56:22.614 INFO  Controller.AuthorListController : id is 8
+12:56:22.614 INFO  Controller.AuthorListController : id is 9
+12:56:22.614 INFO  Controller.AuthorListController : id is 10
+12:56:22.614 INFO  Controller.AuthorListController : id is 11
+12:56:22.615 INFO  Controller.AuthorListController : id is 12
+12:56:22.615 INFO  assignment1.UsefulFunctions : Swithching Views
+12:56:33.629 INFO  Controller.AuthorListController : Double Clicked
+12:56:33.630 ERROR Controller.AuthorListController : couldnt find files
+12:56:35.043 INFO  Controller.AuthorListController : Double Clicked
+12:56:35.043 ERROR Controller.AuthorListController : couldnt find files
+12:56:35.195 INFO  Controller.AuthorListController : Double Clicked
+12:56:35.195 ERROR Controller.AuthorListController : couldnt find files
+12:56:40.750 INFO  Controller.AuthorListController : Double Clicked
+12:56:40.751 ERROR Controller.AuthorListController : couldnt find files
+12:56:42.260 INFO  Controller.AuthorListController : Double Clicked
+12:56:42.261 ERROR Controller.AuthorListController : couldnt find files
+12:56:43.706 INFO  Controller.AuthorListController : Double Clicked
+12:56:43.707 ERROR Controller.AuthorListController : couldnt find files
+12:56:44.732 INFO  Controller.AuthorListController : Double Clicked
+12:56:44.733 ERROR Controller.AuthorListController : couldnt find files
+12:56:45.650 INFO  Controller.AuthorListController : Double Clicked
+12:56:45.651 ERROR Controller.AuthorListController : couldnt find files
+12:56:45.850 INFO  Controller.AuthorListController : Double Clicked
+12:56:45.851 ERROR Controller.AuthorListController : couldnt find files
+12:56:57.577 INFO  Controller.AuthorListController : Double Clicked
+12:56:57.578 ERROR Controller.AuthorListController : couldnt find files
+12:56:59.831 INFO  Controller.AuthorListController : Double Clicked
+12:56:59.832 ERROR Controller.AuthorListController : couldnt find files
+12:57:07.047 INFO  Controller.AuthorListController : Double Clicked
+12:57:07.048 ERROR Controller.AuthorListController : couldnt find files
+12:57:08.255 INFO  Controller.AuthorListController : Double Clicked
+12:57:08.256 ERROR Controller.AuthorListController : couldnt find files
+12:57:08.389 INFO  Controller.AuthorListController : Double Clicked
+12:57:08.390 ERROR Controller.AuthorListController : couldnt find files
+12:57:10.759 INFO  Controller.AuthorListController : Double Clicked
+12:57:10.759 ERROR Controller.AuthorListController : couldnt find files
+12:57:11.669 INFO  Controller.AuthorListController : Double Clicked
+12:57:11.669 ERROR Controller.AuthorListController : couldnt find files
+12:57:12.293 INFO  Controller.AuthorListController : Double Clicked
+12:57:12.293 ERROR Controller.AuthorListController : couldnt find files
+12:57:12.461 INFO  Controller.AuthorListController : Double Clicked
+12:57:12.461 ERROR Controller.AuthorListController : couldnt find files
+12:57:13.043 INFO  Controller.AuthorListController : Double Clicked
+12:57:13.043 ERROR Controller.AuthorListController : couldnt find files
+12:57:13.307 INFO  Controller.AuthorListController : Double Clicked
+12:57:13.307 ERROR Controller.AuthorListController : couldnt find files
+12:57:13.538 INFO  Controller.AuthorListController : Double Clicked
+12:57:13.539 ERROR Controller.AuthorListController : couldnt find files
+12:57:14.035 INFO  Controller.AuthorListController : Double Clicked
+12:57:14.035 ERROR Controller.AuthorListController : couldnt find files
+12:57:14.187 INFO  Controller.AuthorListController : Double Clicked
+12:57:14.187 ERROR Controller.AuthorListController : couldnt find files
+12:57:15.357 INFO  Controller.AuthorListController : Double Clicked
+12:57:15.357 ERROR Controller.AuthorListController : couldnt find files
+12:57:21.665 ERROR assignment1.Main : error Couldnt load window
+12:58:27.740 INFO  assignment1.Main : Creating connection
+12:58:30.177 INFO  Controller.AuthorListController : id is 0
+12:58:30.177 INFO  Controller.AuthorListController : id is 1
+12:58:30.178 INFO  Controller.AuthorListController : id is 2
+12:58:30.178 INFO  Controller.AuthorListController : id is 3
+12:58:30.178 INFO  Controller.AuthorListController : id is 4
+12:58:30.179 INFO  Controller.AuthorListController : id is 5
+12:58:30.179 INFO  Controller.AuthorListController : id is 6
+12:58:30.179 INFO  Controller.AuthorListController : id is 7
+12:58:30.180 INFO  Controller.AuthorListController : id is 8
+12:58:30.180 INFO  Controller.AuthorListController : id is 9
+12:58:30.180 INFO  Controller.AuthorListController : id is 10
+12:58:30.181 INFO  Controller.AuthorListController : id is 11
+12:58:30.181 INFO  Controller.AuthorListController : id is 12
+12:58:30.181 INFO  assignment1.UsefulFunctions : Swithching Views
+12:58:43.874 ERROR assignment1.Main : error Couldnt load window
+13:03:41.249 INFO  assignment1.Main : Creating connection
+13:03:43.640 INFO  Controller.AuthorListController : id is 0
+13:03:43.640 INFO  Controller.AuthorListController : id is 1
+13:03:43.641 INFO  Controller.AuthorListController : id is 2
+13:03:43.641 INFO  Controller.AuthorListController : id is 3
+13:03:43.641 INFO  Controller.AuthorListController : id is 4
+13:03:43.642 INFO  Controller.AuthorListController : id is 5
+13:03:43.642 INFO  Controller.AuthorListController : id is 6
+13:03:43.642 INFO  Controller.AuthorListController : id is 7
+13:03:43.643 INFO  Controller.AuthorListController : id is 8
+13:03:43.643 INFO  Controller.AuthorListController : id is 9
+13:03:43.643 INFO  Controller.AuthorListController : id is 10
+13:03:43.643 INFO  Controller.AuthorListController : id is 11
+13:03:43.644 INFO  Controller.AuthorListController : id is 12
+13:03:43.644 INFO  Controller.AuthorListController : id is 10
+13:03:43.645 INFO  assignment1.UsefulFunctions : Swithching Views
+13:03:58.091 INFO  Controller.AuthorListController$1 : Double Clicked id is 0
+13:03:58.117 INFO  assignment1.UsefulFunctions : Swithching Views
+13:04:06.530 INFO  Controller.AuthorListController : id is 0
+13:04:06.530 INFO  Controller.AuthorListController : id is 1
+13:04:06.530 INFO  Controller.AuthorListController : id is 2
+13:04:06.531 INFO  Controller.AuthorListController : id is 3
+13:04:06.531 INFO  Controller.AuthorListController : id is 4
+13:04:06.531 INFO  Controller.AuthorListController : id is 5
+13:04:06.532 INFO  Controller.AuthorListController : id is 6
+13:04:06.532 INFO  Controller.AuthorListController : id is 7
+13:04:06.532 INFO  Controller.AuthorListController : id is 8
+13:04:06.533 INFO  Controller.AuthorListController : id is 9
+13:04:06.533 INFO  Controller.AuthorListController : id is 10
+13:04:06.533 INFO  Controller.AuthorListController : id is 11
+13:04:06.533 INFO  Controller.AuthorListController : id is 12
+13:04:06.534 INFO  Controller.AuthorListController : id is 10
+13:04:06.534 INFO  assignment1.UsefulFunctions : Swithching Views
+13:04:09.770 INFO  Controller.AuthorListController$1 : Double Clicked id is 9
+13:04:09.778 INFO  assignment1.UsefulFunctions : Swithching Views
+13:04:12.601 ERROR assignment1.Main : error Couldnt load window

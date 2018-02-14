@@ -87,6 +87,15 @@ public class AuthorListController extends ViewController{
 			logger.info("id is " + newButton.getId());
 			buttons.add(newButton);			
 		}
+		
+		Button newButton = new Button();
+		newButton.setText("delete");
+		newButton.setOnMouseClicked(buttonHandler);
+		newButton.setId("10");
+		logger.info("id is " + newButton.getId());
+		//buttons.add(newButton);			
+		ObservableList<Button> button2 = FXCollections.observableArrayList();
+		button2.add(newButton);
 		ListView.setItems(buttons);
 	}
 
