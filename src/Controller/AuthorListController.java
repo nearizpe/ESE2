@@ -9,6 +9,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -30,12 +32,25 @@ public class AuthorListController extends ViewController{
 	private ArrayList<Author> authors;
 
 	@FXML
+    private TextField SelectedAuthor;
+	
+	@FXML
     private ListView<Button> ListView;
+	
+	@FXML
+    private Button DeleteButton;
+
 	
 	public AuthorListController(ArrayList<Author> authors){
 		this.authors= authors;
 	}
 	
+	
+
+    @FXML
+    void DeleteHandler(ActionEvent event) {
+    	logger.info("delete");
+    }
 	
 	@FXML
 	void ListClick(MouseEvent event) {
@@ -88,14 +103,7 @@ public class AuthorListController extends ViewController{
 			buttons.add(newButton);			
 		}
 		
-		Button newButton = new Button();
-		newButton.setText("delete");
-		newButton.setOnMouseClicked(buttonHandler);
-		newButton.setId("10");
-		logger.info("id is " + newButton.getId());
-		//buttons.add(newButton);			
-		ObservableList<Button> button2 = FXCollections.observableArrayList();
-		button2.add(newButton);
+		ListView.setAccessibleText("delete");
 		ListView.setItems(buttons);
 	}
 
