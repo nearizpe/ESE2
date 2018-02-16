@@ -130,7 +130,7 @@ public class Author {
 	}
 	public boolean isValidGender(String gender){
 		try {
-			gender.toLowerCase();
+			gender = gender.toLowerCase();
 			if(gender.equals("male") || gender.equals("female") || gender.equals("unknown")){
 				return true;	
 			}

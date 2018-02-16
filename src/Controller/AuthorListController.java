@@ -55,11 +55,13 @@ public class AuthorListController extends ViewController{
 			logger.info("Proper Delete Execution");
 			try{
 				authors.get(deleteKey).getGateway().deleteAuthor(authors.get(deleteKey));
-				/*logger.info("HERE");
+				
+				logger.info("HERE");
 				authors.remove(authors.get(deleteKey));
 				UsefulFunctions functions = UsefulFunctions.getInstance();
 				AuthorListController newListCntrl = new AuthorListController(authors);
-				functions.SwitchView(this, newListCntrl, "/View/AuthorListView.fxml");	*/	
+				functions.SwitchView(this, newListCntrl, "/View/AuthorListView.fxml");		
+				
 			}catch(Exception e){
 				e.printStackTrace();
 				logger.error("Could not delete author");
@@ -98,8 +100,9 @@ public class AuthorListController extends ViewController{
 					logger.info("Single Click");
 					Button btn = (Button) event.getSource();
 					String id = btn.getId();
+					logger.info(btn.getId());
 					SelectedAuthor.setText(authors.get(Integer.parseInt(id)).getLastName().getValue());
-					deleteKey = authors.get(Integer.parseInt(id)).getId();
+					deleteKey = Integer.parseInt(id);
 					System.out.println("~~~~~~"+deleteKey);
 				}
 			} catch (Exception e) {
