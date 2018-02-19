@@ -9,6 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import DataBase.AuthorTableGateway;
+import DataBase.PublisherTableGateway;
 import Model.Author;
 import assignment1.UsefulFunctions;
 import javafx.event.ActionEvent;
@@ -26,7 +27,12 @@ public class MenuController extends ViewController {
 	
 	private static Logger logger = LogManager.getLogger();
 
-	
+	@FXML
+	private MenuItem AddBookListMenuItem;
+
+	@FXML
+	private MenuItem AddBookMenuItem;
+
 	@FXML
 	private MenuItem AddAuthorMenuItem;
 	
@@ -43,6 +49,7 @@ public class MenuController extends ViewController {
     void MenuHandler(ActionEvent event) {
     	try {
     		AuthorTableGateway authorGateWay = new AuthorTableGateway(conn);
+    		PublisherTableGateway publisherTableGateway = new PublisherTableGateway(conn);
     		
         	if(event.getSource() == closeMenuItem){
             	System.exit(0);
@@ -53,12 +60,22 @@ public class MenuController extends ViewController {
         		UsefulFunctions functions = UsefulFunctions.getInstance();
         		functions.SwitchView(this, detailViewController,"/View/AuthorDetailView.fxml");
         	}
-        	else{
+        	else if(event.getSource() == AuthorListMenuItem){
         		UsefulFunctions functions = UsefulFunctions.getInstance();
         		AuthorListController controller = new AuthorListController(authorGateWay.getAuthors());
         		functions.SwitchView(this,controller,"/View/AuthorListView.fxml");
-
         	}
+        	else if(event.getSource() == AddBookListMenuItem){
+        		UsefulFunctions functions = UsefulFunctions.getInstance();
+        		BookListViewController controller = new BookListViewController();
+        		functions.SwitchView(this,controller,"/View/BookListView.fxml");
+        	}  	
+        	else if(event.getSource() == AddBookMenuItem){
+        		UsefulFunctions functions = UsefulFunctions.getInstance();
+        		BookDetailViewController controller = new BookDetailViewController(publisherTableGateway);
+        		functions.SwitchView(this,controller,"/View/BookDetailView.fxml");
+        	}
+        	
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();

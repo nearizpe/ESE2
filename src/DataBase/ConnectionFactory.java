@@ -20,9 +20,9 @@ public class ConnectionFactory {
 
 		try{
 			MysqlDataSource ds = new MysqlDataSource();
-			ds.setURL("jdbc:mysql://easel2.fulgentcorp.com:3306/fis637");
-			ds.setUser("fis637");
-			ds.setPassword("BVJcwouxMz0sv48zrttX");
+			ds.setURL("jdbc:mysql://easel2.fulgentcorp.com:3306/dky407");
+			ds.setUser("dky407");
+			ds.setPassword("change_me");
 			
 			conn = ds.getConnection();
 			

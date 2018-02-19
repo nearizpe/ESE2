@@ -18,7 +18,7 @@ public class Author {
 	private SimpleStringProperty firstName;
 	private SimpleStringProperty lastName;
 	private SimpleObjectProperty<LocalDate> dateOfBirth;
-	private SimpleStringProperty gender;
+	private SimpleObjectProperty<String> gender;
 	private SimpleStringProperty webSite;
 	private AuthorTableGateway gateway;
 	
@@ -36,7 +36,7 @@ public class Author {
 		firstName = new SimpleStringProperty();
 	    lastName = new SimpleStringProperty();
 		dateOfBirth = new SimpleObjectProperty<LocalDate>();
-		gender = new SimpleStringProperty();
+		gender = new SimpleObjectProperty<String>();
 		webSite = new SimpleStringProperty();
 	}
 	
@@ -64,7 +64,7 @@ public class Author {
 	public void setDateOfBirth(LocalDate dateOfBirth) {
 		this.dateOfBirth.setValue(dateOfBirth);
 	}
-	public SimpleStringProperty getGender() {
+	public SimpleObjectProperty<String> getGender() {
 		return gender;
 	}
 	public void setGender(String gender) {

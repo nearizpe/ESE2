@@ -11,8 +11,8 @@
          <items>
             <Menu mnemonicParsing="false" text="Book">
               <items>
-                <MenuItem fx:id="AddBookListMenuItem" mnemonicParsing="false" text="Book List" />
-                  <MenuItem fx:id="AddBookMenuItem" mnemonicParsing="false" text="Add Book" />
+                <MenuItem fx:id="AddBookListMenuItem" mnemonicParsing="false" onAction="#MenuHandler" text="Book List" />
+                  <MenuItem fx:id="AddBookMenuItem" mnemonicParsing="false" onAction="#MenuHandler" text="Add Book" />
               </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Authors">

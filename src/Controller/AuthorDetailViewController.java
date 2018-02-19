@@ -11,9 +11,11 @@ import org.apache.logging.log4j.Logger;
 
 import Model.Author;
 import assignment1.Main;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -35,7 +37,7 @@ public class AuthorDetailViewController extends ViewController{
     private DatePicker Birthday;
 
     @FXML
-    private TextField Gender;
+    private ComboBox<String> Gender;
 
     @FXML
     private TextField Website;
@@ -67,7 +69,7 @@ public class AuthorDetailViewController extends ViewController{
     		msg.showAndWait();
     		valid = false;
     	}
-    	if(!author.isValidGender(Gender.getText())){
+    	if(!author.isValidGender(Gender.getValue())){
     		logger.error("Invalid Gender");
     		msg.setContentText("Invalid Gender");
     		msg.showAndWait();
@@ -90,7 +92,7 @@ public class AuthorDetailViewController extends ViewController{
     		logger.info("clicked save");
     		author.setFirstName(this.FirstName.getText());
     		author.setLastName(this.LastName.getText());
-    		author.setGender(this.Gender.getText());
+    		author.setGender(this.Gender.getValue());
     		author.setWebSite(this.Website.getText());
     		LocalDate date ;
     		logger.info(dateFormat);
@@ -116,11 +118,15 @@ public class AuthorDetailViewController extends ViewController{
     }
     
     public void initialize() {
+    	
     	//dogName.textProperty().bindBidirectional(dog.dogNameProperty());
     	this.FirstName.textProperty().bindBidirectional(author.getFirstName());
     	this.LastName.textProperty().bindBidirectional(author.getLastName());
-    	this.Gender.textProperty().bindBidirectional(author.getGender());
+    	this.Gender.valueProperty().bindBidirectional(author.getGender());
     	this.Website.textProperty().bindBidirectional(author.getWebSite());
     	this.Birthday.valueProperty().bindBidirectional(author.getDateOfBirth());
+    	
+    	Gender.getItems().removeAll(Gender.getItems());
+    	Gender.getItems().addAll("Female", "Male", "Unknown");
 	}
 }

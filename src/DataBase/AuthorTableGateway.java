@@ -29,7 +29,7 @@ public class AuthorTableGateway {
 		ResultSet rs = null;
 
 		try {
-			stmt = conn.prepareStatement("Select * From AuthorDB");
+			stmt = conn.prepareStatement("Select * From authorDatabase");
 			rs = stmt.executeQuery();
 			while (rs.next()) {
 				Author temp = new Author(this);
@@ -74,7 +74,7 @@ public class AuthorTableGateway {
 
 		if (author.getId() == 0) {
 			st = conn.prepareStatement(
-					"insert into AuthorDB (first_name, last_name, dob, gender, web_site) " + "values (?, ?, ?, ?, ?)",Statement.RETURN_GENERATED_KEYS);
+					"insert into authorDatabase (first_name, last_name, dob, gender, web_site) " + "values (?, ?, ?, ?, ?)",Statement.RETURN_GENERATED_KEYS);
 			st.setString(1, author.getFirstName().getValue());
 			st.setString(2, author.getLastName().getValue());
 			rdob = new SimpleDateFormat(dateFormat).parse(author.getDateOfBirth().getValue().toString());
@@ -92,7 +92,7 @@ public class AuthorTableGateway {
 			try {
 				System.out.println("WDWADASSADSASDA " + author.getId());
 				st = conn.prepareStatement(
-						"update AuthorDB set first_name = ?,last_name = ?,dob = ?,gender = ?, Web_site = ? where id = ?");
+						"update authorDatabase set first_name = ?,last_name = ?,dob = ?,gender = ?, Web_site = ? where id = ?");
 				
 				st.setString(1, author.getFirstName().getValue());
 				st.setString(2, author.getLastName().getValue());
@@ -122,7 +122,7 @@ public class AuthorTableGateway {
 		PreparedStatement st = null;
 		System.out.println(author.getId());
 		try{
-		st = conn.prepareStatement("delete from AuthorDB where id = ?");
+		st = conn.prepareStatement("delete from authorDatabase where id = ?");
 		st.setInt(1, author.getId());
 		st.executeUpdate();
 		}catch(SQLException e){
