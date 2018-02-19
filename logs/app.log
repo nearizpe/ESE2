@@ -3453,3 +3453,14 @@
 12:40:46.599 INFO  Controller.AuthorListController : id is 3
 12:40:46.599 INFO  Controller.AuthorListController : id is 4
 12:40:46.600 INFO  assignment1.UsefulFunctions : Swithching Views
+13:44:26.458 INFO  assignment1.Main : Creating connection
+13:44:30.754 ERROR assignment1.Main : error Couldnt load window
+13:47:51.992 INFO  assignment1.Main : Creating connection
+13:47:55.225 INFO  Controller.AuthorListController : id is 0
+13:47:55.225 INFO  Controller.AuthorListController : id is 1
+13:47:55.226 INFO  Controller.AuthorListController : id is 2
+13:47:55.226 INFO  Controller.AuthorListController : id is 3
+13:47:55.226 INFO  assignment1.UsefulFunctions : Swithching Views
+13:48:01.296 ERROR assignment1.Main : error Couldnt load window
+13:48:43.974 INFO  assignment1.Main : Creating connection
+13:48:48.268 ERROR assignment1.Main : error Couldnt load window
