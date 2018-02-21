@@ -28,6 +28,12 @@ public class Book {
 
 	public Book(BookTableGateway gway){
 		this.gateway = gway;
+		title = new SimpleStringProperty();
+		summary = new SimpleStringProperty();
+		yearPublished = new SimpleIntegerProperty();
+		publisher = new SimpleObjectProperty<Publisher>();
+		isbn = new SimpleStringProperty();
+		dateAdded = new SimpleObjectProperty<LocalDate>();
 	}
 	
 	public Boolean isTittleValid(){
@@ -110,8 +116,8 @@ public class Book {
 		return yearPublished;
 	}
 
-	public void setYearPublished(int  yearPublished) {
-		this.yearPublished.setValue( yearPublished);
+	public void setYearPublished(int yearPublished) {
+		this.yearPublished.setValue(yearPublished);
 	}
 
 	public SimpleObjectProperty<Publisher> getPublisher() {

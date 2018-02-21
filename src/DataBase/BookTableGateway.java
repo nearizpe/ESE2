@@ -24,7 +24,7 @@ public class BookTableGateway {
 		ResultSet rs = null;
 
 		try {
-			stmt = conn.prepareStatement("Select * From AuthorDB");
+			stmt = conn.prepareStatement("Select * From bookTable");
 			rs = stmt.executeQuery();
 			while (rs.next()) {
 				Book temp = new Book(this);
@@ -37,9 +37,10 @@ public class BookTableGateway {
 				temp.setIsbn(rs.getString("isbn"));
 				temp.setDateAdded(rs.getDate("date_added").toLocalDate());
 				books.add(temp);
+				System.out.println(temp.getTitle());
 			}
 		} catch (SQLException e) {
-			System.out.println("DB QUERY ERROR");
+			System.out.println("DB QUERY ERROR!!");
 			e.printStackTrace();
 
 		} finally {

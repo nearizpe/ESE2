@@ -1,6 +1,12 @@
 package Controller;
 
+import java.time.LocalDate;
+
+import Book.Book;
+import Book.Publisher;
 import DataBase.PublisherTableGateway;
+import javafx.beans.property.Property;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
@@ -9,7 +15,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 public class BookDetailViewController extends ViewController{
-	
+	private Book book;
 	@FXML
     private TextField tittleTextField;
 
@@ -17,7 +23,7 @@ public class BookDetailViewController extends ViewController{
     private TextField ISBNField;
 
     @FXML
-    private ComboBox<?> publisherComboBox;
+    private ComboBox<Publisher> publisherComboBox;
 
     @FXML
     private TextArea summaryTextArea;
@@ -26,12 +32,23 @@ public class BookDetailViewController extends ViewController{
     private DatePicker yearPublishedDatePicker;
 
     private PublisherTableGateway publisherTableGateway;
-    public BookDetailViewController(PublisherTableGateway gway){
-    	this.publisherTableGateway = gway;
+    //public BookDetailViewController(PublisherTableGateway gway){
+    public BookDetailViewController(Book book){
+    	//this.publisherTableGateway = gway;
+    	this.book = book;
     }
     
     @FXML
     void SaveHandler(MouseEvent event) {
 
+    }
+    
+    public void initialize() {
+    	this.tittleTextField.textProperty().bindBidirectional(book.getTitle());
+    	this.ISBNField.textProperty().bindBidirectional(book.getIsbn());
+    	this.publisherComboBox.valueProperty().bindBidirectional(book.getPublisher());
+    	this.summaryTextArea.textProperty().bindBidirectional(book.getSummary());
+    	//copnvert BOOKDETAILVIEW to not use datepicker and use a textfield or some sort of year picker
+    	//this.yearPublishedDatePicker.valueProperty().bindBidirectional();
     }
 }

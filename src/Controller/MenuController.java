@@ -9,6 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import DataBase.AuthorTableGateway;
+import DataBase.BookTableGateway;
 import DataBase.PublisherTableGateway;
 import Model.Author;
 import assignment1.UsefulFunctions;
@@ -49,7 +50,10 @@ public class MenuController extends ViewController {
     void MenuHandler(ActionEvent event) {
     	try {
     		AuthorTableGateway authorGateWay = new AuthorTableGateway(conn);
+    		BookTableGateway bookGateway = new BookTableGateway(conn);
     		PublisherTableGateway publisherTableGateway = new PublisherTableGateway(conn);
+    		
+    		
     		
         	if(event.getSource() == closeMenuItem){
             	System.exit(0);
@@ -66,14 +70,15 @@ public class MenuController extends ViewController {
         		functions.SwitchView(this,controller,"/View/AuthorListView.fxml");
         	}
         	else if(event.getSource() == AddBookListMenuItem){
+        		System.out.println("HEY");
         		UsefulFunctions functions = UsefulFunctions.getInstance();
-        		BookListViewController controller = new BookListViewController();
+        		BookListViewController controller = new BookListViewController(bookGateway.getBooks());
         		functions.SwitchView(this,controller,"/View/BookListView.fxml");
         	}  	
         	else if(event.getSource() == AddBookMenuItem){
         		UsefulFunctions functions = UsefulFunctions.getInstance();
-        		BookDetailViewController controller = new BookDetailViewController(publisherTableGateway);
-        		functions.SwitchView(this,controller,"/View/BookDetailView.fxml");
+        		//BookDetailViewController controller = new BookDetailViewController(publisherTableGateway);
+        		//functions.SwitchView(this,controller,"/View/BookDetailView.fxml");
         	}
         	
 		} catch (Exception e) {
