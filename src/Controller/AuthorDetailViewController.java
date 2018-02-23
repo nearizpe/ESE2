@@ -81,7 +81,7 @@ public class AuthorDetailViewController extends ViewController{
     		msg.showAndWait();
     		valid = false;
     	}
-    	if(!author.isValidId(author.getId())){
+    	if(!author.isValidId(author.getId())){ // do to binding the program may crash and this not get called because of data type diferientiation. The fact that it makes save not do anthing means we might not need too fix
     		logger.error("Invalid Id");
     		msg.setContentText("Invalid Id");
     		msg.showAndWait();

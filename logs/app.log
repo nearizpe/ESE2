@@ -3834,3 +3834,116 @@
 16:27:30.093 INFO  assignment1.Main : Creating connection
 16:27:33.341 INFO  assignment1.UsefulFunctions : Swithching Views
 16:27:36.992 ERROR assignment1.Main : error Couldnt load window
+13:03:51.862 INFO  assignment1.Main : Creating connection
+13:03:55.025 INFO  assignment1.UsefulFunctions : Swithching Views
+13:04:19.515 INFO  assignment1.UsefulFunctions : Swithching Views
+13:04:31.797 INFO  Controller.AuthorListController : id is 0
+13:04:31.798 INFO  Controller.AuthorListController : id is 1
+13:04:31.798 INFO  Controller.AuthorListController : id is 2
+13:04:31.798 INFO  Controller.AuthorListController : id is 3
+13:04:31.800 INFO  Controller.AuthorListController : id is 4
+13:04:31.801 INFO  Controller.AuthorListController : id is 5
+13:04:31.802 INFO  assignment1.UsefulFunctions : Swithching Views
+13:04:36.238 INFO  assignment1.UsefulFunctions : Swithching Views
+13:04:40.936 INFO  assignment1.UsefulFunctions : Swithching Views
+13:04:42.957 INFO  assignment1.UsefulFunctions : Swithching Views
+13:05:55.165 ERROR assignment1.Main : error Couldnt load window
+12:30:03.492 INFO  assignment1.Main : Creating connection
+12:30:06.653 INFO  assignment1.UsefulFunctions : Swithching Views
+12:30:12.261 ERROR assignment1.Main : error Couldnt load window
+12:30:48.653 INFO  assignment1.Main : Creating connection
+12:30:51.749 INFO  assignment1.UsefulFunctions : Swithching Views
+12:30:54.638 ERROR assignment1.Main : error Couldnt load window
+12:32:35.482 INFO  assignment1.Main : Creating connection
+12:32:38.408 INFO  assignment1.UsefulFunctions : Swithching Views
+12:32:39.433 INFO  assignment1.UsefulFunctions : Swithching Views
+12:32:44.208 INFO  assignment1.UsefulFunctions : Swithching Views
+12:32:45.945 INFO  assignment1.UsefulFunctions : Swithching Views
+12:32:49.578 ERROR assignment1.Main : error Couldnt load window
+12:34:29.326 INFO  assignment1.Main : Creating connection
+12:34:31.487 INFO  assignment1.UsefulFunctions : Swithching Views
+12:34:37.907 ERROR assignment1.Main : error Couldnt load window
+12:34:57.221 INFO  assignment1.Main : Creating connection
+12:34:59.482 INFO  assignment1.UsefulFunctions : Swithching Views
+12:35:00.897 ERROR assignment1.Main : error Couldnt load window
+12:35:08.350 INFO  assignment1.Main : Creating connection
+12:35:10.928 INFO  assignment1.UsefulFunctions : Swithching Views
+12:35:11.947 ERROR assignment1.Main : error Couldnt load window
+12:36:25.275 INFO  assignment1.Main : Creating connection
+12:36:28.278 INFO  assignment1.UsefulFunctions : Swithching Views
+12:36:29.578 INFO  assignment1.UsefulFunctions : Swithching Views
+12:36:35.539 INFO  assignment1.UsefulFunctions : Swithching Views
+12:36:36.247 INFO  assignment1.UsefulFunctions : Swithching Views
+12:36:39.231 ERROR assignment1.Main : error Couldnt load window
+12:40:43.079 INFO  assignment1.Main : Creating connection
+12:40:46.337 INFO  assignment1.UsefulFunctions : Swithching Views
+12:40:49.169 ERROR assignment1.Main : error Couldnt load window
+12:40:55.037 INFO  assignment1.Main : Creating connection
+12:40:57.320 INFO  assignment1.UsefulFunctions : Swithching Views
+12:40:59.855 ERROR assignment1.Main : error Couldnt load window
+12:50:49.469 INFO  assignment1.Main : Creating connection
+12:50:53.620 INFO  assignment1.UsefulFunctions : Swithching Views
+12:50:57.861 INFO  assignment1.UsefulFunctions : Swithching Views
+12:51:39.839 ERROR assignment1.Main : error Couldnt load window
+12:53:26.729 INFO  assignment1.Main : Creating connection
+12:53:28.505 ERROR assignment1.Main : error Couldnt load window
+12:53:35.974 INFO  assignment1.Main : Creating connection
+12:53:39.026 INFO  assignment1.UsefulFunctions : Swithching Views
+12:53:40.099 INFO  assignment1.UsefulFunctions : Swithching Views
+12:54:17.745 ERROR assignment1.Main : error Couldnt load window
+12:57:26.242 INFO  assignment1.Main : Creating connection
+12:57:29.494 INFO  assignment1.UsefulFunctions : Swithching Views
+12:57:30.652 INFO  assignment1.UsefulFunctions : Swithching Views
+12:57:44.436 ERROR Controller.BookDetailViewController : Invalid First Name
+12:58:06.785 ERROR Controller.BookDetailViewController : Invalid First Name
+12:58:08.899 ERROR Controller.BookDetailViewController : Invalid Birthday
+12:58:15.483 ERROR Controller.BookDetailViewController : Invalid Birthday
+12:58:25.217 ERROR Controller.BookDetailViewController : Invalid Birthday
+12:58:26.471 ERROR Controller.BookDetailViewController : Invalid Gender
+12:58:48.416 ERROR Controller.BookDetailViewController : Invalid Gender
+12:58:53.705 ERROR Controller.BookDetailViewController : Invalid Gender
+12:58:55.383 ERROR Controller.BookDetailViewController : Invalid Gender
+12:58:58.469 ERROR Controller.BookDetailViewController : Invalid Gender
+12:59:02.891 ERROR Controller.BookDetailViewController : Invalid Gender
+12:59:07.209 ERROR assignment1.Main : error Couldnt load window
+13:00:13.601 INFO  assignment1.Main : Creating connection
+13:00:16.307 INFO  assignment1.UsefulFunctions : Swithching Views
+13:00:17.529 INFO  assignment1.UsefulFunctions : Swithching Views
+13:00:35.219 ERROR assignment1.Main : error Couldnt load window
+13:05:43.107 INFO  assignment1.Main : Creating connection
+13:05:46.923 INFO  assignment1.UsefulFunctions : Swithching Views
+13:05:47.821 INFO  assignment1.UsefulFunctions : Swithching Views
+13:05:52.402 ERROR Controller.BookDetailViewController : Invalid year Published
+13:05:56.572 ERROR assignment1.Main : error Couldnt load window
+13:36:45.156 INFO  assignment1.Main : Creating connection
+13:36:47.802 INFO  assignment1.UsefulFunctions : Swithching Views
+13:37:06.299 INFO  Controller.BookDetailViewController : clicked save
+13:37:06.308 ERROR Controller.BookDetailViewController : couldnt update database
+13:53:31.867 INFO  assignment1.Main : Creating connection
+13:53:36.187 INFO  assignment1.UsefulFunctions : Swithching Views
+13:53:37.188 INFO  assignment1.UsefulFunctions : Swithching Views
+13:53:41.091 ERROR assignment1.Main : error Couldnt load window
+13:53:53.322 INFO  assignment1.Main : Creating connection
+13:53:55.825 INFO  assignment1.UsefulFunctions : Swithching Views
+13:53:56.747 INFO  assignment1.UsefulFunctions : Swithching Views
+13:54:00.075 ERROR assignment1.Main : error Couldnt load window
+13:59:10.950 INFO  assignment1.Main : Creating connection
+13:59:14.941 ERROR assignment1.UsefulFunctions : error couldnt switch view
+13:59:16.508 ERROR assignment1.Main : error Couldnt load window
+14:00:21.755 INFO  assignment1.Main : Creating connection
+14:00:24.446 INFO  assignment1.UsefulFunctions : Swithching Views
+14:00:25.548 ERROR assignment1.UsefulFunctions : error couldnt switch view
+14:00:26.716 ERROR assignment1.Main : error Couldnt load window
+14:00:42.805 INFO  assignment1.Main : Creating connection
+14:00:45.207 INFO  assignment1.UsefulFunctions : Swithching Views
+14:00:46.189 ERROR assignment1.UsefulFunctions : error couldnt switch view
+14:00:47.188 ERROR assignment1.Main : error Couldnt load window
+14:01:14.199 INFO  assignment1.Main : Creating connection
+14:01:17.681 INFO  assignment1.UsefulFunctions : Swithching Views
+14:01:18.897 ERROR assignment1.UsefulFunctions : error couldnt switch view
+14:01:20.446 ERROR assignment1.Main : error Couldnt load window
+14:01:47.457 INFO  assignment1.Main : Creating connection
+14:01:49.640 INFO  assignment1.UsefulFunctions : Swithching Views
+14:01:50.468 INFO  assignment1.UsefulFunctions : Swithching Views
+14:01:58.215 ERROR assignment1.Main : error Couldnt load window
+14:49:54.869 ERROR assignment1.Main : error Couldnt load window

@@ -3,6 +3,7 @@ package Controller;
 import java.util.ArrayList;
 
 import Book.Book;
+import Book.Publisher;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,6 +19,8 @@ public class BookListViewController extends ViewController {
 
 	private ArrayList<Book> books;
 	private ObservableList<Book> listItems = FXCollections.observableArrayList();
+	private 
+	
 
 	@FXML
 	private Button SearchButton;
@@ -55,7 +58,8 @@ public class BookListViewController extends ViewController {
 		System.out.println("ID =" + id);
 		//without this i get an out of bounds error
 		id--;
-		BookDetailViewController bookController = new BookDetailViewController(books.get(id));
+		ArrayList<Publisher> publisher = publisherTableGateway.getPublishers();
+		BookDetailViewController bookController = new BookDetailViewController(books.get(id),);
 		UsefulFunctions functions = UsefulFunctions.getInstance();
 		functions.SwitchView(this, bookController,"/View/BookDetailView.fxml");
 	}

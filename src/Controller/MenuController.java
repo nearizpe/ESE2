@@ -9,6 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import Book.Book;
+import Book.Publisher;
 import DataBase.AuthorTableGateway;
 import DataBase.BookTableGateway;
 import DataBase.PublisherTableGateway;
@@ -79,7 +80,8 @@ public class MenuController extends ViewController {
         	else if(event.getSource() == AddBookMenuItem){
         		Book book = new Book(bookGateway);
         		UsefulFunctions functions = UsefulFunctions.getInstance();
-        		BookDetailViewController controller = new BookDetailViewController(book);
+        		ArrayList<Publisher> publisher = publisherTableGateway.getPublishers();
+        		BookDetailViewController controller = new BookDetailViewController(book,publisher);
         		functions.SwitchView(this,controller,"/View/BookDetailView.fxml");
         	}
         	

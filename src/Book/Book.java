@@ -3,6 +3,7 @@ package Book;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.Calendar;
 import java.util.Date;
 
 import DataBase.AuthorTableGateway;
@@ -34,7 +35,7 @@ public class Book {
 		publisher = new SimpleObjectProperty<Publisher>();
 		isbn = new SimpleStringProperty();
 		dateAdded = new SimpleObjectProperty<LocalDate>();
-	}
+	} 
 	
 	public Boolean isTittleValid(){
 		if(1 <= title.length().intValue() && title.length().intValue() <=255)
@@ -156,4 +157,30 @@ public class Book {
 		return dateFormat;
 	}
 	
+	@Override
+	public String toString(){
+		return this.getTitle().getValue();
+	}
+
+	public boolean isValidYear(String year) {
+		// TODO Auto-generated method stub
+		int yearP;
+		try{
+			yearP = Integer.parseInt(year);
+		}
+		catch(Exception e){
+			return false;
+		}
+		Date todayDate = new Date();
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(todayDate);
+		int todaysYear = cal.get(Calendar.YEAR);
+		
+		
+		
+		if(yearP> todaysYear){
+			return false;
+		}
+		return true;
+	}
 }

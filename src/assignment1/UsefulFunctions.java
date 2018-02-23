@@ -2,6 +2,7 @@ package assignment1;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
 
 import javax.swing.text.View;
 
@@ -19,6 +20,27 @@ import javafx.scene.layout.BorderPane;
 public class UsefulFunctions {
 	private static UsefulFunctions single_instance = null;
 	private static Logger logger = LogManager.getLogger(Main.class);
+	
+	public static final int AuthorDetail = 1;
+	
+	private Connection conn;
+	private BorderPane rootPane = null;
+
+	public BorderPane getRootPane() {
+		return rootPane;
+	}
+
+	public void setRootPane(BorderPane rootPane) {
+		this.rootPane = rootPane;
+	}
+
+	public Connection getConn() {
+		return conn;
+	}
+
+	public void setConn(Connection conn) {
+		this.conn = conn;
+	}
 
 	// private constructor restricted to this class itself
     private UsefulFunctions()
@@ -34,9 +56,26 @@ public class UsefulFunctions {
         return single_instance;
     }
 	
-	public void SwitchView(ViewController fromController,ViewController toController,String resource){
+	public void SwitchView(int viewType,Object arg){ //REFACTOR
 		try {
-			toController.setRootNode(fromController.getRootNode());
+			ViewController controller = null;
+			URL fxmFile = null;
+			switch(viewType){
+			case AuthorDetail:
+				"/View/AuthorDetailView.fxml"
+				break;
+			}
+			
+			FXMLLoader loader = new FXMLLoader(fxmlFile);
+			loader.setController(controller);
+		
+			Parent viewNode = loader.load();
+			rootPane.setCenter(viewNode);
+		} catch (IOException e) {
+			throw new Exception(e);
+		}
+			
+		/*	toController.setRootNode(fromController.getRootNode());
 			
 			URL fxmlFile = this.getClass().getResource(resource);	
 			FXMLLoader loader = new FXMLLoader(fxmlFile);
@@ -55,8 +94,10 @@ public class UsefulFunctions {
 		} catch (IOException e) {
 			logger.error("error couldnt switch view");
 			e.printStackTrace();
-		}
+		}*/
 	}
+	
+	
 
 
 }
