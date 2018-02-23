@@ -77,19 +77,12 @@ public class BookTableGateway {
 		if (book.getId() == 0) {
 			try {
 				st = conn.prepareStatement(
-						"insert into bookTable (tittle, summary, year_published, publisher_id, isbn, date_added) " + "values (?, ?, ?, ?, ?, ?)",Statement.RETURN_GENERATED_KEYS);
+						"insert into bookTable (tittle, summary, year_published, publisher_id, isbn, date_added) " + "values (?, ?, ?, ?)",Statement.RETURN_GENERATED_KEYS);
 				st.setString(1, book.getTitle().getValue());
 				st.setString(2, book.getSummary().getValue());
 				st.setInt(3, book.getPublisher().getValue().getId());
 				st.setString(4, book.getIsbn().getValue());
 				
-				java.util.Date utilDate = new java.util.Date();
-				Calendar cal = Calendar.getInstance();
-				cal.setTime(utilDate);
-				cal.set(Calendar.MILLISECOND, 0);
-				
-				Timestamp stamp = new Timestamp(utilDate.getTime());
-				st.setTimestamp(5, stamp);
 				st.executeUpdate();
 				ResultSet rs = st.getGeneratedKeys();
 				rs.next();
@@ -103,20 +96,13 @@ public class BookTableGateway {
 		} else {
 			try {
 				st = conn.prepareStatement(
-						"update authorDatabase set tittle = ?,summary = ?,year_published = ?,publisher_id = ?, isbn = ?, date_added = ?  where id = ?");
+						"update authorDatabase set tittle = ?,summary = ?,year_published = ?,publisher_id = ?, isbn = ? where id = ?");
 				
 				st.setString(1, book.getTitle().getValue());
 				st.setString(2, book.getSummary().getValue());
 				st.setInt(3, book.getPublisher().getValue().getId());
 				st.setString(4, book.getIsbn().getValue());
 				
-				java.util.Date utilDate = new java.util.Date();
-				Calendar cal = Calendar.getInstance();
-				cal.setTime(utilDate);
-				cal.set(Calendar.MILLISECOND, 0);
-				
-				Timestamp stamp = new Timestamp(utilDate.getTime());
-				st.setTimestamp(5, stamp);
 				st.executeUpdate();
 				ResultSet rs = st.getGeneratedKeys();
 				rs.next();
