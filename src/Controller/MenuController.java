@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import Book.Book;
 import DataBase.AuthorTableGateway;
 import DataBase.BookTableGateway;
 import DataBase.PublisherTableGateway;
@@ -76,9 +77,10 @@ public class MenuController extends ViewController {
         		functions.SwitchView(this,controller,"/View/BookListView.fxml");
         	}  	
         	else if(event.getSource() == AddBookMenuItem){
+        		Book book = new Book(bookGateway);
         		UsefulFunctions functions = UsefulFunctions.getInstance();
-        		//BookDetailViewController controller = new BookDetailViewController(publisherTableGateway);
-        		//functions.SwitchView(this,controller,"/View/BookDetailView.fxml");
+        		BookDetailViewController controller = new BookDetailViewController(book);
+        		functions.SwitchView(this,controller,"/View/BookDetailView.fxml");
         	}
         	
 		} catch (Exception e) {

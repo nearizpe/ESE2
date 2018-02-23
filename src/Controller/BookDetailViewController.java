@@ -10,9 +10,11 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Spinner;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.util.converter.NumberStringConverter;
 
 public class BookDetailViewController extends ViewController{
 	private Book book;
@@ -29,8 +31,8 @@ public class BookDetailViewController extends ViewController{
     private TextArea summaryTextArea;
 
     @FXML
-    private DatePicker yearPublishedDatePicker;
-
+    private TextField yearPubTF;
+    
     private PublisherTableGateway publisherTableGateway;
     //public BookDetailViewController(PublisherTableGateway gway){
     public BookDetailViewController(Book book){
@@ -48,7 +50,7 @@ public class BookDetailViewController extends ViewController{
     	this.ISBNField.textProperty().bindBidirectional(book.getIsbn());
     	this.publisherComboBox.valueProperty().bindBidirectional(book.getPublisher());
     	this.summaryTextArea.textProperty().bindBidirectional(book.getSummary());
-    	//copnvert BOOKDETAILVIEW to not use datepicker and use a textfield or some sort of year picker
-    	//this.yearPublishedDatePicker.valueProperty().bindBidirectional();
+    	this.yearPubTF.textProperty().bindBidirectional(book.getYearPublished(), new NumberStringConverter());
+    	
     }
 }
