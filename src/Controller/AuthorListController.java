@@ -59,8 +59,7 @@ public class AuthorListController extends ViewController{
 				logger.info("HERE");
 				authors.remove(authors.get(deleteKey));
 				UsefulFunctions functions = UsefulFunctions.getInstance();
-				AuthorListController newListCntrl = new AuthorListController(authors);
-				functions.SwitchView(this, newListCntrl, "/View/AuthorListView.fxml");		
+				functions.SwitchView(functions.AuthorList, null);		
 				
 			}catch(Exception e){
 				e.printStackTrace();
@@ -114,9 +113,13 @@ public class AuthorListController extends ViewController{
 	};
 	
 	private void changeView(int id){
-		AuthorDetailViewController detailViewController = new AuthorDetailViewController(authors.get(id));
 		UsefulFunctions functions = UsefulFunctions.getInstance();
-		functions.SwitchView(this, detailViewController,"/View/AuthorDetailView.fxml");
+		try {
+			functions.SwitchView(functions.AuthorDetail, authors.get(id));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public void initialize(){//URL location, ResourceBundle resources

@@ -62,27 +62,22 @@ public class MenuController extends ViewController {
         	}
         	else if(event.getSource() == AddAuthorMenuItem){
         		Author author = new Author(authorGateWay);
-        		AuthorDetailViewController detailViewController = new AuthorDetailViewController(author);
         		UsefulFunctions functions = UsefulFunctions.getInstance();
-        		functions.SwitchView(this, detailViewController,"/View/AuthorDetailView.fxml");
+        		functions.SwitchView(functions.AuthorDetail,author);
         	}
         	else if(event.getSource() == AuthorListMenuItem){
         		UsefulFunctions functions = UsefulFunctions.getInstance();
-        		AuthorListController controller = new AuthorListController(authorGateWay.getAuthors());
-        		functions.SwitchView(this,controller,"/View/AuthorListView.fxml");
+        		//logger.info("Is it null ?" +authorGateWay);
+        		functions.SwitchView(functions.AuthorList,authorGateWay.getAuthors());
         	}
-        	else if(event.getSource() == AddBookListMenuItem){
-        		System.out.println("HEY");
+        	else if(event.getSource() == AddBookListMenuItem){//book list
         		UsefulFunctions functions = UsefulFunctions.getInstance();
-        		BookListViewController controller = new BookListViewController(bookGateway.getBooks());
-        		functions.SwitchView(this,controller,"/View/BookListView.fxml");
+        		functions.SwitchView(functions.BookListView,null);
         	}  	
-        	else if(event.getSource() == AddBookMenuItem){
+        	else if(event.getSource() == AddBookMenuItem){ //Book detail
         		Book book = new Book(bookGateway);
         		UsefulFunctions functions = UsefulFunctions.getInstance();
-        		ArrayList<Publisher> publisher = publisherTableGateway.getPublishers();
-        		BookDetailViewController controller = new BookDetailViewController(book,publisher);
-        		functions.SwitchView(this,controller,"/View/BookDetailView.fxml");
+        		functions.SwitchView(functions.BookDetail,book);
         	}
         	
 		} catch (Exception e) {

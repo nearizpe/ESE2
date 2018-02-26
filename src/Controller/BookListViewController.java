@@ -18,9 +18,7 @@ import assignment1.UsefulFunctions;
 public class BookListViewController extends ViewController {
 
 	private ArrayList<Book> books;
-	private ObservableList<Book> listItems = FXCollections.observableArrayList();
-	private 
-	
+	private ObservableList<Book> listItems = FXCollections.observableArrayList();	
 
 	@FXML
 	private Button SearchButton;
@@ -58,9 +56,12 @@ public class BookListViewController extends ViewController {
 		System.out.println("ID =" + id);
 		//without this i get an out of bounds error
 		id--;
-		ArrayList<Publisher> publisher = publisherTableGateway.getPublishers();
-		BookDetailViewController bookController = new BookDetailViewController(books.get(id),);
 		UsefulFunctions functions = UsefulFunctions.getInstance();
-		functions.SwitchView(this, bookController,"/View/BookDetailView.fxml");
+		try {
+			functions.SwitchView(functions.BookDetail, books.get(id));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

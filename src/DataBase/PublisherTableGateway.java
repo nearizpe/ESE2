@@ -24,12 +24,12 @@ public class PublisherTableGateway {
 		ResultSet rs = null;
 
 		try {
-			stmt = conn.prepareStatement("Select * From bookTable");
+			stmt = conn.prepareStatement("Select * From publisherTable");
 			rs = stmt.executeQuery();
 			while (rs.next()) {
 				Publisher temp = new Publisher(this);
 				temp.setId(rs.getInt("id"));
-				temp.setPublisherName(rs.getString("publisher_date"));
+				temp.setPublisherName(rs.getString("publisher_name"));
 				list.add(temp);
 			}
 		} catch (SQLException e) {

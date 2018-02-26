@@ -11,6 +11,7 @@ public class Publisher {
 
 	public Publisher(PublisherTableGateway way){
 		this.gateway = way;
+		publisherName = new SimpleStringProperty();
 	}
 	
 	public int getId() {
