@@ -18,7 +18,8 @@ import assignment1.UsefulFunctions;
 public class BookListViewController extends ViewController {
 
 	private ArrayList<Book> books;
-	private ObservableList<Book> listItems = FXCollections.observableArrayList();	
+	private ObservableList<Book> listItems = FXCollections.observableArrayList();
+	private Book SelectedBook = null;
 
 	@FXML
 	private Button SearchButton;
@@ -31,12 +32,18 @@ public class BookListViewController extends ViewController {
 
 	@FXML
 	void ListClick(MouseEvent event) {
-		if(event.getClickCount() > 1) {
-			Book nb = ListView.getSelectionModel().getSelectedItem();
-			if (nb != null){
+		
+		
+		if(event.getClickCount() == 1){
+			SelectedBook = ListView.getSelectionModel().getSelectedItem();
+			searchField.setText(SelectedBook.getTitle().getValue());
+		}
+		else if(event.getClickCount() > 1) {
+			SelectedBook = ListView.getSelectionModel().getSelectedItem();
+			if (SelectedBook != null){
 				UsefulFunctions functions = UsefulFunctions.getInstance();
 				try {
-					functions.SwitchView(functions.BookDetail, nb);
+					functions.SwitchView(functions.BookDetail, SelectedBook);
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -48,6 +55,18 @@ public class BookListViewController extends ViewController {
 	@FXML
 	void SearchHandler(ActionEvent event) {
 
+	}
+	
+	@FXML
+	void DeleteHandler(ActionEvent event) {
+		if (SelectedBook != null){
+			try {
+				SelectedBook.getGateway().deleteBook(SelectedBook);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
 
 	public BookListViewController(ArrayList<Book> books) {

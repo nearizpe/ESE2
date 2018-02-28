@@ -124,4 +124,17 @@ public class BookTableGateway {
 		}
 	}
 	
+	public void deleteBook (Book book) throws Exception{
+		PreparedStatement st = null;
+		System.out.println(book.getId());
+		try{
+		st = conn.prepareStatement("delete from bookTable where id = ?");
+		st.setInt(1, book.getId());
+		st.executeUpdate();
+		}catch(SQLException e){
+			e.printStackTrace();
+			throw new Exception(e);
+		}
+	}
+	
 }
