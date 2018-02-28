@@ -4283,3 +4283,44 @@
 13:43:19.705 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@56085cd8[styleClass=root]
 13:43:21.484 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@56085cd8[styleClass=root]
 13:43:22.605 ERROR assignment1.Main : error Couldnt load window
+14:00:37.576 INFO  assignment1.Main : Creating connection
+14:00:39.974 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@56085cd8[styleClass=root]
+14:01:01.733 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@56085cd8[styleClass=root]
+14:01:07.333 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@56085cd8[styleClass=root]
+14:01:10.868 INFO  Controller.AuthorListController : id is 0
+14:01:10.868 INFO  Controller.AuthorListController : id is 1
+14:01:10.869 INFO  Controller.AuthorListController : id is 2
+14:01:10.869 INFO  Controller.AuthorListController : id is 3
+14:01:10.869 INFO  Controller.AuthorListController : id is 4
+14:01:10.870 INFO  Controller.AuthorListController : id is 5
+14:01:10.870 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@56085cd8[styleClass=root]
+14:01:12.105 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@56085cd8[styleClass=root]
+14:01:17.156 ERROR assignment1.Main : error Couldnt load window
+14:04:48.636 INFO  assignment1.Main : Creating connection
+14:04:50.585 ERROR assignment1.Main : error Couldnt load window
+14:05:05.834 INFO  assignment1.Main : Creating connection
+14:05:09.724 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@56085cd8[styleClass=root]
+14:05:11.792 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@56085cd8[styleClass=root]
+14:05:17.658 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@56085cd8[styleClass=root]
+14:05:18.701 ERROR assignment1.Main : error Couldnt load window
+14:18:14.742 INFO  assignment1.Main : Creating connection
+14:18:17.117 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@3e0f9856[styleClass=root]
+14:18:34.492 ERROR assignment1.Main : error Couldnt load window
+14:23:07.873 INFO  assignment1.Main : Creating connection
+14:23:10.058 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@62d709ad[styleClass=root]
+14:23:16.011 ERROR assignment1.Main : error Couldnt load window
+14:23:41.409 INFO  assignment1.Main : Creating connection
+14:23:43.572 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@56085cd8[styleClass=root]
+14:23:51.276 ERROR assignment1.Main : error Couldnt load window
+14:24:00.926 INFO  assignment1.Main : Creating connection
+14:24:03.008 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@1c1166cc[styleClass=root]
+14:24:09.100 ERROR assignment1.Main : error Couldnt load window
+14:28:50.440 INFO  assignment1.Main : Creating connection
+14:28:52.805 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7261b23a[styleClass=root]
+14:28:57.401 ERROR assignment1.Main : error Couldnt load window
+14:30:18.453 INFO  assignment1.Main : Creating connection
+14:30:20.512 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@af19d5a[styleClass=root]
+14:30:24.340 ERROR assignment1.Main : error Couldnt load window
+14:33:54.407 INFO  assignment1.Main : Creating connection
+14:33:57.071 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@40be6dbe[styleClass=root]
+14:34:36.856 ERROR assignment1.Main : error Couldnt load window

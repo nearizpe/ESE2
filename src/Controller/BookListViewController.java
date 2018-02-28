@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import Book.Book;
 import Book.Publisher;
+import DataBase.BookTableGateway;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -17,19 +18,25 @@ import assignment1.UsefulFunctions;
 
 public class BookListViewController extends ViewController {
 
+	private BookTableGateway gway;
 	private ArrayList<Book> books;
 	private ObservableList<Book> listItems = FXCollections.observableArrayList();
 	private Book SelectedBook = null;
 
 	@FXML
 	private Button SearchButton;
-
+	
 	@FXML
 	private TextField searchField;
 
 	@FXML
 	private ListView<Book> ListView;
 
+	public BookListViewController(BookTableGateway gway) {
+		this.gway = gway;
+		this.books = gway.getBooks();
+	}
+	
 	@FXML
 	void ListClick(MouseEvent event) {
 		
@@ -54,7 +61,17 @@ public class BookListViewController extends ViewController {
 
 	@FXML
 	void SearchHandler(ActionEvent event) {
-
+		if(searchField.getText() == ""){
+			listItems.setAll(books);
+			ListView.setItems(listItems);
+		}
+		else{
+			ArrayList<Book> nbList;
+			nbList = gway.getSpecificBooks(searchField.getText());
+			
+			listItems.setAll(nbList);
+			ListView.setItems(listItems);
+		}
 	}
 	
 	@FXML
@@ -62,15 +79,13 @@ public class BookListViewController extends ViewController {
 		if (SelectedBook != null){
 			try {
 				SelectedBook.getGateway().deleteBook(SelectedBook);
+				UsefulFunctions functions = UsefulFunctions.getInstance();
+				functions.SwitchView(functions.BookListView, null);		
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
-	}
-
-	public BookListViewController(ArrayList<Book> books) {
-		this.books = books;
 	}
 
 	public void initialize() {// URL location, ResourceBundle resources

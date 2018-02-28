@@ -88,7 +88,7 @@ public class UsefulFunctions {
 				break;
 			case BookListView:
 				fxmlFile = this.getClass().getResource("/View/BookListView.fxml");
-				controller = new BookListViewController(new BookTableGateway(conn).getBooks() );
+				controller = new BookListViewController(new BookTableGateway(conn));
 				break;
 			}
 			
