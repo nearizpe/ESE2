@@ -12,14 +12,14 @@ import Book.Publisher;
 public class PublisherTableGateway {
 
 	private Connection conn;
-	
-	public PublisherTableGateway(Connection conn){
+
+	public PublisherTableGateway(Connection conn) {
 		this.conn = conn;
 	}
-	
-	public ArrayList<Publisher> getPublishers (){
+
+	public ArrayList<Publisher> getPublishers() {
 		ArrayList<Publisher> list = new ArrayList<Publisher>();
-		//gateWay Stuff
+		// gateWay Stuff
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
 
@@ -57,8 +57,46 @@ public class PublisherTableGateway {
 		}
 		return list;
 	}
-	
-	public Publisher getPublisherById(int id){
-		return null;
+
+	public Publisher getPublisherById(int id) {
+		Publisher pub = new Publisher(this);
+
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+
+		try {
+			stmt = conn.prepareStatement("Select * From publisherTable where id = ?");
+			stmt.setInt(1, id);
+			rs = stmt.executeQuery();
+			rs.next();
+			pub.setId(id);
+			//System.out.println("SWL RESULT ID IS" +rs.getInt("id"));
+			//System.out.println("SWL RESULT IS" +rs.getString("publisher_name"));
+			pub.setPublisherName(rs.getString("publisher_name"));
+			System.out.println("CRASH5");
+		} catch (SQLException e) {
+			System.out.println("DB QUERY ERROR!! Publisher Table GAtewaty");
+			e.printStackTrace();
+
+		} finally {
+			if (rs != null) {
+				try {
+					rs.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+
+		if (stmt != null) {
+			try {
+				stmt.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return pub;
 	}
 }

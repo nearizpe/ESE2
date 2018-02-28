@@ -27,5 +27,9 @@ public class Publisher {
 		this.publisherName.setValue(publisherName);
 	}
 	
+	public String toString(){
+		return this.getPublisherName().getValue();
+	}
+	
 	
 }

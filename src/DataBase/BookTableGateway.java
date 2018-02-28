@@ -37,8 +37,10 @@ public class BookTableGateway {
 				temp.setTitle(rs.getString("tittle"));
 				temp.setSummary(rs.getString("summary"));
 				temp.setYearPublished(rs.getInt("year_published")); 
-				// Not sure how to set publisher yet Maybe have to get id and check what publisher it is and make it that?
-				//temp.setPublisher(rs.getInt("publisher_id"));
+				int pubId = rs.getInt("publisher_id");
+				//System.out.println("Below");
+				//System.out.println("HERE "+ new PublisherTableGateway(conn).getPublisherById(pubId));
+				temp.setPublisher(new PublisherTableGateway(conn).getPublisherById(pubId));
 				temp.setIsbn(rs.getString("isbn"));
 				temp.setDateAdded(rs.getDate("date_added").toLocalDate());
 				books.add(temp);
@@ -76,12 +78,14 @@ public class BookTableGateway {
 
 		if (book.getId() == 0) {
 			try {
+				System.out.println("HERE IT IS "+ book.getPublisher());
 				st = conn.prepareStatement(
-						"insert into bookTable (tittle, summary, year_published, publisher_id, isbn, date_added) " + "values (?, ?, ?, ?)",Statement.RETURN_GENERATED_KEYS);
+						"insert into bookTable (tittle, summary, year_published, publisher_id, isbn) " + "values (?, ?, ?, ?, ?)",Statement.RETURN_GENERATED_KEYS);
 				st.setString(1, book.getTitle().getValue());
 				st.setString(2, book.getSummary().getValue());
-				st.setInt(3, book.getPublisher().getValue().getId());
-				st.setString(4, book.getIsbn().getValue());
+				st.setInt(3, book.getYearPublished().getValue());
+				st.setInt(4, book.getPublisher().getValue().getId());
+				st.setString(5, book.getIsbn().getValue());
 				
 				st.executeUpdate();
 				ResultSet rs = st.getGeneratedKeys();

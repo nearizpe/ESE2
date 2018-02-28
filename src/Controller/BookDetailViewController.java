@@ -115,6 +115,6 @@ public class BookDetailViewController extends ViewController{
     	
     	//System.out.println(publisherTableGateway + "What is it?");
     	publisherComboBox.getItems().removeAll();
-    	//publisherComboBox.getItems().addAll(publisherTableGateway.getPublishers());
+    	publisherComboBox.getItems().addAll(publishers);
     }
 }

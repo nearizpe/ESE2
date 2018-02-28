@@ -34,7 +34,13 @@ public class BookListViewController extends ViewController {
 		if(event.getClickCount() > 1) {
 			Book nb = ListView.getSelectionModel().getSelectedItem();
 			if (nb != null){
-			 changeView(nb.getId());
+				UsefulFunctions functions = UsefulFunctions.getInstance();
+				try {
+					functions.SwitchView(functions.BookDetail, nb);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		}
 	}
@@ -51,17 +57,5 @@ public class BookListViewController extends ViewController {
 	public void initialize() {// URL location, ResourceBundle resources
 		listItems.setAll(books);
 		ListView.setItems(listItems);
-	}
-	private void changeView(int id){
-		System.out.println("ID =" + id);
-		//without this i get an out of bounds error
-		id--;
-		UsefulFunctions functions = UsefulFunctions.getInstance();
-		try {
-			functions.SwitchView(functions.BookDetail, books.get(id));
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 }
