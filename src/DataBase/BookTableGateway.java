@@ -13,6 +13,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import Book.Book;
+import Model.AuditTrailModel;
 import Model.Author;
 
 public class BookTableGateway {
@@ -186,6 +187,63 @@ public class BookTableGateway {
 			}
 		}
 		return books;
+	}
+	
+	public ArrayList<AuditTrailModel> getAuditTrail(){ //implement later
+		ArrayList<AuditTrailModel> list = new ArrayList<AuditTrailModel>();
+		
+		PreparedStatement st = null;
+
+		if (book.getId() == 0) {
+			try {
+				st = conn.prepareStatement(
+						"insert into bookTable (tittle, summary, year_published, publisher_id, isbn, date_added) " + "values (?, ?, ?, ?)",Statement.RETURN_GENERATED_KEYS);
+				st.setString(1, book.getTitle().getValue());
+				st.setString(2, book.getSummary().getValue());
+				st.setInt(3, book.getPublisher().getValue().getId());
+				st.setString(4, book.getIsbn().getValue());
+				
+				st.executeUpdate();
+				ResultSet rs = st.getGeneratedKeys();
+				rs.next();
+				int id = rs.getInt(1);
+				book.setId(id);
+				System.out.println("Clicked save in add and id of new obj is " + id);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} else {
+			try {
+				st = conn.prepareStatement(
+						"update authorDatabase set tittle = ?,summary = ?,year_published = ?,publisher_id = ?, isbn = ? where id = ?");
+				
+				st.setString(1, book.getTitle().getValue());
+				st.setString(2, book.getSummary().getValue());
+				st.setInt(3, book.getPublisher().getValue().getId());
+				st.setString(4, book.getIsbn().getValue());
+				
+				st.executeUpdate();
+				ResultSet rs = st.getGeneratedKeys();
+				rs.next();
+				int id = rs.getInt(1);
+				book.setId(id);
+
+			} catch (SQLException e) {
+				e.printStackTrace();
+				throw new Exception(e);
+			} finally {
+				try {
+					if (st != null)
+						st.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+					throw new Exception(e);
+				}
+			}
+		}
+		
+		return list;
 	}
 	
 }

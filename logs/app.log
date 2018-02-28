@@ -4324,3 +4324,9 @@
 14:33:54.407 INFO  assignment1.Main : Creating connection
 14:33:57.071 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@40be6dbe[styleClass=root]
 14:34:36.856 ERROR assignment1.Main : error Couldnt load window
+15:27:50.133 INFO  assignment1.Main : Creating connection
+15:27:50.275 FATAL DataBase.ConnectionFactory : Could not establish connection
+
+15:27:53.184 INFO  assignment1.Main : Creating connection
+15:27:56.506 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@af19d5a[styleClass=root]
+15:35:17.758 ERROR assignment1.Main : error Couldnt load window

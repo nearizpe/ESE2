@@ -11,6 +11,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import Book.Book;
+import Controller.AuditTrailController;
 import Controller.AuthorDetailViewController;
 import Controller.AuthorListController;
 import Controller.BookDetailViewController;
@@ -34,6 +35,7 @@ public class UsefulFunctions {
 	public static final int AuthorList = 2;
 	public static final int BookDetail = 3;
 	public static final int BookListView = 4;
+	public static final int AuditTrail = 5;
 
 	
 	private Connection conn;
@@ -89,6 +91,10 @@ public class UsefulFunctions {
 			case BookListView:
 				fxmlFile = this.getClass().getResource("/View/BookListView.fxml");
 				controller = new BookListViewController(new BookTableGateway(conn));
+				break;
+			case AuditTrail:
+				fxmlFile = this.getClass().getResource("/View/AuditTrailView.fxml");
+				controller = new AuditTrailController();
 				break;
 			}
 			

@@ -10,6 +10,7 @@ import Book.Book;
 import Book.Publisher;
 import DataBase.PublisherTableGateway;
 import assignment1.Main;
+import assignment1.UsefulFunctions;
 import javafx.beans.property.Property;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
@@ -114,7 +115,14 @@ public class BookDetailViewController extends ViewController{
     
     @FXML
     void AuiditButtonHandler(ActionEvent event) {
-
+    	try {
+			UsefulFunctions functions = UsefulFunctions.getInstance();
+			functions.SwitchView(functions.BookListView, null);		
+    	}
+    	catch(Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+    	}
     }
     
     public void initialize() {
