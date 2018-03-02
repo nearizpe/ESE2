@@ -13,6 +13,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 import Book.Book;
+import Book.Publisher;
 import Model.AuditTrailModel;
 import Model.Author;
 
@@ -37,9 +38,9 @@ public class BookTableGateway {
 				temp.setId(rs.getInt("id"));
 				temp.setTitle(rs.getString("tittle"));
 				temp.setSummary(rs.getString("summary"));
-				temp.setYearPublished(rs.getInt("year_published")); 
-				// Not sure how to set publisher yet Maybe have to get id and check what publisher it is and make it that?
-				//temp.setPublisher(rs.getInt("publisher_id"));
+				temp.setYearPublished(rs.getInt("year_published")); 				// Not sure how to set publisher yet Maybe have to get id and check what publisher it is and make it that?
+				Publisher pub = new PublisherTableGateway(conn).getPublisherById(rs.getInt("publisher_id"));
+				temp.setPublisher(pub);
 				temp.setIsbn(rs.getString("isbn"));
 				temp.setDateAdded(rs.getDate("date_added").toLocalDate());
 				books.add(temp);
@@ -75,14 +76,17 @@ public class BookTableGateway {
 		// TODO Auto-generated method stub
 		PreparedStatement st = null;
 
+		System.out.println("THE BOOK ID IS " + book.getId() );
+
 		if (book.getId() == 0) {
 			try {
 				st = conn.prepareStatement(
-						"insert into bookTable (tittle, summary, year_published, publisher_id, isbn, date_added) " + "values (?, ?, ?, ?)",Statement.RETURN_GENERATED_KEYS);
+						"insert into bookTable (tittle, summary, year_published, publisher_id, isbn) " + "values (?, ?, ?, ? ,? )",Statement.RETURN_GENERATED_KEYS);
 				st.setString(1, book.getTitle().getValue());
 				st.setString(2, book.getSummary().getValue());
-				st.setInt(3, book.getPublisher().getValue().getId());
-				st.setString(4, book.getIsbn().getValue());
+				st.setInt(3, book.getYearPublished().getValue());
+				st.setInt(4, book.getPublisher().getValue().getId());
+				st.setString(5, book.getIsbn().getValue());
 				
 				st.executeUpdate();
 				ResultSet rs = st.getGeneratedKeys();
@@ -97,18 +101,16 @@ public class BookTableGateway {
 		} else {
 			try {
 				st = conn.prepareStatement(
-						"update authorDatabase set tittle = ?,summary = ?,year_published = ?,publisher_id = ?, isbn = ? where id = ?");
-				
+						"update bookTable set tittle = ?, summary = ?, year_published = ?, publisher_id = ?, isbn = ? where id = ?");
 				st.setString(1, book.getTitle().getValue());
 				st.setString(2, book.getSummary().getValue());
-				st.setInt(3, book.getPublisher().getValue().getId());
-				st.setString(4, book.getIsbn().getValue());
+				st.setInt(3, book.getYearPublished().getValue());
+				st.setInt(4, book.getPublisher().getValue().getId());
+				st.setString(5, book.getIsbn().getValue());
+				st.setInt(6, book.getId());
 				
 				st.executeUpdate();
-				ResultSet rs = st.getGeneratedKeys();
-				rs.next();
-				int id = rs.getInt(1);
-				book.setId(id);
+
 
 			} catch (SQLException e) {
 				e.printStackTrace();

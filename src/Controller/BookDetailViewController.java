@@ -116,8 +116,19 @@ public class BookDetailViewController extends ViewController{
     @FXML
     void AuiditButtonHandler(ActionEvent event) {
     	try {
-			UsefulFunctions functions = UsefulFunctions.getInstance();
-			functions.SwitchView(functions.AuditTrail, this.book);		
+    		if(book.getId() == 0){
+    			Alert msg = new Alert(AlertType.INFORMATION);
+    	    	msg.setTitle("Error!");
+    	    	msg.setHeaderText("Error");
+    	    	
+        		msg.setContentText("Click Save before going to audit trail");
+        		msg.showAndWait();
+    		}
+    		else{
+    			UsefulFunctions functions = UsefulFunctions.getInstance();
+    			functions.SwitchView(functions.AuditTrail, this.book);		
+    		}
+			
     	}
     	catch(Exception e) {
 			// TODO Auto-generated catch block
