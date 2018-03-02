@@ -73,7 +73,6 @@ public class PublisherTableGateway {
 			//System.out.println("SWL RESULT ID IS" +rs.getInt("id"));
 			//System.out.println("SWL RESULT IS" +rs.getString("publisher_name"));
 			pub.setPublisherName(rs.getString("publisher_name"));
-			System.out.println("CRASH5");
 		} catch (SQLException e) {
 			System.out.println("DB QUERY ERROR!! Publisher Table GAtewaty");
 			e.printStackTrace();

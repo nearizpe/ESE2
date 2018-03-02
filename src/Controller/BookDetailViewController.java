@@ -92,17 +92,7 @@ public class BookDetailViewController extends ViewController{
     	
     	if (valid){
     		logger.info("clicked save");
-    		/*book.setFirstName(this.FirstName.getText());
-    		author.setLastName(this.LastName.getText());
-    		author.setGender(this.Gender.getValue());
-    		author.setWebSite(this.Website.getText());
-    		LocalDate date ;
-    		logger.info(dateFormat);
-    		
-    			date = this.Birthday.getValue();
-	    		author.setDateOfBirth(date);
-	    		logger.info(date);
-    		*/
+
     		try {
 				book.getGateway().upDateBook(book);
 			} catch (Exception e) {

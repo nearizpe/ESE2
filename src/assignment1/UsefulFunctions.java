@@ -108,26 +108,6 @@ public class UsefulFunctions {
 			throw new Exception(e);
 		}
 			
-		/*	toController.setRootNode(fromController.getRootNode());
-			
-			URL fxmlFile = this.getClass().getResource(resource);	
-			FXMLLoader loader = new FXMLLoader(fxmlFile);
-			
-			loader.setController(toController);
-			
-			Parent contentView = loader.load();
-
-			//get rid of reference to previous content view
-			fromController.getRootNode().setCenter(null);
-			logger.info("Swithching Views");
-
-			
-			fromController.getRootNode().setCenter(contentView);
-
-		} catch (IOException e) {
-			logger.error("error couldnt switch view");
-			e.printStackTrace();
-		}*/
 	}
 	
 	

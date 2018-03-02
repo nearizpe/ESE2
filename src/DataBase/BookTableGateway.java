@@ -95,14 +95,11 @@ public class BookTableGateway {
 				book.setId(id);
 				
 				//now do audit trail stuff
-				System.out.println("111");
 				st = conn.prepareStatement(
 						"insert into book_audit_trail (book_id, entry_msg) " + "values (?, ?)");
 				st.setInt(1, book.getId());
 				st.setString(2, "Book added" );
-				System.out.println("222");
 				st.executeUpdate();
-				System.out.println("333");
 				
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
@@ -189,9 +186,7 @@ public class BookTableGateway {
 
 		try {
 			stmt = conn.prepareStatement("Select * From bookTable where tittle like ?");
-			System.out.println("TESST");
 			stmt.setString(1, title + '%');
-			System.out.println("TESST2");
 			rs = stmt.executeQuery();
 			while (rs.next()) {
 				Book temp = new Book(this);
@@ -250,7 +245,6 @@ public class BookTableGateway {
 				temp.setDateAdded(rs.getTimestamp("date_added"));
 				temp.setMsg(rs.getString("entry_msg"));
 				list.add(temp);
-				System.out.println("hey");
 			}
 		} catch (SQLException e) {
 			System.out.println("AUDIT TRAIL QUERY ERROR!!");
