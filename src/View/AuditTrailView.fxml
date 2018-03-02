@@ -18,7 +18,7 @@
   </rowConstraints>
    <children>
       <Label fx:id="AuditLabel" prefHeight="400.0" prefWidth="500.0" text="Label" />
-      <ListView prefHeight="400.0" prefWidth="500.0" GridPane.rowIndex="1" />
+      <ListView fx:id="ListView" prefHeight="400.0" prefWidth="500.0" GridPane.rowIndex="1" />
       <Button fx:id="BackButton" mnemonicParsing="false" onAction="#BackHandler" prefHeight="400.0" prefWidth="500.0" text="Back" GridPane.rowIndex="2" />
    </children>
 </GridPane>

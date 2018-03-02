@@ -95,14 +95,14 @@ public class BookTableGateway {
 				book.setId(id);
 				
 				//now do audit trail stuff
-				
+				System.out.println("111");
 				st = conn.prepareStatement(
 						"insert into book_audit_trail (book_id, entry_msg) " + "values (?, ?)");
 				st.setInt(1, book.getId());
 				st.setString(2, "Book added" );
-				
+				System.out.println("222");
 				st.executeUpdate();
-				
+				System.out.println("333");
 				
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
@@ -115,7 +115,7 @@ public class BookTableGateway {
 				st = conn.prepareStatement("Select * From bookTable where id = ?");
 				st.setInt(1, book.getId());
 				ResultSet rs = st.executeQuery();
-				
+				rs.next();
 				Book temp = new Book(this);
 				temp.setTitle(rs.getString("tittle"));
 				temp.setSummary(rs.getString("summary"));
@@ -125,19 +125,19 @@ public class BookTableGateway {
 				temp.setIsbn(rs.getString("isbn"));
 				
 				if(!temp.getTitle().getValue().equals(book.getTitle().getValue())){
-					AuditTrailChanged(book.getId(), "“Title changed from" +temp.getTitle().getValue()+"  to "+book.getTitle().getValue());
+					AuditTrailChanged(book.getId(), "Title changed from " +temp.getTitle().getValue()+"  to "+book.getTitle().getValue());
 				}
-				if(!temp.getSummary().getValue().equals(book.getTitle().getValue()) ){
-					AuditTrailChanged(book.getId(), "“Summary changed from" +temp.getSummary().getValue()+"  to "+ book.getSummary().getValue());
+				if(!temp.getSummary().getValue().equals(book.getSummary().getValue()) ){
+					AuditTrailChanged(book.getId(), "Summary changed from " +temp.getSummary().getValue()+"  to "+ book.getSummary().getValue());
 				}
 				if(temp.getYearPublished().getValue() != book.getYearPublished().getValue() ){
-					AuditTrailChanged(book.getId(), "“Year published changed from" +temp.getYearPublished().getValue()+"  to "+ book.getYearPublished().getValue());
+					AuditTrailChanged(book.getId(), "Year published changed from " +temp.getYearPublished().getValue()+"  to "+ book.getYearPublished().getValue());
 				}
 				if(temp.getPublisher().getValue().getId() != book.getPublisher().getValue().getId()  ){
-					AuditTrailChanged(book.getId(), "“Publisher changed from" +temp.getPublisher().getValue().getPublisherName().getValue()+"  to "+ book.getPublisher().getValue().getPublisherName().getValue());
+					AuditTrailChanged(book.getId(), "Publisher changed from " +temp.getPublisher().getValue().getPublisherName().getValue()+"  to "+ book.getPublisher().getValue().getPublisherName().getValue());
 				}
 				if(!temp.getIsbn().getValue().equals(book.getIsbn().getValue()) ){
-					AuditTrailChanged(book.getId(), "“ISBN changed from" +temp.getIsbn().getValue()+"  to "+ book.getIsbn().getValue());
+					AuditTrailChanged(book.getId(), "ISBN changed from " +temp.getIsbn().getValue()+"  to "+ book.getIsbn().getValue());
 				}
 				
 				//normal stuff
@@ -283,7 +283,7 @@ public class BookTableGateway {
 		PreparedStatement st = null;
 		st = conn.prepareStatement("insert into book_audit_trail (book_id, entry_msg) " + "values (?, ?)");
 		st.setInt(1, bookId);
-		st.setString(2, "Book added" );
+		st.setString(2, messege );
 		st.executeUpdate();
 	}
 	
