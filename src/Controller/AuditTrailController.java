@@ -48,6 +48,7 @@ public class AuditTrailController extends ViewController {
 	
 	public void initialize() {
 		AuditLabel.setText("Audit Trail for " + book.getTitle().getValue());
+		System.out.println("SIZE OF MODEL " +models.size());
 		listItems.setAll(models);
 		ListView.setItems(listItems);
 	}

@@ -130,7 +130,7 @@ public class BookTableGateway {
 				if(!temp.getSummary().getValue().equals(book.getSummary().getValue()) ){
 					AuditTrailChanged(book.getId(), "Summary changed from " +temp.getSummary().getValue()+"  to "+ book.getSummary().getValue());
 				}
-				if(temp.getYearPublished().getValue() != book.getYearPublished().getValue() ){
+				if(temp.getYearPublished().get() != book.getYearPublished().get()  ){
 					AuditTrailChanged(book.getId(), "Year published changed from " +temp.getYearPublished().getValue()+"  to "+ book.getYearPublished().getValue());
 				}
 				if(temp.getPublisher().getValue().getId() != book.getPublisher().getValue().getId()  ){
@@ -239,14 +239,14 @@ public class BookTableGateway {
 		ResultSet rs = null;
 
 		try {
-			stmt = conn.prepareStatement("Select * From book_audit_trail where id = ?");
-			System.out.println("TESST");
+			stmt = conn.prepareStatement("Select * From book_audit_trail where book_id = ?");
 			stmt.setInt(1, book.getId());
-			System.out.println("TESST2");
 			rs = stmt.executeQuery();
 			while (rs.next()) {
 				AuditTrailModel temp = new AuditTrailModel();
 				temp.setId(rs.getInt("id"));
+				DateFormat df = new SimpleDateFormat("dd-MMM-yyyy hh:mm:ss");
+				System.out.println(df.format(rs.getDate("date_added")));
 				temp.setDateAdded(rs.getDate("date_added"));
 				temp.setMsg(rs.getString("entry_msg"));
 				list.add(temp);

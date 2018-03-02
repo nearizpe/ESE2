@@ -1,5 +1,7 @@
 package Model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class AuditTrailModel {
@@ -25,6 +27,12 @@ public class AuditTrailModel {
 	}
 	public void setMsg(String msg) {
 		this.msg = msg;
+	}
+	
+	public String toString(){
+		DateFormat df = new SimpleDateFormat("dd-MMM-yyyy hh:mm:ss");
+		
+		return df.format(dateAdded)+" : "+ msg;
 	}
 	
 }

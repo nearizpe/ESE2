@@ -3,11 +3,13 @@ package Book;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
 import DataBase.AuthorTableGateway;
 import DataBase.BookTableGateway;
+import Model.AuditTrailModel;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -182,5 +184,15 @@ public class Book {
 			return false;
 		}
 		return true;
+	}
+	
+	public ArrayList<AuditTrailModel> getAuditTrail(){
+		 try {
+			return gateway.getAuditTrail(this);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 	}
 }
