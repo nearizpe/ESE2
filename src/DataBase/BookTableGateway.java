@@ -246,8 +246,8 @@ public class BookTableGateway {
 				AuditTrailModel temp = new AuditTrailModel();
 				temp.setId(rs.getInt("id"));
 				DateFormat df = new SimpleDateFormat("dd-MMM-yyyy hh:mm:ss");
-				System.out.println(df.format(rs.getDate("date_added")));
-				temp.setDateAdded(rs.getDate("date_added"));
+				//System.out.println(df.format(rs.getDate("date_added")));
+				temp.setDateAdded(rs.getTimestamp("date_added"));
 				temp.setMsg(rs.getString("entry_msg"));
 				list.add(temp);
 				System.out.println("hey");

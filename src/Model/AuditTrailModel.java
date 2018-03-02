@@ -30,9 +30,9 @@ public class AuditTrailModel {
 	}
 	
 	public String toString(){
-		DateFormat df = new SimpleDateFormat("dd-MMM-yyyy hh:mm:ss");
+		//DateFormat df = new SimpleDateFormat("dd-MMM-yyyy hh:mm:ss"); df.format(dateAdded)
 		
-		return df.format(dateAdded)+" : "+ msg;
+		return dateAdded.toString() +" : "+ msg;
 	}
 	
 }
