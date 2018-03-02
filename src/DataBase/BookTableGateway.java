@@ -189,57 +189,47 @@ public class BookTableGateway {
 		return books;
 	}
 	
-	public ArrayList<AuditTrailModel> getAuditTrail(){ //implement later
+	public ArrayList<AuditTrailModel> getAuditTrail(Book book) throws Exception{ //implement later
 		ArrayList<AuditTrailModel> list = new ArrayList<AuditTrailModel>();
-		
-		PreparedStatement st = null;
+		// creating database variables and entering account info
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
 
-		if (book.getId() == 0) {
+		try {
+			stmt = conn.prepareStatement("Select * From book_audit_trail where id = ?");
+			System.out.println("TESST");
+			stmt.setInt(1, book.getId());
+			System.out.println("TESST2");
+			rs = stmt.executeQuery();
+			while (rs.next()) {
+				AuditTrailModel temp = new AuditTrailModel();
+				temp.setId(rs.getInt("id"));
+				temp.setDateAdded(rs.getDate("date_added"));
+				temp.setMsg(rs.getString("entry_msg"));
+				list.add(temp);
+				System.out.println("hey");
+			}
+		} catch (SQLException e) {
+			System.out.println("AUDIT TRAIL QUERY ERROR!!");
+			e.printStackTrace();
+
+		} finally {
+			if (rs != null) {
+				try {
+					rs.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+
+		if (stmt != null) {
 			try {
-				st = conn.prepareStatement(
-						"insert into bookTable (tittle, summary, year_published, publisher_id, isbn, date_added) " + "values (?, ?, ?, ?)",Statement.RETURN_GENERATED_KEYS);
-				st.setString(1, book.getTitle().getValue());
-				st.setString(2, book.getSummary().getValue());
-				st.setInt(3, book.getPublisher().getValue().getId());
-				st.setString(4, book.getIsbn().getValue());
-				
-				st.executeUpdate();
-				ResultSet rs = st.getGeneratedKeys();
-				rs.next();
-				int id = rs.getInt(1);
-				book.setId(id);
-				System.out.println("Clicked save in add and id of new obj is " + id);
+				stmt.close();
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
-		} else {
-			try {
-				st = conn.prepareStatement(
-						"update authorDatabase set tittle = ?,summary = ?,year_published = ?,publisher_id = ?, isbn = ? where id = ?");
-				
-				st.setString(1, book.getTitle().getValue());
-				st.setString(2, book.getSummary().getValue());
-				st.setInt(3, book.getPublisher().getValue().getId());
-				st.setString(4, book.getIsbn().getValue());
-				
-				st.executeUpdate();
-				ResultSet rs = st.getGeneratedKeys();
-				rs.next();
-				int id = rs.getInt(1);
-				book.setId(id);
-
-			} catch (SQLException e) {
-				e.printStackTrace();
-				throw new Exception(e);
-			} finally {
-				try {
-					if (st != null)
-						st.close();
-				} catch (SQLException e) {
-					e.printStackTrace();
-					throw new Exception(e);
-				}
 			}
 		}
 		

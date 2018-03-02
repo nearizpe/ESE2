@@ -117,7 +117,7 @@ public class BookDetailViewController extends ViewController{
     void AuiditButtonHandler(ActionEvent event) {
     	try {
 			UsefulFunctions functions = UsefulFunctions.getInstance();
-			functions.SwitchView(functions.BookListView, null);		
+			functions.SwitchView(functions.AuditTrail, this.book);		
     	}
     	catch(Exception e) {
 			// TODO Auto-generated catch block

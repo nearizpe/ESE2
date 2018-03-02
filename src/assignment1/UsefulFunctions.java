@@ -94,7 +94,8 @@ public class UsefulFunctions {
 				break;
 			case AuditTrail:
 				fxmlFile = this.getClass().getResource("/View/AuditTrailView.fxml");
-				controller = new AuditTrailController();
+				BookTableGateway bg = new BookTableGateway(conn);
+				controller = new AuditTrailController(bg.getAuditTrail((Book)arg));
 				break;
 			}
 			
