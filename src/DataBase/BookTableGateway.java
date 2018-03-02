@@ -93,13 +93,54 @@ public class BookTableGateway {
 				rs.next();
 				int id = rs.getInt(1);
 				book.setId(id);
-				System.out.println("Clicked save in add and id of new obj is " + id);
+				
+				//now do audit trail stuff
+				
+				st = conn.prepareStatement(
+						"insert into book_audit_trail (book_id, entry_msg) " + "values (?, ?)");
+				st.setInt(1, book.getId());
+				st.setString(2, "Book added" );
+				
+				st.executeUpdate();
+				
+				
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		} else {
 			try {
+				// Got to compare values to see what changed .This would be a good point for a transactions
+				
+				st = conn.prepareStatement("Select * From bookTable where id = ?");
+				st.setInt(1, book.getId());
+				ResultSet rs = st.executeQuery();
+				
+				Book temp = new Book(this);
+				temp.setTitle(rs.getString("tittle"));
+				temp.setSummary(rs.getString("summary"));
+				temp.setYearPublished(rs.getInt("year_published")); 				// Not sure how to set publisher yet Maybe have to get id and check what publisher it is and make it that?
+				Publisher pub = new PublisherTableGateway(conn).getPublisherById(rs.getInt("publisher_id"));
+				temp.setPublisher(pub);
+				temp.setIsbn(rs.getString("isbn"));
+				
+				if(!temp.getTitle().getValue().equals(book.getTitle().getValue())){
+					AuditTrailChanged(book.getId(), "“Title changed from" +temp.getTitle().getValue()+"  to "+book.getTitle().getValue());
+				}
+				if(!temp.getSummary().getValue().equals(book.getTitle().getValue()) ){
+					AuditTrailChanged(book.getId(), "“Summary changed from" +temp.getSummary().getValue()+"  to "+ book.getSummary().getValue());
+				}
+				if(temp.getYearPublished().getValue() != book.getYearPublished().getValue() ){
+					AuditTrailChanged(book.getId(), "“Year published changed from" +temp.getYearPublished().getValue()+"  to "+ book.getYearPublished().getValue());
+				}
+				if(temp.getPublisher().getValue().getId() != book.getPublisher().getValue().getId()  ){
+					AuditTrailChanged(book.getId(), "“Publisher changed from" +temp.getPublisher().getValue().getPublisherName().getValue()+"  to "+ book.getPublisher().getValue().getPublisherName().getValue());
+				}
+				if(!temp.getIsbn().getValue().equals(book.getIsbn().getValue()) ){
+					AuditTrailChanged(book.getId(), "“ISBN changed from" +temp.getIsbn().getValue()+"  to "+ book.getIsbn().getValue());
+				}
+				
+				//normal stuff
 				st = conn.prepareStatement(
 						"update bookTable set tittle = ?, summary = ?, year_published = ?, publisher_id = ?, isbn = ? where id = ?");
 				st.setString(1, book.getTitle().getValue());
@@ -236,6 +277,14 @@ public class BookTableGateway {
 		}
 		
 		return list;
+	}
+	
+	private void AuditTrailChanged(int bookId, String messege) throws Exception {
+		PreparedStatement st = null;
+		st = conn.prepareStatement("insert into book_audit_trail (book_id, entry_msg) " + "values (?, ?)");
+		st.setInt(1, bookId);
+		st.setString(2, "Book added" );
+		st.executeUpdate();
 	}
 	
 }

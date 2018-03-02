@@ -4467,3 +4467,16 @@
 12:52:44.345 INFO  Controller.BookDetailViewController : clicked save
 12:52:45.029 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@3e498140[styleClass=root]
 12:52:48.071 ERROR assignment1.Main : error Couldnt load window
+13:32:10.828 INFO  assignment1.Main : Creating connection
+13:32:14.227 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@1c1166cc[styleClass=root]
+13:32:29.674 ERROR Controller.BookDetailViewController : Invalid year Published
+13:32:34.490 INFO  Controller.BookDetailViewController : clicked save
+13:32:35.353 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@1c1166cc[styleClass=root]
+13:32:38.740 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@1c1166cc[styleClass=root]
+13:32:43.883 INFO  Controller.BookDetailViewController : clicked save
+13:32:43.896 ERROR Controller.BookDetailViewController : couldnt update database
+13:32:46.083 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@1c1166cc[styleClass=root]
+13:32:46.964 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@1c1166cc[styleClass=root]
+13:32:47.765 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@1c1166cc[styleClass=root]
+13:32:49.708 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@1c1166cc[styleClass=root]
+13:32:51.456 ERROR assignment1.Main : error Couldnt load window
