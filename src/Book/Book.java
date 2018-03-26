@@ -166,6 +166,10 @@ public class Book {
 
 	public boolean isValidYear(String year) {
 		// TODO Auto-generated method stub
+		
+		if(year.equals("")){//allow null strung
+			return true;
+		}
 		int yearP;
 		try{
 			yearP = Integer.parseInt(year);

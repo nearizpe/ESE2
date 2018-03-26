@@ -4,10 +4,13 @@ import java.util.Date;
 
 import DataBase.AuthorTableGateway;
 
+import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.scene.control.DatePicker;
@@ -21,7 +24,10 @@ public class Author {
 	private SimpleObjectProperty<String> gender;
 	private SimpleStringProperty webSite;
 	private AuthorTableGateway gateway;
+	private LocalDateTime lastModStamp;
 	
+
+
 	public AuthorTableGateway getGateway() {
 		return gateway;
 	}
@@ -38,8 +44,17 @@ public class Author {
 		dateOfBirth = new SimpleObjectProperty<LocalDate>();
 		gender = new SimpleObjectProperty<String>();
 		webSite = new SimpleStringProperty();
+		lastModStamp = LocalDateTime.of(null, null);
 	}
 	
+	public LocalDateTime getLastModStamp() {
+		return lastModStamp;
+	}
+
+	public void setLastModStamp(LocalDateTime lastModStamp) {
+		this.lastModStamp = lastModStamp;
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -160,7 +175,7 @@ public class Author {
 		author.setWebSite(this.getWebSite().getValue());
 		author.setDateOfBirth(this.getDateOfBirth().getValue());
 		author.setId(id);
-
+		author.setLastModStamp(lastModStamp);
 		return author;
 	}
 }

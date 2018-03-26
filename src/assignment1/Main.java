@@ -17,7 +17,7 @@ import Controller.MenuController;
 import DataBase.ConnectionFactory;
 
 public class Main extends Application {
-	// CS 4743 Assignment 2 by Kevin Gonzales, Nicholas Arizpe
+	// CS 4743 Assignment 3 by Kevin Gonzales, Nicholas Arizpe
 	private Connection conn;
 	private static Logger logger = LogManager.getLogger(Main.class);
 
@@ -41,7 +41,7 @@ public class Main extends Application {
 
 		BorderPane rootNode = loader.load();
 		Scene scene = new Scene(rootNode, 600, 400);
-		stage.setTitle("Assignment 1");
+		stage.setTitle("Enterprise ");
 		stage.setScene(scene);
 		stage.show();
 

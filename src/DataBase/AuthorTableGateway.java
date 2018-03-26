@@ -6,7 +6,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 
@@ -39,6 +41,7 @@ public class AuthorTableGateway {
 				temp.setDateOfBirth(rs.getDate("dob").toLocalDate());
 				temp.setGender(rs.getString("gender"));
 				temp.setWebSite(rs.getString("web_site"));
+				temp.setLastModStamp(rs.getTimestamp("last_modified").toLocalDateTime());
 				authors.add(temp);
 			}
 		} catch (SQLException e) {
@@ -72,7 +75,7 @@ public class AuthorTableGateway {
 		java.util.Date rdob = null;
 		java.sql.Date newD = null;
 
-		if (author.getId() == 0) {
+		if (author.getId() == 0) {//creating a new author
 			st = conn.prepareStatement(
 					"insert into authorDatabase (first_name, last_name, dob, gender, web_site) " + "values (?, ?, ?, ?, ?)",Statement.RETURN_GENERATED_KEYS);
 			st.setString(1, author.getFirstName().getValue());
@@ -88,21 +91,28 @@ public class AuthorTableGateway {
 			int id = rs.getInt(1);
 			author.setId(id);
 			System.out.println("Clicked save in add and id of new obj is " + id);
-		} else {
+		} else { //updating
 			try {
-				System.out.println("WDWADASSADSASDA " + author.getId());
-				st = conn.prepareStatement(
-						"update authorDatabase set first_name = ?,last_name = ?,dob = ?,gender = ?, Web_site = ? where id = ?");
 				
-				st.setString(1, author.getFirstName().getValue());
-				st.setString(2, author.getLastName().getValue());
-				rdob = new SimpleDateFormat(dateFormat).parse(author.getDateOfBirth().getValue().toString());
-				newD = new Date(rdob.getTime());
-				st.setDate(3, newD);
-				st.setString(4, author.getGender().getValue());
-				st.setString(5, author.getWebSite().getValue());
-				st.setInt(6, author.getId());
-				st.executeUpdate();
+				
+				if() // schek timestamp . If the not the same dont do anything else proceed
+				{
+					
+				}else{
+					//System.out.println("WDWADASSADSASDA " + author.getId());
+					st = conn.prepareStatement(
+							"update authorDatabase set first_name = ?,last_name = ?,dob = ?,gender = ?, Web_site = ? where id = ?");
+					
+					st.setString(1, author.getFirstName().getValue());
+					st.setString(2, author.getLastName().getValue());
+					rdob = new SimpleDateFormat(dateFormat).parse(author.getDateOfBirth().getValue().toString());
+					newD = new Date(rdob.getTime());
+					st.setDate(3, newD);
+					st.setString(4, author.getGender().getValue());
+					st.setString(5, author.getWebSite().getValue());
+					st.setInt(6, author.getId());
+					st.executeUpdate();
+				}
 
 			} catch (SQLException e) {
 				e.printStackTrace();
@@ -129,5 +139,26 @@ public class AuthorTableGateway {
 			e.printStackTrace();
 			throw new Exception(e);
 		}
+	}
+	
+	private boolean compareTimeStamps(Author author){ //returns true is timeStamps are same false otherwise
+		
+		PreparedStatement st = null;
+		ResultSet rs = null;
+
+		try {
+			st = conn.prepareStatement("Select last_modified From authorDatabase where id = ?");
+			st.setInt(1, author.getId());
+			rs = st.executeQuery();
+
+			LocalDateTime temp = LocalDateTime.of(date, time);
+			
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 }
