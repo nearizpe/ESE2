@@ -93,13 +93,12 @@ public class AuthorTableGateway {
 			System.out.println("Clicked save in add and id of new obj is " + id);
 		} else { //updating
 			try {
-				
-				
-				if() // schek timestamp . If the not the same dont do anything else proceed
+
+				if(!compareTimeStamps(author)) // schek timestamp . If the not the same dont do anything else proceed
 				{
+					System.out.println("The timestamp from the author model object and the timestamp from the database do not match");
 					
 				}else{
-					//System.out.println("WDWADASSADSASDA " + author.getId());
 					st = conn.prepareStatement(
 							"update authorDatabase set first_name = ?,last_name = ?,dob = ?,gender = ?, Web_site = ? where id = ?");
 					
@@ -149,9 +148,15 @@ public class AuthorTableGateway {
 		try {
 			st = conn.prepareStatement("Select last_modified From authorDatabase where id = ?");
 			st.setInt(1, author.getId());
-			rs = st.executeQuery();
-
-			LocalDateTime temp = LocalDateTime.of(date, time);
+			st.executeQuery();
+			rs = st.getGeneratedKeys();
+			rs.next();
+			Timestamp dbStamp = rs.getTimestamp(1);
+			if(author.getLastModStamp().toLocalDate().equals(dbStamp)){
+				return true;
+			}else{
+				return false;
+			}
 			
 			
 			
@@ -159,6 +164,6 @@ public class AuthorTableGateway {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+		return false;
 	}
 }

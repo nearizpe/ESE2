@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="ESE2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/mysql-connector-java-5.1.45-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/log4j-core-2.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/log4j-api-2.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
