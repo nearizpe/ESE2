@@ -44,7 +44,7 @@ public class Author {
 		dateOfBirth = new SimpleObjectProperty<LocalDate>();
 		gender = new SimpleObjectProperty<String>();
 		webSite = new SimpleStringProperty();
-		lastModStamp = LocalDateTime.of(null, null);
+		lastModStamp = null;//LocalDateTime.of(null, null);
 	}
 	
 	public LocalDateTime getLastModStamp() {

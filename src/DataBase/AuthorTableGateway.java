@@ -76,8 +76,7 @@ public class AuthorTableGateway {
 		java.sql.Date newD = null;
 
 		if (author.getId() == 0) {//creating a new author
-			st = conn.prepareStatement(
-					"insert into authorDatabase (first_name, last_name, dob, gender, web_site) " + "values (?, ?, ?, ?, ?)",Statement.RETURN_GENERATED_KEYS);
+			st = conn.prepareStatement("insert into authorDatabase (first_name, last_name, dob, gender, web_site) " + "values (?, ?, ?, ?, ?)",Statement.RETURN_GENERATED_KEYS);
 			st.setString(1, author.getFirstName().getValue());
 			st.setString(2, author.getLastName().getValue());
 			rdob = new SimpleDateFormat(dateFormat).parse(author.getDateOfBirth().getValue().toString());
@@ -93,11 +92,12 @@ public class AuthorTableGateway {
 			System.out.println("Clicked save in add and id of new obj is " + id);
 		} else { //updating
 			try {
-
 				if(!compareTimeStamps(author)) // schek timestamp . If the not the same dont do anything else proceed
 				{
 					System.out.println("The timestamp from the author model object and the timestamp from the database do not match");
 
+					Exception e = new Exception();
+					throw e;
 				}else{
 					st = conn.prepareStatement(
 							"update authorDatabase set first_name = ?,last_name = ?,dob = ?,gender = ?, Web_site = ? where id = ?");
@@ -111,6 +111,9 @@ public class AuthorTableGateway {
 					st.setString(5, author.getWebSite().getValue());
 					st.setInt(6, author.getId());
 					st.executeUpdate();
+					
+					//we must update the local time stamp or else you can only edit once
+					author.setLastModStamp(getLocalDateTime(author));
 				}
 
 			} catch (SQLException e) {
@@ -140,30 +143,64 @@ public class AuthorTableGateway {
 		}
 	}
 	
-	private boolean compareTimeStamps(Author author){ //returns true is timeStamps are same false otherwise
-		
+	private boolean compareTimeStamps(Author author) { // returns true is
+														// timeStamps are same
+														// false otherwise
 		PreparedStatement st = null;
 		ResultSet rs = null;
 
+		LocalDateTime timeStamp = getLocalDateTime(author);
+		if (author.getLastModStamp().equals(timeStamp)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	private LocalDateTime getLocalDateTime(Author author){
+		
+		PreparedStatement st = null;
+		ResultSet rs = null;
+		
 		try {
-			st = conn.prepareStatement("Select last_modified From authorDatabase where id = ?");
+			st = conn.prepareStatement("Select * From authorDatabase where id = ?");
 			st.setInt(1, author.getId());
-			st.executeQuery();
-			rs = st.getGeneratedKeys();
+			rs = st.executeQuery();
 			rs.next();
-			Timestamp dbStamp = rs.getTimestamp(1);
-			if(author.getLastModStamp().toLocalDate().equals(dbStamp)){
-				return true;
-			}else{
-				return false;
-			}
-			
-			
-			
+			Timestamp dbStamp = rs.getTimestamp("last_modified");
+			LocalDateTime timeStamp = dbStamp.toLocalDateTime();
+			System.out.println("Local stamp is "+ author.getLastModStamp() + " DB stamp is "+ timeStamp);
+			return timeStamp;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return false;
+		return null;
 	}
+	
+	public Author getAuthor(int id) { //gets specifi author based of id
+		// creating database variables and entering account info
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+
+		try {
+			stmt = conn.prepareStatement("Select * From authorDatabase where id = ?");
+			stmt.setInt(1, id);
+			rs = stmt.executeQuery();
+			rs.next();
+				Author temp = new Author(this);
+				temp.setId(rs.getInt("id"));
+				temp.setFirstName(rs.getString("first_name"));
+				temp.setLastName(rs.getString("last_name"));
+				temp.setDateOfBirth(rs.getDate("dob").toLocalDate());
+				temp.setGender(rs.getString("gender"));
+				temp.setWebSite(rs.getString("web_site"));
+				temp.setLastModStamp(rs.getTimestamp("last_modified").toLocalDateTime());
+				return temp;
+		} catch (SQLException e) {
+			System.out.println("DB QUERY ERROR");
+			e.printStackTrace();
+		}
+		return null;
+		}
 }

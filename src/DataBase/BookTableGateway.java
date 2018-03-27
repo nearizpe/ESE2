@@ -16,6 +16,7 @@ import Book.Book;
 import Book.Publisher;
 import Model.AuditTrailModel;
 import Model.Author;
+import Model.AuthorBook;
 
 public class BookTableGateway {
 	private Connection conn;
@@ -279,6 +280,26 @@ public class BookTableGateway {
 		st.setInt(1, bookId);
 		st.setString(2, messege );
 		st.executeUpdate();
+	}
+
+	public ArrayList<AuthorBook> getAuthorsForBook(Book book) throws Exception {
+		ArrayList<AuthorBook> list = new ArrayList<AuthorBook>();
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		
+		stmt = conn.prepareStatement("Select * From author_book where book_id = ?");
+		stmt.setInt(1, book.getId());
+		rs = stmt.executeQuery();
+		AuthorTableGateway aGway = new AuthorTableGateway(conn);
+		while (rs.next()) {
+			AuthorBook temp = new AuthorBook();
+			temp.setAuthor(aGway.getAuthor(rs.getInt("author_id")));
+			temp.setBook(book);
+			temp.setRoyalty(rs.getInt("royalty"));
+			temp.setNewRecord(false);
+			list.add(temp);
+		}
+		return list;
 	}
 	
 }

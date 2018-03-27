@@ -105,8 +105,12 @@ public class AuthorDetailViewController extends ViewController{
 				author.getGateway().updateAuthor(author);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
+		    	msg.setTitle("save failure error");
+		    	msg.setHeaderText("Outdated time stamp Error");
+		    	msg.setContentText("go Back to the Author List to fetch a fresh copy of the Author");
+	    		msg.showAndWait();
 				logger.error("couldnt update database");
-				e.printStackTrace();
+				//e.printStackTrace();
 			}
     	}
     	
