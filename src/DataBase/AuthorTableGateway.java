@@ -97,7 +97,7 @@ public class AuthorTableGateway {
 				if(!compareTimeStamps(author)) // schek timestamp . If the not the same dont do anything else proceed
 				{
 					System.out.println("The timestamp from the author model object and the timestamp from the database do not match");
-					
+
 				}else{
 					st = conn.prepareStatement(
 							"update authorDatabase set first_name = ?,last_name = ?,dob = ?,gender = ?, Web_site = ? where id = ?");

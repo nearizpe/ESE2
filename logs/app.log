@@ -4640,3 +4640,10 @@
 15:57:25.159 INFO  assignment1.Main : Creating connection
 15:57:29.732 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@31906c0e[styleClass=root]
 15:57:32.746 ERROR assignment1.Main : error Couldnt load window
+19:11:53.806 INFO  assignment1.Main : Creating connection
+19:12:26.202 ERROR Controller.MenuController : couldnt find files. MenuController
+19:12:44.898 INFO  assignment1.Main : Creating connection
+19:12:55.222 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@5f6378c4[styleClass=root]
+19:13:02.524 ERROR Controller.MenuController : couldnt find files. MenuController
+19:38:42.225 ERROR assignment1.Main : error Couldnt load window
+19:38:44.235 ERROR assignment1.Main : error Couldnt load window
