@@ -10,6 +10,8 @@ import java.util.Date;
 import DataBase.AuthorTableGateway;
 import DataBase.BookTableGateway;
 import Model.AuditTrailModel;
+import Model.Author;
+import Model.AuthorBook;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -188,6 +190,10 @@ public class Book {
 			return false;
 		}
 		return true;
+	}
+	
+	public ArrayList<AuthorBook> getAuthors(Book book) throws Exception{
+		return gateway.getAuthorsForBook(book);
 	}
 	
 	public ArrayList<AuditTrailModel> getAuditTrail(){

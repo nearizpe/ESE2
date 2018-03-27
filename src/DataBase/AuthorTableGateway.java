@@ -176,4 +176,30 @@ public class AuthorTableGateway {
 		}
 		return null;
 	}
+	
+	public Author getAuthor(int id) { //gets specifi author based of id
+		// creating database variables and entering account info
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+
+		try {
+			stmt = conn.prepareStatement("Select * From authorDatabase where id = ?");
+			stmt.setInt(1, id);
+			rs = stmt.executeQuery();
+			rs.next();
+				Author temp = new Author(this);
+				temp.setId(rs.getInt("id"));
+				temp.setFirstName(rs.getString("first_name"));
+				temp.setLastName(rs.getString("last_name"));
+				temp.setDateOfBirth(rs.getDate("dob").toLocalDate());
+				temp.setGender(rs.getString("gender"));
+				temp.setWebSite(rs.getString("web_site"));
+				temp.setLastModStamp(rs.getTimestamp("last_modified").toLocalDateTime());
+				return temp;
+		} catch (SQLException e) {
+			System.out.println("DB QUERY ERROR");
+			e.printStackTrace();
+		}
+		return null;
+		}
 }
