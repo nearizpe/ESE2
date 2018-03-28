@@ -1,5 +1,6 @@
 package Model;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import DataBase.AuthorTableGateway;
@@ -177,5 +178,15 @@ public class Author {
 		author.setId(id);
 		author.setLastModStamp(lastModStamp);
 		return author;
+	}
+
+	public ArrayList<AuditTrailModel> getAuditTrail(){
+		try {
+			return gateway.getAuditTrail(this);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 	}
 }

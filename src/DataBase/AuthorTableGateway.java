@@ -7,11 +7,13 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 
+import Model.AuditTrailModel;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 
 import Model.Author;
@@ -19,7 +21,7 @@ import Model.Author;
 public class AuthorTableGateway {
 	private final String dateFormat = "yyyy-MM-dd";
 	private Connection conn;
-	
+
 	public AuthorTableGateway(Connection conn){
 		this.conn = conn;
 	}
@@ -92,7 +94,7 @@ public class AuthorTableGateway {
 			System.out.println("Clicked save in add and id of new obj is " + id);
 		} else { //updating
 			try {
-				if(!compareTimeStamps(author)) // schek timestamp . If the not the same dont do anything else proceed
+				if(!compareTimeStamps(author)) // check timestamp . If the not the same dont do anything else proceed
 				{
 					System.out.println("The timestamp from the author model object and the timestamp from the database do not match");
 
@@ -110,6 +112,9 @@ public class AuthorTableGateway {
 					st.setString(4, author.getGender().getValue());
 					st.setString(5, author.getWebSite().getValue());
 					st.setInt(6, author.getId());
+                    //updates author audit trail
+                    auditCompare(author.getId(),author);
+
 					st.executeUpdate();
 					
 					//we must update the local time stamp or else you can only edit once
@@ -130,6 +135,7 @@ public class AuthorTableGateway {
 			}
 		}
 	}
+
 	public void deleteAuthor (Author author) throws Exception{
 		PreparedStatement st = null;
 		System.out.println(author.getId());
@@ -203,4 +209,108 @@ public class AuthorTableGateway {
 		}
 		return null;
 		}
+
+
+    public ArrayList<AuditTrailModel> getAuditTrail(Author author) throws Exception{ //implement later
+        ArrayList<AuditTrailModel> list = new ArrayList<AuditTrailModel>();
+        // creating database variables and entering account info
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+
+        try {
+            stmt = conn.prepareStatement("Select * From book_audit_trail where book_id = ?");
+            stmt.setInt(1, author.getId());
+            rs = stmt.executeQuery();
+            while (rs.next()) {
+                AuditTrailModel temp = new AuditTrailModel();
+                temp.setId(rs.getInt("id"));
+                DateFormat df = new SimpleDateFormat("dd-MMM-yyyy hh:mm:ss");
+                //System.out.println(df.format(rs.getDate("date_added")));
+                temp.setDateAdded(rs.getTimestamp("date_added"));
+                temp.setMsg(rs.getString("entry_msg"));
+                list.add(temp);
+            }
+        } catch (SQLException e) {
+            System.out.println("AUDIT TRAIL QUERY ERROR!!");
+            e.printStackTrace();
+
+        } finally {
+            if (rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        if (stmt != null) {
+            try {
+                stmt.close();
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+
+        return list;
+    }
+
+    private void AuditTrailChanged(int authorId, String message) throws Exception {
+        PreparedStatement st = null;
+        st = conn.prepareStatement("insert into author_audit_trail (author_id, entry_msg) " + "values (?, ?)");
+        st.setInt(1, authorId);
+        st.setString(2, message);
+        st.executeUpdate();
+    }
+
+    private void auditCompare(int authorId, Author author){
+        Author temp = new Author(this);
+        temp = getAuthor(authorId);
+
+        if(!temp.getFirstName().getValue().equals(author.getFirstName().getValue())){
+            try {
+                AuditTrailChanged(authorId, "First name changed from " + temp.getFirstName().getValue() + " to " + author.getFirstName().getValue());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        if(!temp.getLastName().getValue().equals(author.getLastName().getValue())){
+            try {
+                AuditTrailChanged(authorId, "Last name changed from " + temp.getLastName().getValue() + " to " + author.getLastName().getValue());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        if(!temp.getDateOfBirth().getValue().equals(author.getDateOfBirth().getValue())){
+            try {
+                AuditTrailChanged(authorId, "Date of Birth changed from " + temp.getDateOfBirth().getValue() + " to " + author.getDateOfBirth().getValue());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        if(!temp.getGender().getValue().equals(author.getGender().getValue())){
+            try {
+                AuditTrailChanged(authorId, "Gender changed from " + temp.getGender().getValue() + " to " + author.getGender().getValue());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        if(!temp.getWebSite().getValue().equals(author.getWebSite().getValue())){
+            try {
+                AuditTrailChanged(authorId, "Web Site changed from " + temp.getWebSite().getValue() + " to " + author.getWebSite().getValue());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
 }
+
+
+
