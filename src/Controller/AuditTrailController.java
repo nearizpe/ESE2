@@ -36,11 +36,22 @@ public class AuditTrailController extends ViewController {
     @FXML
     void BackHandler(ActionEvent event) {
     	UsefulFunctions functions = UsefulFunctions.getInstance();
-		try {
-			functions.SwitchView(functions.BookDetail, book);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+
+		if (objType == 0) {
+			try {
+				functions.SwitchView(functions.BookDetail, book);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		if (objType == 1) {
+			try {
+				functions.SwitchView(functions.AuthorDetail, author);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
     }
 	
@@ -61,7 +72,7 @@ public class AuditTrailController extends ViewController {
 			AuditLabel.setText("Audit Trail for " + book.getTitle().getValue());
 		}
 		if (objType == 1){
-    		AuditLabel.setText("Audit Trail for" + author.getFirstName().getValue() + " " + author.getLastName().getValue());
+    		AuditLabel.setText("Audit Trail for " + author.getFirstName().getValue() + " " + author.getLastName().getValue());
 		}
 		listItems.setAll(models);
 		ListView.setItems(listItems);

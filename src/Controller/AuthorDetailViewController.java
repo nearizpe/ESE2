@@ -1,5 +1,8 @@
 package Controller;
 
+//import java.awt.event.ActionEvent;
+import javafx.event.ActionEvent;
+import java.awt.event.KeyEvent;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -118,7 +121,7 @@ public class AuthorDetailViewController extends ViewController{
     }
 
 	@FXML
-	void AuditButtonHandler(MouseEvent event) {
+	void AuditButtonHandler(ActionEvent event) {
 		try {
 			if(author.getId() == 0){
 				Alert msg = new Alert(AlertType.INFORMATION);
