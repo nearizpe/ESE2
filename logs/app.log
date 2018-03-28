@@ -5108,3 +5108,108 @@
 20:19:02.908 INFO  Controller.AuthorDetailViewController : yyyy-MM-dd
 20:19:02.909 INFO  Controller.AuthorDetailViewController : 2018-02-15
 20:19:24.033 ERROR assignment1.Main : error Couldnt load window
+12:36:22.576 INFO  assignment1.Main : Creating connection
+12:36:28.472 INFO  Controller.AuthorListController : id is 0
+12:36:28.474 INFO  Controller.AuthorListController : id is 1
+12:36:28.474 INFO  Controller.AuthorListController : id is 2
+12:36:28.475 INFO  Controller.AuthorListController : id is 3
+12:36:28.475 INFO  Controller.AuthorListController : id is 4
+12:36:28.475 INFO  Controller.AuthorListController : id is 5
+12:36:28.475 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@2006e8b4[styleClass=root]
+12:36:33.433 INFO  Controller.AuthorListController$1 : Single Click
+12:36:33.434 INFO  Controller.AuthorListController$1 : 5
+12:36:33.601 INFO  Controller.AuthorListController$1 : Double Clicked id is 5
+12:36:33.651 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@2006e8b4[styleClass=root]
+12:38:11.188 INFO  assignment1.Main : Creating connection
+12:38:14.598 INFO  Controller.AuthorListController : id is 0
+12:38:14.599 INFO  Controller.AuthorListController : id is 1
+12:38:14.599 INFO  Controller.AuthorListController : id is 2
+12:38:14.599 INFO  Controller.AuthorListController : id is 3
+12:38:14.599 INFO  Controller.AuthorListController : id is 4
+12:38:14.600 INFO  Controller.AuthorListController : id is 5
+12:38:14.600 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@5f6378c4[styleClass=root]
+12:38:16.094 INFO  Controller.AuthorListController$1 : Single Click
+12:38:16.095 INFO  Controller.AuthorListController$1 : 5
+12:38:16.256 INFO  Controller.AuthorListController$1 : Double Clicked id is 5
+12:38:16.272 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@5f6378c4[styleClass=root]
+12:41:41.172 INFO  assignment1.Main : Creating connection
+12:41:45.679 INFO  Controller.AuthorListController : id is 0
+12:41:45.679 INFO  Controller.AuthorListController : id is 1
+12:41:45.680 INFO  Controller.AuthorListController : id is 2
+12:41:45.680 INFO  Controller.AuthorListController : id is 3
+12:41:45.680 INFO  Controller.AuthorListController : id is 4
+12:41:45.680 INFO  Controller.AuthorListController : id is 5
+12:41:45.681 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@37438f79[styleClass=root]
+12:41:47.148 INFO  Controller.AuthorListController$1 : Single Click
+12:41:47.148 INFO  Controller.AuthorListController$1 : 5
+12:41:47.305 INFO  Controller.AuthorListController$1 : Double Clicked id is 5
+12:42:05.002 INFO  assignment1.Main : Creating connection
+12:42:09.857 INFO  Controller.AuthorListController : id is 0
+12:42:09.858 INFO  Controller.AuthorListController : id is 1
+12:42:09.858 INFO  Controller.AuthorListController : id is 2
+12:42:09.858 INFO  Controller.AuthorListController : id is 3
+12:42:09.858 INFO  Controller.AuthorListController : id is 4
+12:42:09.859 INFO  Controller.AuthorListController : id is 5
+12:42:09.859 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@6390c95e[styleClass=root]
+12:42:11.490 INFO  Controller.AuthorListController$1 : Single Click
+12:42:11.490 INFO  Controller.AuthorListController$1 : 5
+12:42:11.619 INFO  Controller.AuthorListController$1 : Double Clicked id is 5
+12:42:11.637 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@6390c95e[styleClass=root]
+12:42:19.006 ERROR assignment1.Main : error Couldnt load window
+13:09:04.687 INFO  assignment1.Main : Creating connection
+13:09:10.178 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7b3de83e[styleClass=root]
+13:09:14.370 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7b3de83e[styleClass=root]
+13:09:15.781 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7b3de83e[styleClass=root]
+13:09:17.470 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7b3de83e[styleClass=root]
+13:09:18.747 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7b3de83e[styleClass=root]
+13:09:20.302 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7b3de83e[styleClass=root]
+13:09:24.871 INFO  Controller.AuthorListController : id is 0
+13:09:24.872 INFO  Controller.AuthorListController : id is 1
+13:09:24.872 INFO  Controller.AuthorListController : id is 2
+13:09:24.872 INFO  Controller.AuthorListController : id is 3
+13:09:24.872 INFO  Controller.AuthorListController : id is 4
+13:09:24.873 INFO  Controller.AuthorListController : id is 5
+13:09:24.873 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7b3de83e[styleClass=root]
+13:09:26.436 INFO  Controller.AuthorListController$1 : Single Click
+13:09:26.436 INFO  Controller.AuthorListController$1 : 4
+13:09:26.585 INFO  Controller.AuthorListController$1 : Double Clicked id is 4
+13:09:26.598 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7b3de83e[styleClass=root]
+13:09:30.691 ERROR assignment1.Main : error Couldnt load window
+13:21:38.636 INFO  assignment1.Main : Creating connection
+13:21:42.951 INFO  Controller.AuthorListController : id is 0
+13:21:42.952 INFO  Controller.AuthorListController : id is 1
+13:21:42.953 INFO  Controller.AuthorListController : id is 2
+13:21:42.953 INFO  Controller.AuthorListController : id is 3
+13:21:42.953 INFO  Controller.AuthorListController : id is 4
+13:21:42.953 INFO  Controller.AuthorListController : id is 5
+13:21:42.954 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@724d6b5e[styleClass=root]
+13:21:44.422 INFO  Controller.AuthorListController$1 : Single Click
+13:21:44.422 INFO  Controller.AuthorListController$1 : 5
+13:21:44.604 INFO  Controller.AuthorListController$1 : Double Clicked id is 5
+13:21:44.622 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@724d6b5e[styleClass=root]
+13:22:30.190 ERROR assignment1.Main : error Couldnt load window
+13:43:22.745 INFO  assignment1.Main : Creating connection
+13:43:27.669 INFO  Controller.AuthorListController : id is 0
+13:43:27.670 INFO  Controller.AuthorListController : id is 1
+13:43:27.670 INFO  Controller.AuthorListController : id is 2
+13:43:27.671 INFO  Controller.AuthorListController : id is 3
+13:43:27.671 INFO  Controller.AuthorListController : id is 4
+13:43:27.671 INFO  Controller.AuthorListController : id is 5
+13:43:27.671 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7b3de83e[styleClass=root]
+13:43:28.712 INFO  Controller.AuthorListController$1 : Single Click
+13:43:28.712 INFO  Controller.AuthorListController$1 : 5
+13:43:28.878 INFO  Controller.AuthorListController$1 : Double Clicked id is 5
+13:43:57.073 ERROR assignment1.Main : error Couldnt load window
+13:45:06.736 INFO  assignment1.Main : Creating connection
+13:45:36.117 INFO  Controller.AuthorListController : id is 0
+13:45:36.117 INFO  Controller.AuthorListController : id is 1
+13:45:36.118 INFO  Controller.AuthorListController : id is 2
+13:45:36.118 INFO  Controller.AuthorListController : id is 3
+13:45:36.118 INFO  Controller.AuthorListController : id is 4
+13:45:36.119 INFO  Controller.AuthorListController : id is 5
+13:45:36.119 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@2e83a038[styleClass=root]
+13:45:37.075 INFO  Controller.AuthorListController$1 : Single Click
+13:45:37.075 INFO  Controller.AuthorListController$1 : 5
+13:45:37.215 INFO  Controller.AuthorListController$1 : Double Clicked id is 5
+13:45:37.232 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@2e83a038[styleClass=root]
+13:45:41.381 ERROR assignment1.Main : error Couldnt load window

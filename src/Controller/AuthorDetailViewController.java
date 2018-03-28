@@ -130,7 +130,7 @@ public class AuthorDetailViewController extends ViewController{
 			}
 			else{
 				UsefulFunctions functions = UsefulFunctions.getInstance();
-				functions.SwitchView(functions.AuditTrail, this.author);
+				functions.SwitchView(functions.AuthorAuditTrail, this.author);
 			}
 
 		}

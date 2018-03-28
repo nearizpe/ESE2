@@ -98,9 +98,9 @@ public class UsefulFunctions {
 				controller = new AuditTrailController((Book)arg,((Book) arg).getAuditTrail());
 				break;
 			case AuthorAuditTrail:
-                    fxmlFile = this.getClass().getResource("/View/AuditTrailView.fxml");
-                    controller = new AuditTrailController((Author)arg,((Author) arg.getAuditTrail()));
-                    break;
+				fxmlFile = this.getClass().getResource("/View/AuditTrailView.fxml");
+				controller = new AuditTrailController((Author)arg,(((Author) arg).getAuditTrail()));
+				break;
 			}
 			
 			FXMLLoader loader = new FXMLLoader(fxmlFile);
@@ -110,6 +110,7 @@ public class UsefulFunctions {
 			logger.info("Checking if null, "+ rootPane);
 			rootPane.setCenter(viewNode);
 		} catch (IOException e) {
+			System.out.println("Switch View Failed");
 			throw new Exception(e);
 		}
 			
