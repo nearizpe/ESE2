@@ -36,6 +36,7 @@ public class UsefulFunctions {
 	public static final int BookDetail = 3;
 	public static final int BookListView = 4;
 	public static final int AuditTrail = 5;
+    public static final int AuthorAuditTrail = 6;
 
 	
 	private Connection conn;
@@ -96,6 +97,10 @@ public class UsefulFunctions {
 				fxmlFile = this.getClass().getResource("/View/AuditTrailView.fxml");
 				controller = new AuditTrailController((Book)arg,((Book) arg).getAuditTrail());
 				break;
+			case AuthorAuditTrail:
+                    fxmlFile = this.getClass().getResource("/View/AuditTrailView.fxml");
+                    controller = new AuditTrailController((Author)arg,((Author) arg.getAuditTrail()));
+                    break;
 			}
 			
 			FXMLLoader loader = new FXMLLoader(fxmlFile);

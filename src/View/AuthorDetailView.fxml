@@ -7,12 +7,12 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TextField fx:id="FirstName" layoutX="217.0" layoutY="58.0" text="FirstName" />
       <TextField fx:id="LastName" layoutX="217.0" layoutY="100.0" text="LastName" />
       <TextField fx:id="Website" layoutX="217.0" layoutY="246.0" text="Website" />
-      <Button layoutX="276.0" layoutY="285.0" mnemonicParsing="false" onMouseClicked="#SaveHandler" text="Save" />
+      <Button layoutX="217.0" layoutY="285.0" mnemonicParsing="false" onMouseClicked="#SaveHandler" text="Save" />
       <Text layoutX="130.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" />
       <Text layoutX="130.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" />
       <Text layoutX="130.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BirthDay" />
@@ -20,5 +20,6 @@
       <Text layoutX="131.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Website" />
       <DatePicker fx:id="Birthday" layoutX="217.0" layoutY="149.0" />
       <ComboBox fx:id="Gender" layoutX="225.0" layoutY="200.0" prefWidth="150.0" promptText="M" visibleRowCount="3" />
+      <Button fx:id="AuditTrailButton" layoutX="304.0" layoutY="285.0" mnemonicParsing="false" onAction="#AuditButtonHandler" text="Audit Trail" />
    </children>
 </Pane>

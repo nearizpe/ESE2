@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.ZoneId;
 
+import assignment1.UsefulFunctions;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -42,7 +43,6 @@ public class AuthorDetailViewController extends ViewController{
     @FXML
     private TextField Website;
 
-    
     @FXML
     void SaveHandler(MouseEvent event) {
     	Alert msg = new Alert(AlertType.INFORMATION);
@@ -116,6 +116,29 @@ public class AuthorDetailViewController extends ViewController{
     	
     	
     }
+
+	@FXML
+	void AuditButtonHandler(MouseEvent event) {
+		try {
+			if(author.getId() == 0){
+				Alert msg = new Alert(AlertType.INFORMATION);
+				msg.setTitle("Error!");
+				msg.setHeaderText("Error");
+
+				msg.setContentText("Click Save before going to audit trail");
+				msg.showAndWait();
+			}
+			else{
+				UsefulFunctions functions = UsefulFunctions.getInstance();
+				functions.SwitchView(functions.AuditTrail, this.author);
+			}
+
+		}
+		catch(Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
     
     public AuthorDetailViewController(Author author){
     	this.author = author.clone();

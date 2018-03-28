@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import Book.Book;
 import Model.AuditTrailModel;
+import Model.Author;
 import assignment1.UsefulFunctions;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,6 +19,8 @@ public class AuditTrailController extends ViewController {
 	ArrayList<AuditTrailModel> models;
 	
 	private Book book;
+	private Author author;
+	private int objType;
 	private ObservableList<AuditTrailModel> listItems = FXCollections.observableArrayList();
 	
     @FXML
@@ -41,14 +44,25 @@ public class AuditTrailController extends ViewController {
 		}
     }
 	
-	public AuditTrailController(Book book,ArrayList<AuditTrailModel> list){
+	public AuditTrailController(Object model,ArrayList<AuditTrailModel> list){
 		this.models = list;
-		this.book = book;
+		if(model instanceof Book) {
+			this.book = (Book) model;
+			objType = 0;
+		}
+		if (model instanceof Author){
+			this.author = (Author) model;
+			objType = 1;
+		}
 	}
 	
 	public void initialize() {
-		AuditLabel.setText("Audit Trail for " + book.getTitle().getValue());
-		//System.out.println("SIZE OF MODEL " +models.size());
+    	if(objType == 0) {
+			AuditLabel.setText("Audit Trail for " + book.getTitle().getValue());
+		}
+		if (objType == 1){
+    		AuditLabel.setText("Audit Trail for" + author.getFirstName().getValue() + " " + author.getLastName().getValue());
+		}
 		listItems.setAll(models);
 		ListView.setItems(listItems);
 	}
