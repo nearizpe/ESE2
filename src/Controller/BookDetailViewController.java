@@ -3,6 +3,10 @@ package Controller;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
+import Model.AuthorBook;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -15,14 +19,7 @@ import javafx.beans.property.Property;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 import javafx.util.converter.NumberStringConverter;
 
@@ -31,6 +28,9 @@ public class BookDetailViewController extends ViewController{
 	private static Logger logger = LogManager.getLogger(Main.class);
 	
 	private Book book;
+	AuthorBook SelectedAuthor;
+
+
 	@FXML
     private TextField tittleTextField;
 
@@ -49,12 +49,28 @@ public class BookDetailViewController extends ViewController{
     @FXML
     private Button AuditTrailButton;
 
+	@FXML
+	private ListView<AuthorBook> AuthorListView;
+
+	@FXML
+	private Button AddAuthorButton;
+
+	@FXML
+	private Button DeleteAuthorButton;
     
     private ArrayList<Publisher> publishers;
+    private ArrayList<AuthorBook> authors;
+	private ObservableList<AuthorBook> listItems = FXCollections.observableArrayList();
     
-    public BookDetailViewController(Book book, ArrayList<Publisher> gway ){
-    	this.publishers = gway;
+    public BookDetailViewController(Book book, ArrayList<Publisher> publishers ){
+    	this.publishers = publishers;
     	this.book = book;
+    	try {
+			this.authors = book.getAuthors(this.book);
+		}catch (Exception e){
+			logger.error("Could not get Book Authors");
+			e.printStackTrace();
+		}
     }
     
     @FXML
@@ -125,6 +141,37 @@ public class BookDetailViewController extends ViewController{
 			e.printStackTrace();
     	}
     }
+
+	@FXML
+	void AddAuthorHandler(ActionEvent event) {
+
+	}
+
+	@FXML
+	void AuthorListClick(MouseEvent event) {
+		if(event.getClickCount() == 1){
+			SelectedAuthor = AuthorListView.getSelectionModel().getSelectedItem();
+		}else if(event.getClickCount() >1 ){
+			//call author book view to edit
+		}
+
+
+	}
+
+	@FXML
+	void DeleteAuthorHandler(ActionEvent event) {
+		if (SelectedAuthor != null){
+			try {
+				SelectedAuthor.getAuthor().getGateway().deleteBook(SelectedAuthor);
+				UsefulFunctions functions = UsefulFunctions.getInstance();
+				functions.SwitchView(functions.BookListView, null);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+
     
     public void initialize() {
     	this.tittleTextField.textProperty().bindBidirectional(book.getTitle());
@@ -136,5 +183,8 @@ public class BookDetailViewController extends ViewController{
     	//System.out.println(publisherTableGateway + "What is it?");
     	publisherComboBox.getItems().removeAll();
     	publisherComboBox.getItems().addAll(publishers);
+		listItems.setAll(authors);
+		AuthorListView.setItems(listItems);
+
     }
 }

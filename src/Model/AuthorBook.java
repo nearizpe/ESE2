@@ -5,12 +5,17 @@ import Book.Book;
 public class AuthorBook {
 	Author author ;
 	Book book;
-	int royalty; //which is the royalty amount multiplied by 100000. why???)
+	double royalty; //which is the royalty amount multiplied by 100000. why???)
 	
 	public AuthorBook(){
 		
 	}
-	
+
+	@Override
+	public String toString(){
+		return this.getAuthor().getFirstName().getValue() + " " + this.getAuthor().getLastName().getValue() + "		" + this.getRoyalty() + "%";
+	}
+
 	public Author getAuthor() {
 		return author;
 	}
@@ -23,10 +28,10 @@ public class AuthorBook {
 	public void setBook(Book book) {
 		this.book = book;
 	}
-	public int getRoyalty() {
+	public double getRoyalty() {
 		return royalty;
 	}
-	public void setRoyalty(int royalty) {
+	public void setRoyalty(double royalty) {
 		this.royalty = royalty;
 	}
 	public boolean isNewRecord() {
