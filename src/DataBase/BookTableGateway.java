@@ -360,7 +360,8 @@ public class BookTableGateway {
 				stmt = conn.prepareStatement("Insert into author_book (author_id, book_id, royalty) " + "values (?, ?, ?)");
 				stmt.setInt(1, authorBook.getAuthor().getId());
 				stmt.setInt(2,authorBook.getBook().getId());
-				stmt.setBigDecimal(3,authorBook.getRoyalty());
+				stmt.setDouble(3,authorBook.getRoyalty().doubleValue());
+				System.out.println("~~~~~~~~~~~~"+authorBook.getRoyalty().doubleValue());
 				stmt.execute();
 			}catch (Exception e){
 				e.printStackTrace();
@@ -371,6 +372,7 @@ public class BookTableGateway {
 			stmt.setBigDecimal(1,authorBook.getRoyalty());
 			stmt.setInt(2, authorBook.getAuthor().getId());
 			stmt.setInt(3,authorBook.getBook().getId());
+			System.out.println("!!!!!!!!!!!!!!!!!"+authorBook.getRoyalty().doubleValue());
 			stmt.executeUpdate();
 		}
 
