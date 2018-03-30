@@ -5706,3 +5706,49 @@
 12:02:57.646 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4d73a83f[styleClass=root]
 12:02:58.816 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4d73a83f[styleClass=root]
 12:03:56.965 ERROR assignment1.Main : error Couldnt load window
+12:32:55.627 INFO  assignment1.Main : Creating connection
+12:33:00.807 ERROR assignment1.Main : error Couldnt load window
+12:36:31.904 INFO  assignment1.Main : Creating connection
+12:36:45.678 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4d73a83f[styleClass=root]
+12:36:52.596 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4d73a83f[styleClass=root]
+12:36:54.412 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4d73a83f[styleClass=root]
+12:36:57.549 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4d73a83f[styleClass=root]
+12:36:58.747 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4d73a83f[styleClass=root]
+12:37:26.734 ERROR assignment1.Main : error Couldnt load window
+12:39:47.559 INFO  assignment1.Main : Creating connection
+12:39:53.034 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@1a9ce24e[styleClass=root]
+12:39:55.496 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@1a9ce24e[styleClass=root]
+12:45:10.259 INFO  assignment1.Main : Creating connection
+12:45:24.533 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7e34d25f[styleClass=root]
+12:45:26.172 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7e34d25f[styleClass=root]
+12:47:23.766 INFO  assignment1.Main : Creating connection
+12:47:32.259 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4d73a83f[styleClass=root]
+12:47:33.953 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4d73a83f[styleClass=root]
+12:49:19.979 INFO  assignment1.Main : Creating connection
+12:49:26.957 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7e34d25f[styleClass=root]
+12:49:28.883 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7e34d25f[styleClass=root]
+12:49:35.505 INFO  Controller.BookDetailViewController : clicked Add author
+12:49:40.965 ERROR assignment1.Main : error Couldnt load window
+12:55:16.209 INFO  assignment1.Main : Creating connection
+12:55:28.384 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7e34d25f[styleClass=root]
+12:55:29.875 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7e34d25f[styleClass=root]
+12:55:35.633 ERROR Controller.BookDetailViewController : Invalid Royalty
+12:55:42.596 ERROR assignment1.Main : error Couldnt load window
+12:57:27.402 INFO  assignment1.Main : Creating connection
+12:57:34.199 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4d73a83f[styleClass=root]
+12:57:35.624 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4d73a83f[styleClass=root]
+12:57:40.739 INFO  Controller.BookDetailViewController : clicked Add author
+12:57:46.189 ERROR Controller.BookDetailViewController : Invalid Royalty
+12:57:54.192 ERROR assignment1.Main : error Couldnt load window
+12:59:06.487 INFO  assignment1.Main : Creating connection
+12:59:12.523 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@229ef8ce[styleClass=root]
+12:59:13.767 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@229ef8ce[styleClass=root]
+12:59:18.709 ERROR Controller.BookDetailViewController : Invalid Royalty
+12:59:34.703 INFO  Controller.BookDetailViewController : clicked Add author
+12:59:40.353 ERROR assignment1.Main : error Couldnt load window
+13:16:21.425 INFO  assignment1.Main : Creating connection
+13:16:29.456 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@229ef8ce[styleClass=root]
+13:16:31.364 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@229ef8ce[styleClass=root]
+13:16:46.300 ERROR Controller.BookDetailViewController : Invalid Royalty
+13:16:56.760 INFO  Controller.BookDetailViewController : clicked Add author
+13:16:59.877 ERROR assignment1.Main : error Couldnt load window

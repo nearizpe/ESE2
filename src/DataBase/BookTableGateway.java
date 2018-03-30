@@ -165,6 +165,11 @@ public class BookTableGateway {
 			}
 		}
 	}
+
+	public void updateAuthorBook(AuthorBook aBook){
+
+
+	}
 	
 	public void deleteBook (Book book) throws Exception{
 		PreparedStatement st = null;
@@ -295,7 +300,7 @@ public class BookTableGateway {
 			AuthorBook temp = new AuthorBook();
 			temp.setAuthor(aGway.getAuthor(rs.getInt("author_id")));
 			temp.setBook(book);
-			temp.setRoyalty(rs.getInt("royalty"));
+			temp.setRoyalty(rs.getBigDecimal("royalty"));
 			temp.setNewRecord(false);
 			list.add(temp);
 		}

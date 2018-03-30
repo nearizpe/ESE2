@@ -1,5 +1,6 @@
 package Controller;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 import DataBase.AuthorTableGateway;
@@ -153,7 +154,28 @@ public class BookDetailViewController extends ViewController{
 
 	@FXML
 	void AddAuthorHandler(ActionEvent event) {
+		Alert msg = new Alert(AlertType.INFORMATION);
+		msg.setTitle("Error!");
+		msg.setHeaderText("Format Error");
 
+		Boolean valid = true;
+		AuthorBook newAuthor = new AuthorBook();
+		newAuthor.setAuthor(authorComboBox.getSelectionModel().getSelectedItem());
+		newAuthor.setBook(this.book);
+		System.out.println("~~~~~~~~~~" +royaltyInput.getText());
+		newAuthor.setRoyalty(new BigDecimal(royaltyInput.getText()));
+
+		if(!newAuthor.isValidRoyalty()){
+			logger.error("Invalid Royalty");
+			msg.setContentText("Royalty needs to be in between 0 and 1");
+			msg.showAndWait();
+			valid = false;
+		}
+
+		if (valid) {
+			logger.info("clicked Add author");
+
+		}
 	}
 
 	@FXML
@@ -163,7 +185,6 @@ public class BookDetailViewController extends ViewController{
 		}else if(event.getClickCount() >1 ){
 			//call author book view to edit
 		}
-
 
 	}
 

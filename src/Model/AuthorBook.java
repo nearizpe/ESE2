@@ -2,10 +2,12 @@ package Model;
 
 import Book.Book;
 
+import java.math.BigDecimal;
+
 public class AuthorBook {
 	Author author ;
 	Book book;
-	double royalty; //which is the royalty amount multiplied by 100000. why???)
+	BigDecimal royalty; //which is the royalty amount multiplied by 100000. why???)
 	
 	public AuthorBook(){
 		
@@ -28,10 +30,10 @@ public class AuthorBook {
 	public void setBook(Book book) {
 		this.book = book;
 	}
-	public double getRoyalty() {
+	public BigDecimal getRoyalty() {
 		return royalty;
 	}
-	public void setRoyalty(double royalty) {
+	public void setRoyalty(BigDecimal royalty) {
 		this.royalty = royalty;
 	}
 	public boolean isNewRecord() {
@@ -41,4 +43,5 @@ public class AuthorBook {
 		this.newRecord = newRecord;
 	}
 	boolean newRecord = true; //defaults to True, set to False when instantiated using data from a database record
+	public boolean isValidRoyalty(){if(this.royalty.compareTo(new BigDecimal(0)) != -1 && this.royalty.compareTo(new BigDecimal(1)) != 1){ return true;}else return false;}
 }
