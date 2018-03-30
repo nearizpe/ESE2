@@ -218,7 +218,7 @@ public class AuthorTableGateway {
         ResultSet rs = null;
 
         try {
-            stmt = conn.prepareStatement("Select * From book_audit_trail where book_id = ?");
+            stmt = conn.prepareStatement("Select * From author_audit_trail where author_id = ?");
             stmt.setInt(1, author.getId());
             rs = stmt.executeQuery();
             while (rs.next()) {

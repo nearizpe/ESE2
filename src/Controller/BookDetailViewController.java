@@ -1,8 +1,9 @@
 package Controller;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 
+import DataBase.AuthorTableGateway;
+import Model.Author;
 import Model.AuthorBook;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -12,11 +13,8 @@ import org.apache.logging.log4j.Logger;
 
 import Book.Book;
 import Book.Publisher;
-import DataBase.PublisherTableGateway;
 import assignment1.Main;
 import assignment1.UsefulFunctions;
-import javafx.beans.property.Property;
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert.AlertType;
@@ -57,20 +55,31 @@ public class BookDetailViewController extends ViewController{
 
 	@FXML
 	private Button DeleteAuthorButton;
+
+	@FXML
+	private ComboBox<Author> authorComboBox;
+
+	@FXML
+	private TextField royaltyInput;
     
     private ArrayList<Publisher> publishers;
-    private ArrayList<AuthorBook> authors;
+	private ArrayList<Author> authors;
+    private ArrayList<AuthorBook> authorBooks;
 	private ObservableList<AuthorBook> listItems = FXCollections.observableArrayList();
+
     
-    public BookDetailViewController(Book book, ArrayList<Publisher> publishers ){
+    public BookDetailViewController(Book book, ArrayList<Publisher>  publishers){
     	this.publishers = publishers;
     	this.book = book;
     	try {
-			this.authors = book.getAuthors(this.book);
+			this.authorBooks = book.getAuthors(this.book);
 		}catch (Exception e){
 			logger.error("Could not get Book Authors");
 			e.printStackTrace();
 		}
+		UsefulFunctions uf =  UsefulFunctions.getInstance();
+		AuthorTableGateway authorgw = new AuthorTableGateway(uf.getConn());
+		authors = authorgw.getAuthors();
     }
     
     @FXML
@@ -162,7 +171,7 @@ public class BookDetailViewController extends ViewController{
 	void DeleteAuthorHandler(ActionEvent event) {
 		if (SelectedAuthor != null){
 			try {
-				SelectedAuthor.getAuthor().getGateway().deleteBook(SelectedAuthor);
+				//SelectedAuthor.getAuthor().getGateway().deleteBook(SelectedAuthor);
 				UsefulFunctions functions = UsefulFunctions.getInstance();
 				functions.SwitchView(functions.BookListView, null);
 			} catch (Exception e) {
@@ -181,9 +190,11 @@ public class BookDetailViewController extends ViewController{
     	this.yearPubTF.textProperty().bindBidirectional(book.getYearPublished(), new NumberStringConverter());
     	
     	//System.out.println(publisherTableGateway + "What is it?");
+		authorComboBox.getItems().removeAll();
+		authorComboBox.getItems().addAll(authors);
     	publisherComboBox.getItems().removeAll();
     	publisherComboBox.getItems().addAll(publishers);
-		listItems.setAll(authors);
+		listItems.setAll(authorBooks);
 		AuthorListView.setItems(listItems);
 
     }

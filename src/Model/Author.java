@@ -189,4 +189,9 @@ public class Author {
 		}
 		return null;
 	}
+
+	@Override
+	public String toString() {
+		return this.getFirstName().getValue() + " " + this.getLastName().getValue();
+	}
 }
