@@ -307,4 +307,37 @@ public class BookTableGateway {
 		return list;
 	}
 	
+	public void addedAuthor(Book book, Author author){// call whenever you add an author
+		String authorname = author.getFirstName().getValue() + " "+author.getLastName().getValue();
+		String msg ="Added author " +  authorname;
+		try {
+			AuditTrailChanged(book.getId(),  msg);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void changedAuthorRoyalty(Book book, Author author,double newVal){// call whenever you change an author royalty
+		String authorname = author.getFirstName().getValue() + " "+author.getLastName().getValue();
+		String msg ="Changed " +  authorname+ " royalty to " + newVal;
+		try {
+			AuditTrailChanged(book.getId(),  msg);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void changedAuthorRoyalty(Book book, Author author){// call whenever you delete an author
+		String authorname = author.getFirstName().getValue() + " "+author.getLastName().getValue();
+		String msg ="deleterd " +  authorname + " from this book ";
+		try {
+			AuditTrailChanged(book.getId(),  msg);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 }
