@@ -2,6 +2,7 @@ package Controller;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Optional;
 
 import DataBase.AuthorTableGateway;
 import Model.Author;
@@ -162,7 +163,6 @@ public class BookDetailViewController extends ViewController{
 		AuthorBook newAuthor = new AuthorBook();
 		newAuthor.setAuthor(authorComboBox.getSelectionModel().getSelectedItem());
 		newAuthor.setBook(this.book);
-		System.out.println("~~~~~~~~~~" +royaltyInput.getText());
 		newAuthor.setRoyalty(new BigDecimal(royaltyInput.getText()));
 
 		if(!newAuthor.isValidRoyalty()){
@@ -174,29 +174,61 @@ public class BookDetailViewController extends ViewController{
 
 		if (valid) {
 			logger.info("clicked Add author");
-
+			//call update authorbook
+			try {
+				book.getGateway().saveAuthorBook(newAuthor);
+			}catch (Exception e){
+				logger.error("Error adding author");
+				e.printStackTrace();
+			}
 		}
 	}
 
 	@FXML
 	void AuthorListClick(MouseEvent event) {
+		Alert msg = new Alert(AlertType.INFORMATION);
+		msg.setTitle("Error!");
+		msg.setHeaderText("Invalid Input");
+
 		if(event.getClickCount() == 1){
 			SelectedAuthor = AuthorListView.getSelectionModel().getSelectedItem();
 		}else if(event.getClickCount() >1 ){
-			//call author book view to edit
+			TextInputDialog dialog = new TextInputDialog(""+ SelectedAuthor.getRoyalty());
+			dialog.setTitle("Edit Royalty");
+			dialog.setHeaderText("Royalty for "+ SelectedAuthor.getAuthor().getFirstName().getValue() + " " + SelectedAuthor.getAuthor().getLastName().getValue());
+			dialog.setContentText("Please Enter a new royalty:");
+			Optional<String> result = dialog.showAndWait();
+			if(result.isPresent()){
+				System.out.println("User entered "+ result.get());
+				SelectedAuthor.setRoyalty(new BigDecimal(result.get()));
+				if(SelectedAuthor.isValidRoyalty()){
+					//call update authorbook
+					try {
+						book.getGateway().saveAuthorBook(SelectedAuthor);
+					}catch (Exception e){
+						logger.error("Error adding author");
+						e.printStackTrace();
+					}
+				}else{
+					logger.error("Invalid Royalty");
+					msg.setContentText("Royalty needs to be in between 0 and 1");
+					msg.showAndWait();
+				}
+			}
 		}
 
 	}
 
 	@FXML
 	void DeleteAuthorHandler(ActionEvent event) {
+
 		if (SelectedAuthor != null){
 			try {
-				//SelectedAuthor.getAuthor().getGateway().deleteBook(SelectedAuthor);
-				UsefulFunctions functions = UsefulFunctions.getInstance();
-				functions.SwitchView(functions.BookListView, null);
+			//call delete authorBook
+				book.getGateway().deleteAuthorBook(SelectedAuthor);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
+				logger.error("Could not delete author");
 				e.printStackTrace();
 			}
 		}

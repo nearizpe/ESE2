@@ -77,8 +77,6 @@ public class BookTableGateway {
 		// TODO Auto-generated method stub
 		PreparedStatement st = null;
 
-		System.out.println("THE BOOK ID IS " + book.getId() );
-
 		if (book.getId() == 0) {
 			try {
 				st = conn.prepareStatement(
@@ -338,6 +336,44 @@ public class BookTableGateway {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+
+	public void deleteAuthorBook(AuthorBook authorBook) throws Exception{
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		try {
+			stmt = conn.prepareStatement("Delete From author_book where author_id = ?");
+			stmt.setInt(1, authorBook.getAuthor().getId());
+			rs = stmt.executeQuery();
+		}catch (Exception e){
+			e.printStackTrace();
+			throw new Exception(e);
+		}
+
+	}
+
+	public void saveAuthorBook(AuthorBook authorBook) throws Exception{
+		PreparedStatement stmt = null;
+
+		if(authorBook.isNewRecord()){
+			try {
+				stmt = conn.prepareStatement("Insert into author_book (author_id, book_id, royalty) " + "values (?, ?, ?)");
+				stmt.setInt(1, authorBook.getAuthor().getId());
+				stmt.setInt(2,authorBook.getBook().getId());
+				stmt.setBigDecimal(3,authorBook.getRoyalty());
+				stmt.execute();
+			}catch (Exception e){
+				e.printStackTrace();
+				throw new Exception(e);
+			}
+		}else{
+			stmt = conn.prepareStatement("Update author_book set royalty = ? Where author_id = ? && book_id = ?");
+			stmt.setBigDecimal(1,authorBook.getRoyalty());
+			stmt.setInt(2, authorBook.getAuthor().getId());
+			stmt.setInt(3,authorBook.getBook().getId());
+			stmt.executeUpdate();
+		}
+
 	}
 	
 }
