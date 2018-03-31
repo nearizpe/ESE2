@@ -24,7 +24,7 @@
       <Button fx:id="AuditTrailButton" layoutX="189.0" layoutY="318.0" mnemonicParsing="false" onAction="#AuiditButtonHandler" text="Audit Trail" />
       <Pane layoutX="307.0" layoutY="63.0" prefHeight="282.0" prefWidth="171.0">
          <children>
-            <ListView fx:id="AuthorListView" onMouseClicked="#AuthorListClick" prefHeight="315.0" prefWidth="200.0" />
+            <ListView fx:id="AuthorListView" onMouseClicked="#AuthorListClick" prefHeight="282.0" prefWidth="200.0" />
          </children>
       </Pane>
       <Text layoutX="307.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Authors" />

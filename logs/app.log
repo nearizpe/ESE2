@@ -5836,3 +5836,87 @@
 14:53:22.353 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4d73a83f[styleClass=root]
 14:53:49.586 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4d73a83f[styleClass=root]
 14:53:50.836 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4d73a83f[styleClass=root]
+15:42:00.915 INFO  assignment1.Main : Creating connection
+15:42:07.934 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@2e83a038[styleClass=root]
+15:42:09.970 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@2e83a038[styleClass=root]
+15:42:20.666 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@2e83a038[styleClass=root]
+15:42:23.154 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@2e83a038[styleClass=root]
+15:42:43.466 ERROR Controller.BookDetailViewController : Could not delete author
+15:43:27.754 INFO  assignment1.Main : Creating connection
+15:43:31.727 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@724d6b5e[styleClass=root]
+15:43:33.214 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@724d6b5e[styleClass=root]
+15:43:36.883 ERROR Controller.BookDetailViewController : Could not delete author
+15:44:27.950 INFO  Controller.BookDetailViewController : clicked Add author
+15:44:31.786 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@724d6b5e[styleClass=root]
+15:44:33.296 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@724d6b5e[styleClass=root]
+15:44:34.503 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@724d6b5e[styleClass=root]
+15:44:35.936 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@724d6b5e[styleClass=root]
+15:45:18.842 ERROR Controller.BookDetailViewController : Could not delete author
+15:45:46.478 INFO  assignment1.Main : Creating connection
+15:45:53.548 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@2e83a038[styleClass=root]
+15:45:54.961 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@2e83a038[styleClass=root]
+15:46:02.322 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@2e83a038[styleClass=root]
+15:46:05.004 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@2e83a038[styleClass=root]
+15:46:06.371 ERROR assignment1.Main : error Couldnt load window
+15:46:38.799 INFO  assignment1.Main : Creating connection
+15:46:43.272 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@2e83a038[styleClass=root]
+15:46:44.609 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@2e83a038[styleClass=root]
+15:46:54.791 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@2e83a038[styleClass=root]
+15:46:56.138 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@2e83a038[styleClass=root]
+15:47:01.228 ERROR assignment1.Main : error Couldnt load window
+15:48:19.268 INFO  assignment1.Main : Creating connection
+15:48:22.515 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@2e83a038[styleClass=root]
+15:48:23.948 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@2e83a038[styleClass=root]
+15:48:26.485 ERROR assignment1.Main : error Couldnt load window
+15:48:32.978 INFO  assignment1.Main : Creating connection
+15:48:36.160 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@28ce0df8[styleClass=root]
+15:48:37.129 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@28ce0df8[styleClass=root]
+15:48:41.175 ERROR assignment1.Main : error Couldnt load window
+15:50:34.479 INFO  assignment1.Main : Creating connection
+15:50:37.723 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@724d6b5e[styleClass=root]
+15:50:39.242 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@724d6b5e[styleClass=root]
+15:50:43.925 ERROR assignment1.Main : error Couldnt load window
+15:51:24.967 INFO  assignment1.Main : Creating connection
+15:51:26.972 ERROR assignment1.Main : error Couldnt load window
+15:51:52.425 INFO  assignment1.Main : Creating connection
+15:51:55.744 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@6d2936ec[styleClass=root]
+15:51:57.000 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@6d2936ec[styleClass=root]
+15:52:24.423 ERROR assignment1.Main : error Couldnt load window
+15:52:51.348 INFO  assignment1.Main : Creating connection
+15:52:54.759 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7b3de83e[styleClass=root]
+15:52:56.541 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7b3de83e[styleClass=root]
+15:54:02.201 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7b3de83e[styleClass=root]
+15:54:04.466 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7b3de83e[styleClass=root]
+15:54:15.346 INFO  Controller.BookDetailViewController : clicked Add author
+15:54:18.918 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7b3de83e[styleClass=root]
+15:54:20.312 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@7b3de83e[styleClass=root]
+15:54:21.393 ERROR assignment1.Main : error Couldnt load window
+15:54:39.360 INFO  assignment1.Main : Creating connection
+15:54:43.181 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@6390c95e[styleClass=root]
+15:54:44.624 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@6390c95e[styleClass=root]
+15:54:46.470 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@6390c95e[styleClass=root]
+15:54:52.803 INFO  Controller.AuthorListController : id is 0
+15:54:52.804 INFO  Controller.AuthorListController : id is 1
+15:54:52.804 INFO  Controller.AuthorListController : id is 2
+15:54:52.804 INFO  Controller.AuthorListController : id is 3
+15:54:52.805 INFO  Controller.AuthorListController : id is 4
+15:54:52.805 INFO  Controller.AuthorListController : id is 5
+15:54:52.805 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@6390c95e[styleClass=root]
+15:54:56.968 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@6390c95e[styleClass=root]
+15:55:25.084 INFO  Controller.AuthorDetailViewController : clicked save
+15:55:25.084 INFO  Controller.AuthorDetailViewController : yyyy-MM-dd
+15:55:25.085 INFO  Controller.AuthorDetailViewController : 2017-10-10
+15:55:31.964 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@6390c95e[styleClass=root]
+15:55:34.875 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@6390c95e[styleClass=root]
+15:55:40.370 INFO  Controller.BookDetailViewController : clicked Add author
+15:56:10.741 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@6390c95e[styleClass=root]
+15:56:12.416 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@6390c95e[styleClass=root]
+15:56:30.495 INFO  Controller.BookDetailViewController : clicked Add author
+15:56:33.093 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@6390c95e[styleClass=root]
+15:56:34.257 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@6390c95e[styleClass=root]
+15:56:39.024 ERROR assignment1.Main : error Couldnt load window
+15:58:04.561 INFO  assignment1.Main : Creating connection
+15:58:09.236 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@28ce0df8[styleClass=root]
+15:58:12.080 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@28ce0df8[styleClass=root]
+15:58:19.712 INFO  Controller.BookDetailViewController : clicked Add author
+15:58:26.753 ERROR assignment1.Main : error Couldnt load window

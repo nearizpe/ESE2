@@ -15,7 +15,7 @@ public class AuthorBook {
 
 	@Override
 	public String toString(){
-		return this.getAuthor().getFirstName().getValue() + " " + this.getAuthor().getLastName().getValue() + "		" + this.getRoyalty() + "%";
+		return this.getAuthor().getFirstName().getValue() + " " + this.getAuthor().getLastName().getValue() + "		" + this.getRoyalty().multiply(new BigDecimal(100)).setScale(2) + "%";
 	}
 
 	public Author getAuthor() {

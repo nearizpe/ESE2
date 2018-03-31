@@ -1,5 +1,6 @@
 package DataBase;
 
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -316,7 +317,7 @@ public class BookTableGateway {
 		}
 	}
 	
-	public void changedAuthorRoyalty(Book book, Author author,double newVal){// call whenever you change an author royalty
+	public void changedAuthorRoyalty(Book book, Author author,BigDecimal newVal){// call whenever you change an author royalty
 		String authorname = author.getFirstName().getValue() + " "+author.getLastName().getValue();
 		String msg ="Changed " +  authorname+ " royalty to " + newVal;
 		try {
@@ -327,9 +328,9 @@ public class BookTableGateway {
 		}
 	}
 	
-	public void changedAuthorRoyalty(Book book, Author author){// call whenever you delete an author
+	public void deleteAuthor(Book book, Author author){// call whenever you delete an author
 		String authorname = author.getFirstName().getValue() + " "+author.getLastName().getValue();
-		String msg ="deleterd " +  authorname + " from this book ";
+		String msg ="deleted " +  authorname + " from this book ";
 		try {
 			AuditTrailChanged(book.getId(),  msg);
 		} catch (Exception e) {
@@ -344,7 +345,7 @@ public class BookTableGateway {
 		try {
 			stmt = conn.prepareStatement("Delete From author_book where author_id = ?");
 			stmt.setInt(1, authorBook.getAuthor().getId());
-			rs = stmt.executeQuery();
+			stmt.execute();
 		}catch (Exception e){
 			e.printStackTrace();
 			throw new Exception(e);
@@ -361,7 +362,6 @@ public class BookTableGateway {
 				stmt.setInt(1, authorBook.getAuthor().getId());
 				stmt.setInt(2,authorBook.getBook().getId());
 				stmt.setDouble(3,authorBook.getRoyalty().doubleValue());
-				System.out.println("~~~~~~~~~~~~"+authorBook.getRoyalty().doubleValue());
 				stmt.execute();
 			}catch (Exception e){
 				e.printStackTrace();
@@ -372,7 +372,6 @@ public class BookTableGateway {
 			stmt.setBigDecimal(1,authorBook.getRoyalty());
 			stmt.setInt(2, authorBook.getAuthor().getId());
 			stmt.setInt(3,authorBook.getBook().getId());
-			System.out.println("!!!!!!!!!!!!!!!!!"+authorBook.getRoyalty().doubleValue());
 			stmt.executeUpdate();
 		}
 

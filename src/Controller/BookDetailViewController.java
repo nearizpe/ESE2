@@ -177,6 +177,10 @@ public class BookDetailViewController extends ViewController{
 			//call update authorbook
 			try {
 				book.getGateway().saveAuthorBook(newAuthor);
+				book.getGateway().addedAuthor(this.book, newAuthor.getAuthor());
+				authorBooks = book.getAuthors(this.book);
+				listItems.setAll(authorBooks);
+				AuthorListView.setItems(listItems);
 			}catch (Exception e){
 				logger.error("Error adding author");
 				e.printStackTrace();
@@ -205,8 +209,11 @@ public class BookDetailViewController extends ViewController{
 					//call update authorbook
 					try {
 						book.getGateway().saveAuthorBook(SelectedAuthor);
+						book.getGateway().changedAuthorRoyalty(book,SelectedAuthor.getAuthor(), SelectedAuthor.getRoyalty());
+						listItems.setAll(authorBooks);
+						AuthorListView.setItems(listItems);
 					}catch (Exception e){
-						logger.error("Error adding author");
+						logger.error("Error editing royalty");
 						e.printStackTrace();
 					}
 				}else{
@@ -226,6 +233,7 @@ public class BookDetailViewController extends ViewController{
 			try {
 			//call delete authorBook
 				book.getGateway().deleteAuthorBook(SelectedAuthor);
+				book.getGateway().deleteAuthor(book, SelectedAuthor.getAuthor());
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				logger.error("Could not delete author");
