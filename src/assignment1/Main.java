@@ -2,6 +2,9 @@ package assignment1;
 
 import java.net.URL;
 import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,8 +16,12 @@ import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import Book.Book;
+import Book.Publisher;
 import Controller.MenuController;
+import DataBase.BookTableGateway;
 import DataBase.ConnectionFactory;
+import DataBase.PublisherTableGateway;
 
 public class Main extends Application {
 	// CS 4743 Assignment 3 by Kevin Gonzales, Nicholas Arizpe
@@ -60,6 +67,28 @@ public class Main extends Application {
 		Parent contentView = loader.load();
 
 		rootNode.setTop(contentView);
+		
+		BookTableGateway bgw = new BookTableGateway(conn);
+		RandomWords rw = new RandomWords();
+		PublisherTableGateway pgw = new PublisherTableGateway(conn);
+		List<Publisher> pubs = pgw.getPublishers();
+		Random rand = new Random();
+		int max = pubs.size();
+		System.out.println("~~~~~~~~~~" + max);
+		
+		for(int i = 0; i< 10000; i++){
+		Book temp = new Book(bgw);
+		temp.setGateway(bgw);
+		temp.setYearPublished(1994);
+		temp.setSummary("this is a book");
+		int randnum = rand.nextInt(max);
+		temp.setPublisher(pubs.get(randnum));
+		temp.setIsbn("isbn2134");
+		temp.setTitle("Book"+String.valueOf(i));
+		
+		bgw.upDateBook(temp);
+		
+		}
 
 	}
 
@@ -78,5 +107,6 @@ public class Main extends Application {
 
 		// main thread blocks until launch returns (JAT thread terminates)
 		launch(args);
+		
 	}
 }
