@@ -13,7 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-
+import javafx.scene.text.Text;
 import assignment1.UsefulFunctions;
 
 public class BookListViewController extends ViewController {
@@ -31,6 +31,21 @@ public class BookListViewController extends ViewController {
 
 	@FXML
 	private ListView<Book> ListView;
+	
+	 @FXML
+	 private Button FirstPageButton;
+
+	 @FXML
+	 private Button PrevPageButton;
+
+     @FXML
+     private Button NextPageButton;
+
+    @FXML
+    private Button LastPageButton;
+
+    @FXML
+    private Text RecordNumberDisplay;
 
 	public BookListViewController(BookTableGateway gway) {
 		this.gway = gway;
@@ -87,6 +102,28 @@ public class BookListViewController extends ViewController {
 			}
 		}
 	}
+	
+	@FXML
+	void FirstPageHandler(ActionEvent event) {
+
+	}
+
+	@FXML
+	void LastPageHandler(ActionEvent event) {
+
+	}
+	
+	@FXML
+	void NextPageHandler(ActionEvent event) {
+
+	}
+
+	@FXML
+	void PrevPageHandler(ActionEvent event) {
+
+	}
+	
+	
 
 	public void initialize() {// URL location, ResourceBundle resources
 		listItems.setAll(books);

@@ -76,7 +76,7 @@ public class Main extends Application {
 		int max = pubs.size();
 		System.out.println("~~~~~~~~~~" + max);
 		
-		for(int i = 0; i< 10000; i++){
+		/*for(int i = 0; i< 10000; i++){
 		Book temp = new Book(bgw);
 		temp.setGateway(bgw);
 		temp.setYearPublished(1994);
@@ -88,7 +88,7 @@ public class Main extends Application {
 		
 		bgw.upDateBook(temp);
 		
-		}
+		}*/
 
 	}
 
