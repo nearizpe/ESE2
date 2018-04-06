@@ -21,6 +21,7 @@ import Model.AuthorBook;
 
 public class BookTableGateway {
 	private Connection conn;
+	private int lastId;
 	
 	public BookTableGateway(Connection conn){
 		this.conn = conn;
@@ -73,7 +74,70 @@ public class BookTableGateway {
 		}
 		return books;
 	}
+	
+	public ArrayList<Book> getRangeBooks(int r, int dir){
+		ArrayList<Book> rbooks = new ArrayList<Book>();
+		int offset;
+		// creating database variables and entering account info
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+		
+	
+			if(dir == 0){
+				offset = (r * 50);
+				
+			}else{
+				offset = (r * 50) - 50;
+			}
+			try{
+			stmt = conn.prepareStatement("Select * From bookTable LIMIT 50 OFFSET ?");
+			stmt.setInt(1, offset);
+			
+			rs = stmt.executeQuery();
+			while (rs.next()) {
+				Book temp = new Book(this);
+				temp.setId(rs.getInt("id"));
+				temp.setTitle(rs.getString("tittle"));
+				temp.setSummary(rs.getString("summary"));
+				temp.setYearPublished(rs.getInt("year_published")); 				// Not sure how to set publisher yet Maybe have to get id and check what publisher it is and make it that?
+				Publisher pub = new PublisherTableGateway(conn).getPublisherById(rs.getInt("publisher_id"));
+				temp.setPublisher(pub);
+				temp.setIsbn(rs.getString("isbn"));
+				temp.setDateAdded(rs.getDate("date_added").toLocalDate());
+				rbooks.add(temp);
+				this.lastId = rs.getInt("id");
+			}
+		} catch (SQLException e) {
+			System.out.println("DB QUERY ERROR!!");
+			e.printStackTrace();
 
+		} finally {
+			if (rs != null) {
+				try {
+					rs.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+
+		if (stmt != null) {
+			try {
+				stmt.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+			
+		return rbooks;
+	}
+
+	public int getLastId(){
+		return this.lastId;
+	}
+	
 	public void upDateBook(Book book) throws Exception {
 		// TODO Auto-generated method stub
 		PreparedStatement st = null;
@@ -375,6 +439,22 @@ public class BookTableGateway {
 			stmt.executeUpdate();
 		}
 
+	}
+	
+	public int getNumRecords(){
+		int num = 0;
+		ResultSet rs = null;
+		PreparedStatement st = null;
+		try{
+			st = conn.prepareStatement("SELECT COUNT(*) AS count FROM bookTable");
+			rs = st.executeQuery();
+			rs.next();
+			num = rs.getInt("count");
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		
+		return num;
 	}
 	
 }

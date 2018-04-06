@@ -22,6 +22,8 @@ public class BookListViewController extends ViewController {
 	private ArrayList<Book> books;
 	private ObservableList<Book> listItems = FXCollections.observableArrayList();
 	private Book SelectedBook = null;
+	private int numOfPages = 0;
+	private int lastPage = 0;
 
 	@FXML
 	private Button SearchButton;
@@ -49,7 +51,10 @@ public class BookListViewController extends ViewController {
 
 	public BookListViewController(BookTableGateway gway) {
 		this.gway = gway;
-		this.books = gway.getBooks();
+		//this.books = gway.getBooks();
+		this.books = gway.getRangeBooks(0,0);
+		this.numOfPages = gway.getNumRecords();
+		this.lastPage = numOfPages/50;
 	}
 	
 	@FXML
@@ -105,12 +110,23 @@ public class BookListViewController extends ViewController {
 	
 	@FXML
 	void FirstPageHandler(ActionEvent event) {
-
+		System.out.println("FP Clicked");
+		ArrayList<Book> FPList;
+		FPList = gway.getRangeBooks(0,0);
+		
+		listItems.setAll(FPList);
+		ListView.setItems(listItems);
+		ListView.refresh();
 	}
 
 	@FXML
 	void LastPageHandler(ActionEvent event) {
-
+		ArrayList<Book> LPList;
+		System.out.println("LP Clicked");
+		LPList = gway.getRangeBooks(lastPage,0);
+		listItems.setAll(LPList);
+		ListView.setItems(listItems);
+		ListView.refresh();
 	}
 	
 	@FXML
