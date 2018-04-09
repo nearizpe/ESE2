@@ -75,7 +75,7 @@ public class BookTableGateway {
 		return books;
 	}
 	
-	public ArrayList<Book> getRangeBooks(int r, int dir){
+	public ArrayList<Book> getRangeBooks(int r){
 		ArrayList<Book> rbooks = new ArrayList<Book>();
 		int offset;
 		// creating database variables and entering account info
@@ -83,12 +83,7 @@ public class BookTableGateway {
 		ResultSet rs = null;
 		
 	
-			if(dir == 0){
-				offset = (r * 50);
-				
-			}else{
-				offset = (r * 50) - 50;
-			}
+			offset = r * 50;
 			try{
 			stmt = conn.prepareStatement("Select * From bookTable LIMIT 50 OFFSET ?");
 			stmt.setInt(1, offset);

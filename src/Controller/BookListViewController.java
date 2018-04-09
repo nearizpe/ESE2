@@ -24,6 +24,7 @@ public class BookListViewController extends ViewController {
 	private Book SelectedBook = null;
 	private int numOfPages = 0;
 	private int lastPage = 0;
+	private int currPage;
 
 	@FXML
 	private Button SearchButton;
@@ -52,9 +53,11 @@ public class BookListViewController extends ViewController {
 	public BookListViewController(BookTableGateway gway) {
 		this.gway = gway;
 		//this.books = gway.getBooks();
-		this.books = gway.getRangeBooks(0,0);
+		this.currPage = 0;
+		this.books = gway.getRangeBooks(currPage);
 		this.numOfPages = gway.getNumRecords();
 		this.lastPage = numOfPages/50;
+		
 	}
 	
 	@FXML
@@ -111,32 +114,57 @@ public class BookListViewController extends ViewController {
 	@FXML
 	void FirstPageHandler(ActionEvent event) {
 		System.out.println("FP Clicked");
-		ArrayList<Book> FPList;
-		FPList = gway.getRangeBooks(0,0);
-		
-		listItems.setAll(FPList);
+		if(currPage != 0){
+		currPage = 0;
+		books = gway.getRangeBooks(currPage);
+		listItems.setAll(books);
 		ListView.setItems(listItems);
 		ListView.refresh();
+		}else{
+			System.out.println("Already on First Page");
+		}
 	}
 
 	@FXML
 	void LastPageHandler(ActionEvent event) {
-		ArrayList<Book> LPList;
 		System.out.println("LP Clicked");
-		LPList = gway.getRangeBooks(lastPage,0);
-		listItems.setAll(LPList);
+		if(currPage != lastPage){
+		currPage = lastPage;
+		books = gway.getRangeBooks(currPage);
+		listItems.setAll(books);
 		ListView.setItems(listItems);
 		ListView.refresh();
+		}else{
+		System.out.println("Already on Last Page");
+		}
 	}
 	
 	@FXML
 	void NextPageHandler(ActionEvent event) {
-
+		System.out.println("Next Page Clicked");
+		if(currPage != lastPage){
+			currPage++;
+			books = gway.getRangeBooks(currPage);
+			listItems.setAll(books);
+			ListView.setItems(listItems);
+			ListView.refresh();
+		}else{
+			System.out.println("This is the last Page");
+		}
 	}
 
 	@FXML
 	void PrevPageHandler(ActionEvent event) {
-
+		System.out.println("Prev Page Clicked");
+		if(currPage != 0){
+			currPage--;
+			books = gway.getRangeBooks(currPage);
+			listItems.setAll(books);
+			ListView.setItems(listItems);
+			ListView.refresh();
+		}else{
+			System.out.println("This is the first page");
+		}
 	}
 	
 	
