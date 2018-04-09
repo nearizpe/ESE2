@@ -58,6 +58,7 @@ public class BookListViewController extends ViewController {
 		this.numOfPages = gway.getNumRecords();
 		this.lastPage = numOfPages/50;
 		
+		
 	}
 	
 	@FXML
@@ -120,6 +121,7 @@ public class BookListViewController extends ViewController {
 		listItems.setAll(books);
 		ListView.setItems(listItems);
 		ListView.refresh();
+		RecordNumberDisplay.setText("Fetched books 1 to 50 of " + numOfPages);
 		}else{
 			System.out.println("Already on First Page");
 		}
@@ -134,6 +136,7 @@ public class BookListViewController extends ViewController {
 		listItems.setAll(books);
 		ListView.setItems(listItems);
 		ListView.refresh();
+		RecordNumberDisplay.setText("Fetched books " +(currPage*50+1) + " to " + (currPage*50+50) + " of " + numOfPages);
 		}else{
 		System.out.println("Already on Last Page");
 		}
@@ -148,6 +151,7 @@ public class BookListViewController extends ViewController {
 			listItems.setAll(books);
 			ListView.setItems(listItems);
 			ListView.refresh();
+			RecordNumberDisplay.setText("Fetched books " +(currPage*50+1) + " to " + (currPage*50+50) + " of " + numOfPages);
 		}else{
 			System.out.println("This is the last Page");
 		}
@@ -162,6 +166,7 @@ public class BookListViewController extends ViewController {
 			listItems.setAll(books);
 			ListView.setItems(listItems);
 			ListView.refresh();
+			RecordNumberDisplay.setText("Fetched books " +(currPage*50+1) + " to " + (currPage*50+50) + " of " + numOfPages);
 		}else{
 			System.out.println("This is the first page");
 		}
@@ -172,5 +177,6 @@ public class BookListViewController extends ViewController {
 	public void initialize() {// URL location, ResourceBundle resources
 		listItems.setAll(books);
 		ListView.setItems(listItems);
+		this.RecordNumberDisplay.setText("Fetched books 1 to 50 of " + numOfPages);
 	}
 }
