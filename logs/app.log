@@ -5920,3 +5920,23 @@
 15:58:12.080 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@28ce0df8[styleClass=root]
 15:58:19.712 INFO  Controller.BookDetailViewController : clicked Add author
 15:58:26.753 ERROR assignment1.Main : error Couldnt load window
+14:17:18.583 INFO  assignment1.Main : Creating connection
+14:17:22.636 ERROR assignment1.Main : error Couldnt load window
+14:18:06.892 INFO  assignment1.Main : Creating connection
+14:18:08.811 ERROR assignment1.Main : error Couldnt load window
+14:19:18.826 INFO  assignment1.Main : Creating connection
+14:19:20.897 ERROR assignment1.Main : error Couldnt load window
+14:20:30.869 INFO  assignment1.Main : Creating connection
+14:20:32.491 DEBUG _private.Messages : Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+14:20:32.494 INFO  client.InitialContextFactory : WFNAM00025: org.jboss.naming.remote.client.InitialContextFactory is deprecated; new applications should use org.wildfly.naming.client.WildFlyInitialContextFactory instead
+14:20:32.533 INFO  client.Version : WildFly Naming version 1.0.7.Final
+14:20:33.218 INFO  security.Version : ELY00001: WildFly Elytron version 1.2.2.Final
+14:20:33.429 INFO  xnio.Xnio : XNIO version 3.6.2.Final
+14:20:33.457 INFO  nio.NioXnio : XNIO NIO Implementation Version 3.6.2.Final
+14:20:34.371 INFO  threads.Version : JBoss Threads version 2.3.1.Final
+14:20:34.487 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.WindowsSelectorImpl@6602ca78
+14:20:34.491 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.WindowsSelectorImpl@3e76eae0
+14:20:34.609 INFO  remoting3.EndpointImpl : JBoss Remoting version 5.0.5.Final
+14:20:54.931 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/MyNameBean, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+14:20:55.591 DEBUG logging.DelegatingBasicLogger : Received MODULE_AVAILABLE(8) message for module /MyEJB
+14:21:09.910 ERROR assignment1.Main : error Couldnt load window

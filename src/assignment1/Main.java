@@ -22,11 +22,13 @@ import Controller.MenuController;
 import DataBase.BookTableGateway;
 import DataBase.ConnectionFactory;
 import DataBase.PublisherTableGateway;
+import core.clientTest;
 
 public class Main extends Application {
 	// CS 4743 Assignment 3 by Kevin Gonzales, Nicholas Arizpe
 	private Connection conn;
 	private static Logger logger = LogManager.getLogger(Main.class);
+	private clientTest bean;
 
 	@Override
 	public void stop() throws Exception {
@@ -69,13 +71,12 @@ public class Main extends Application {
 		rootNode.setTop(contentView);
 		
 		BookTableGateway bgw = new BookTableGateway(conn);
-		RandomWords rw = new RandomWords();
 		PublisherTableGateway pgw = new PublisherTableGateway(conn);
 		List<Publisher> pubs = pgw.getPublishers();
 		Random rand = new Random();
 		int max = pubs.size();
-		System.out.println("~~~~~~~~~~" + max);
-		
+		bean = clientTest.getInstance();
+		bean.callGetName();
 		/*for(int i = 0; i< 10000; i++){
 		Book temp = new Book(bgw);
 		temp.setGateway(bgw);
