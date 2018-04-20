@@ -6038,3 +6038,6 @@
 14:44:26.666 DEBUG logging.DelegatingBasicLogger : Received MODULE_AVAILABLE(8) message for module /MyEJB
 14:44:37.552 ERROR assignment1.Main : error Couldnt load window
 >>>>>>> bf31885c86791ffb1de5d76b7ae5171336dd41b2
+18:00:20.563 INFO  assignment1.Main : Creating connection
+18:00:28.062 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@280110cf[styleClass=root]
+18:00:29.827 ERROR assignment1.Main : error Couldnt load window
