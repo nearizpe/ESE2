@@ -75,8 +75,6 @@ public class Main extends Application {
 		List<Publisher> pubs = pgw.getPublishers();
 		Random rand = new Random();
 		int max = pubs.size();
-		bean = clientTest.getInstance();
-		bean.callGetName();
 		/*for(int i = 0; i< 10000; i++){
 		Book temp = new Book(bgw);
 		temp.setGateway(bgw);

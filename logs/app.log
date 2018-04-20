@@ -5940,3 +5940,70 @@
 14:20:54.931 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/MyNameBean, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
 14:20:55.591 DEBUG logging.DelegatingBasicLogger : Received MODULE_AVAILABLE(8) message for module /MyEJB
 14:21:09.910 ERROR assignment1.Main : error Couldnt load window
+14:27:01.771 INFO  assignment1.Main : Creating connection
+14:27:02.512 DEBUG _private.Messages : Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+14:27:02.513 INFO  client.InitialContextFactory : WFNAM00025: org.jboss.naming.remote.client.InitialContextFactory is deprecated; new applications should use org.wildfly.naming.client.WildFlyInitialContextFactory instead
+14:27:02.517 INFO  client.Version : WildFly Naming version 1.0.7.Final
+14:27:02.606 INFO  security.Version : ELY00001: WildFly Elytron version 1.2.2.Final
+14:27:02.629 INFO  xnio.Xnio : XNIO version 3.6.2.Final
+14:27:02.634 INFO  nio.NioXnio : XNIO NIO Implementation Version 3.6.2.Final
+14:27:02.667 INFO  threads.Version : JBoss Threads version 2.3.1.Final
+14:27:02.681 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.KQueueSelectorImpl@ecff91a
+14:27:02.681 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.KQueueSelectorImpl@63debfd6
+14:27:02.691 INFO  remoting3.EndpointImpl : JBoss Remoting version 5.0.5.Final
+14:27:03.274 ERROR assignment1.Main : error Couldnt load window
+14:28:09.364 INFO  assignment1.Main : Creating connection
+14:28:14.096 ERROR assignment1.Main : error Couldnt load window
+14:28:18.266 INFO  assignment1.Main : Creating connection
+14:28:24.112 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4bfca905[styleClass=root]
+14:28:42.757 ERROR assignment1.Main : error Couldnt load window
+14:56:00.432 INFO  assignment1.Main : Creating connection
+14:56:09.443 ERROR assignment1.Main : error Couldnt load window
+15:38:06.728 INFO  assignment1.Main : Creating connection
+15:38:41.409 INFO  assignment1.Main : Creating connection
+15:38:44.038 ERROR assignment1.Main : error Couldnt load window
+15:41:14.232 ERROR assignment1.Main : error Couldnt load window
+15:41:44.261 INFO  assignment1.Main : Creating connection
+15:41:58.486 ERROR assignment1.Main : error Couldnt load window
+15:42:25.370 INFO  assignment1.Main : Creating connection
+15:42:27.282 ERROR assignment1.Main : error Couldnt load window
+15:44:49.474 INFO  assignment1.Main : Creating connection
+15:44:51.671 ERROR assignment1.Main : error Couldnt load window
+15:45:09.854 INFO  assignment1.Main : Creating connection
+15:45:11.731 ERROR assignment1.Main : error Couldnt load window
+16:30:27.420 INFO  assignment1.Main : Creating connection
+16:30:29.303 ERROR assignment1.Main : error Couldnt load window
+16:30:56.165 INFO  assignment1.Main : Creating connection
+16:30:57.950 ERROR assignment1.Main : error Couldnt load window
+16:31:14.007 INFO  assignment1.Main : Creating connection
+16:31:15.865 ERROR assignment1.Main : error Couldnt load window
+16:31:35.778 INFO  assignment1.Main : Creating connection
+16:31:37.554 ERROR assignment1.Main : error Couldnt load window
+16:36:04.814 INFO  assignment1.Main : Creating connection
+16:36:06.957 ERROR assignment1.Main : error Couldnt load window
+16:39:03.677 INFO  assignment1.Main : Creating connection
+16:39:10.249 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4f501cf[styleClass=root]
+16:39:11.379 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4f501cf[styleClass=root]
+16:39:19.070 INFO  Controller.AuthorListController : id is 0
+16:39:19.071 INFO  Controller.AuthorListController : id is 1
+16:39:19.071 INFO  Controller.AuthorListController : id is 2
+16:39:19.071 INFO  Controller.AuthorListController : id is 3
+16:39:19.072 INFO  Controller.AuthorListController : id is 4
+16:39:19.072 INFO  Controller.AuthorListController : id is 5
+16:39:19.072 INFO  Controller.AuthorListController : id is 6
+16:39:19.072 INFO  Controller.AuthorListController : id is 7
+16:39:19.073 INFO  Controller.AuthorListController : id is 8
+16:39:19.073 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4f501cf[styleClass=root]
+16:39:20.049 INFO  Controller.AuthorListController$1 : Single Click
+16:39:20.050 INFO  Controller.AuthorListController$1 : 1
+16:39:20.185 INFO  Controller.AuthorListController$1 : Double Clicked id is 1
+16:39:20.204 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4f501cf[styleClass=root]
+16:46:58.360 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4f501cf[styleClass=root]
+16:46:59.268 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4f501cf[styleClass=root]
+16:47:08.656 ERROR Controller.BookDetailViewController : Invalid Royalty
+16:47:12.726 INFO  Controller.BookDetailViewController : clicked Add author
+16:47:18.470 INFO  Controller.BookDetailViewController : clicked Add author
+16:47:21.384 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4f501cf[styleClass=root]
+16:47:22.619 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4f501cf[styleClass=root]
+16:47:31.229 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4f501cf[styleClass=root]
+16:47:32.478 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@4f501cf[styleClass=root]
