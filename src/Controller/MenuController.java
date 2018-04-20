@@ -41,6 +41,12 @@ public class MenuController extends ViewController {
 	
     @FXML
     private MenuItem AuthorListMenuItem;
+    
+    @FXML
+    private MenuItem LoginMenuItem;
+
+    @FXML
+    private MenuItem logoutMenuItem;
 
     @FXML
     private MenuItem closeMenuItem;
@@ -59,8 +65,11 @@ public class MenuController extends ViewController {
     		
         	if(event.getSource() == closeMenuItem){
             	System.exit(0);
-        	}
-        	else if(event.getSource() == AddAuthorMenuItem){
+        	}else if(event.getSource() == LoginMenuItem) {
+        		System.out.println("login was clicked");
+        	}else if(event.getSource() == logoutMenuItem) {
+        		System.out.println("logout was clicked");
+        	}else if(event.getSource() == AddAuthorMenuItem){
         		Author author = new Author(authorGateWay);
         		UsefulFunctions functions = UsefulFunctions.getInstance();
         		functions.SwitchView(functions.AuthorDetail,author);
