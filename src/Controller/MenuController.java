@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.util.ArrayList;
+import java.util.Optional;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,18 +16,34 @@ import DataBase.BookTableGateway;
 import DataBase.PublisherTableGateway;
 import Model.Author;
 import assignment1.UsefulFunctions;
+import core.clientTest;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ButtonBar.ButtonData;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Dialog;
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.util.Pair;
 
 
 public class MenuController extends ViewController {
 	
 	private Connection conn;
+	private clientTest bean;
 	
 	private static Logger logger = LogManager.getLogger();
 
@@ -67,6 +84,7 @@ public class MenuController extends ViewController {
             	System.exit(0);
         	}else if(event.getSource() == LoginMenuItem) {
         		System.out.println("login was clicked");
+        		loginHandler();
         	}else if(event.getSource() == logoutMenuItem) {
         		System.out.println("logout was clicked");
         	}else if(event.getSource() == AddAuthorMenuItem){
@@ -97,7 +115,81 @@ public class MenuController extends ViewController {
 
     }
 
-    public void setConnection(Connection conn){
+    private void loginHandler() {
+    	bean = bean.getInstance();
+    	Dialog<Pair<String, String>> dialog = new Dialog<>();
+    	dialog.setTitle("Login");
+    	dialog.setHeaderText("Please enter your username and password");
+
+    	// Set the icon (must be included in the project).
+    	//dialog.setGraphic(new ImageView(this.getClass().getResource("login.png").toString()));
+
+    	// Set the button types.
+    	ButtonType loginButtonType = new ButtonType("Login", ButtonData.OK_DONE);
+    	dialog.getDialogPane().getButtonTypes().addAll(loginButtonType, ButtonType.CANCEL);
+
+    	// Create the username and password labels and fields.
+    	GridPane grid = new GridPane();
+    	grid.setHgap(10);
+    	grid.setVgap(10);
+    	grid.setPadding(new Insets(20, 150, 10, 10));
+
+    	TextField username = new TextField();
+    	username.setPromptText("Username");
+    	PasswordField password = new PasswordField();
+    	password.setPromptText("Password");
+
+    	grid.add(new Label("Username:"), 0, 0);
+    	grid.add(username, 1, 0);
+    	grid.add(new Label("Password:"), 0, 1);
+    	grid.add(password, 1, 1);
+
+    	// Enable/Disable login button depending on whether a username was entered.
+    	Node loginButton = dialog.getDialogPane().lookupButton(loginButtonType);
+    	loginButton.setDisable(true);
+
+    	// Do some validation (using the Java 8 lambda syntax).
+    	username.textProperty().addListener((observable, oldValue, newValue) -> {
+    	    loginButton.setDisable(newValue.trim().isEmpty());
+    	});
+
+    	dialog.getDialogPane().setContent(grid);
+
+    	// Request focus on the username field by default.
+    	Platform.runLater(() -> username.requestFocus());
+
+    	// Convert the result to a username-password-pair when the login button is clicked.
+    	dialog.setResultConverter(dialogButton -> {
+    	    if (dialogButton == loginButtonType) {
+    	        return new Pair<>(username.getText(), password.getText());
+    	    }
+    	    return null;
+    	});
+
+    	Optional<Pair<String, String>> result = dialog.showAndWait();
+
+    	result.ifPresent(usernamePassword -> {
+    	    System.out.println("Username=" + usernamePassword.getKey() + ", Password=" + usernamePassword.getValue());
+    	});
+    	if(bean.callLogin(username.getText(), password.getText()) == 1) {
+    		System.out.println("Succesful login");
+    	}else {
+    		loginErrorMessage();
+    	}
+		
+	}
+
+	private void loginErrorMessage() {
+		// TODO Auto-generated method stub
+		Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setTitle("Error!");
+		alert.setHeaderText(null);
+		alert.setContentText("Invalid username or password");
+
+		alert.showAndWait();
+	}
+
+	public void setConnection(Connection conn){
     	this.conn = conn;
     }
     

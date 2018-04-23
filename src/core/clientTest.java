@@ -63,6 +63,11 @@ public class clientTest extends Application{
 		bean.setName(str);
 	}
 	
+	public int callLogin(String usr, String psw) {
+		System.out.println("callLogin called");
+		return bean.login(usr, psw);
+	}
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
