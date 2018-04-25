@@ -171,8 +171,10 @@ public class MenuController extends ViewController {
     	result.ifPresent(usernamePassword -> {
     	    System.out.println("Username=" + usernamePassword.getKey() + ", Password=" + usernamePassword.getValue());
     	});
-    	if(bean.callLogin(username.getText(), password.getText()) == 1) {
-    		System.out.println("Succesful login");
+    	
+    	int sessionId;
+    	if((sessionId = bean.callLogin(username.getText(), password.getText())) != -1) {
+    		System.out.println("Succesful login session Id = "+ sessionId);
     	}else {
     		loginErrorMessage();
     	}

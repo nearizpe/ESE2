@@ -6124,3 +6124,79 @@
 15:49:33.707 DEBUG logging.DelegatingBasicLogger : Received MODULE_AVAILABLE(8) message for module /MyEJB
 15:49:38.264 ERROR assignment1.Main : error Couldnt load window
 15:49:39.671 ERROR assignment1.Main : error Couldnt load window
+16:16:27.654 INFO  assignment1.Main : Creating connection
+16:16:53.714 DEBUG _private.Messages : Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+16:16:53.720 INFO  client.InitialContextFactory : WFNAM00025: org.jboss.naming.remote.client.InitialContextFactory is deprecated; new applications should use org.wildfly.naming.client.WildFlyInitialContextFactory instead
+16:16:53.745 INFO  client.Version : WildFly Naming version 1.0.7.Final
+16:16:54.225 INFO  security.Version : ELY00001: WildFly Elytron version 1.2.2.Final
+16:16:54.399 INFO  xnio.Xnio : XNIO version 3.6.2.Final
+16:16:54.420 INFO  nio.NioXnio : XNIO NIO Implementation Version 3.6.2.Final
+16:16:55.046 INFO  threads.Version : JBoss Threads version 2.3.1.Final
+16:16:55.145 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.WindowsSelectorImpl@46bcea2e
+16:16:55.147 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.WindowsSelectorImpl@15931295
+16:16:55.236 INFO  remoting3.EndpointImpl : JBoss Remoting version 5.0.5.Final
+16:17:01.880 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/MyNameBean, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+16:17:02.207 DEBUG logging.DelegatingBasicLogger : Received MODULE_AVAILABLE(8) message for module /MyEJB
+16:17:04.978 ERROR assignment1.Main : error Couldnt load window
+16:38:15.349 INFO  assignment1.Main : Creating connection
+16:38:19.675 ERROR assignment1.Main : error Couldnt load window
+16:38:31.450 INFO  assignment1.Main : Creating connection
+16:38:35.238 ERROR assignment1.Main : error Couldnt load window
+16:39:10.918 INFO  assignment1.Main : Creating connection
+16:39:15.975 ERROR assignment1.Main : error Couldnt load window
+16:39:26.344 INFO  assignment1.Main : Creating connection
+16:39:32.918 ERROR assignment1.Main : error Couldnt load window
+16:39:49.118 INFO  assignment1.Main : Creating connection
+16:39:53.012 ERROR assignment1.Main : error Couldnt load window
+16:40:49.076 INFO  assignment1.Main : Creating connection
+16:40:52.384 ERROR assignment1.Main : error Couldnt load window
+16:41:04.722 INFO  assignment1.Main : Creating connection
+16:41:08.003 ERROR assignment1.Main : error Couldnt load window
+16:41:37.620 INFO  assignment1.Main : Creating connection
+16:41:40.412 ERROR assignment1.Main : error Couldnt load window
+16:42:12.981 INFO  assignment1.Main : Creating connection
+16:42:16.867 ERROR assignment1.Main : error Couldnt load window
+16:45:15.011 INFO  assignment1.Main : Creating connection
+16:45:18.553 ERROR assignment1.Main : error Couldnt load window
+13:09:06.802 INFO  assignment1.Main : Creating connection
+13:09:14.987 DEBUG _private.Messages : Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+13:09:14.991 INFO  client.InitialContextFactory : WFNAM00025: org.jboss.naming.remote.client.InitialContextFactory is deprecated; new applications should use org.wildfly.naming.client.WildFlyInitialContextFactory instead
+13:09:15.032 INFO  client.Version : WildFly Naming version 1.0.7.Final
+13:09:15.707 INFO  security.Version : ELY00001: WildFly Elytron version 1.2.2.Final
+13:09:15.952 INFO  xnio.Xnio : XNIO version 3.6.2.Final
+13:09:15.998 INFO  nio.NioXnio : XNIO NIO Implementation Version 3.6.2.Final
+13:09:16.606 INFO  threads.Version : JBoss Threads version 2.3.1.Final
+13:09:16.719 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.WindowsSelectorImpl@3a41359c
+13:09:16.719 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.WindowsSelectorImpl@66f2d6ea
+13:09:16.791 INFO  remoting3.EndpointImpl : JBoss Remoting version 5.0.5.Final
+13:09:41.238 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/MyNameBean, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+13:09:41.365 DEBUG logging.DelegatingBasicLogger : Received MODULE_AVAILABLE(8) message for module /MyEJB
+13:09:54.973 INFO  assignment1.Main : Creating connection
+13:09:59.313 DEBUG _private.Messages : Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+13:09:59.317 INFO  client.InitialContextFactory : WFNAM00025: org.jboss.naming.remote.client.InitialContextFactory is deprecated; new applications should use org.wildfly.naming.client.WildFlyInitialContextFactory instead
+13:09:59.328 INFO  client.Version : WildFly Naming version 1.0.7.Final
+13:09:59.515 INFO  security.Version : ELY00001: WildFly Elytron version 1.2.2.Final
+13:09:59.606 INFO  xnio.Xnio : XNIO version 3.6.2.Final
+13:09:59.630 INFO  nio.NioXnio : XNIO NIO Implementation Version 3.6.2.Final
+13:09:59.962 INFO  threads.Version : JBoss Threads version 2.3.1.Final
+13:10:00.002 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.WindowsSelectorImpl@4c81842d
+13:10:00.010 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.WindowsSelectorImpl@2cb598cf
+13:10:00.042 INFO  remoting3.EndpointImpl : JBoss Remoting version 5.0.5.Final
+13:10:08.390 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/MyNameBean, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+13:10:08.487 DEBUG logging.DelegatingBasicLogger : Received MODULE_AVAILABLE(8) message for module /MyEJB
+13:10:14.583 ERROR assignment1.Main : error Couldnt load window
+13:10:17.011 ERROR assignment1.Main : error Couldnt load window
+13:51:53.559 INFO  assignment1.Main : Creating connection
+13:51:58.934 DEBUG _private.Messages : Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+13:51:58.937 INFO  client.InitialContextFactory : WFNAM00025: org.jboss.naming.remote.client.InitialContextFactory is deprecated; new applications should use org.wildfly.naming.client.WildFlyInitialContextFactory instead
+13:51:58.961 INFO  client.Version : WildFly Naming version 1.0.7.Final
+13:51:59.484 INFO  security.Version : ELY00001: WildFly Elytron version 1.2.2.Final
+13:51:59.665 INFO  xnio.Xnio : XNIO version 3.6.2.Final
+13:51:59.692 INFO  nio.NioXnio : XNIO NIO Implementation Version 3.6.2.Final
+13:52:00.357 INFO  threads.Version : JBoss Threads version 2.3.1.Final
+13:52:00.442 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.WindowsSelectorImpl@76b46dec
+13:52:00.442 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.WindowsSelectorImpl@15931295
+13:52:00.491 INFO  remoting3.EndpointImpl : JBoss Remoting version 5.0.5.Final
+13:52:12.364 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/MyNameBean, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+13:52:12.589 DEBUG logging.DelegatingBasicLogger : Received MODULE_AVAILABLE(8) message for module /MyEJB
+13:52:24.351 ERROR assignment1.Main : error Couldnt load window
