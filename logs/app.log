@@ -6200,3 +6200,52 @@
 13:52:12.364 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/MyNameBean, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
 13:52:12.589 DEBUG logging.DelegatingBasicLogger : Received MODULE_AVAILABLE(8) message for module /MyEJB
 13:52:24.351 ERROR assignment1.Main : error Couldnt load window
+15:05:41.760 INFO  assignment1.Main : Creating connection
+15:05:44.842 ERROR assignment1.Main : error Couldnt load window
+15:06:48.381 INFO  assignment1.Main : Creating connection
+15:06:49.857 ERROR assignment1.Main : error Couldnt load window
+15:07:07.864 INFO  assignment1.Main : Creating connection
+15:07:09.370 ERROR assignment1.Main : error Couldnt load window
+15:15:11.291 INFO  assignment1.Main : Creating connection
+15:15:14.175 ERROR assignment1.Main : error Couldnt load window
+15:15:14.429 INFO  assignment1.Main : Creating connection
+15:15:15.996 ERROR assignment1.Main : error Couldnt load window
+15:52:21.106 INFO  assignment1.Main : Creating connection
+15:52:32.741 DEBUG _private.Messages : Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+15:52:32.745 INFO  client.InitialContextFactory : WFNAM00025: org.jboss.naming.remote.client.InitialContextFactory is deprecated; new applications should use org.wildfly.naming.client.WildFlyInitialContextFactory instead
+15:52:32.830 INFO  client.Version : WildFly Naming version 1.0.7.Final
+15:52:33.653 INFO  security.Version : ELY00001: WildFly Elytron version 1.2.2.Final
+15:52:34.049 INFO  xnio.Xnio : XNIO version 3.6.2.Final
+15:52:34.110 INFO  nio.NioXnio : XNIO NIO Implementation Version 3.6.2.Final
+15:52:34.849 INFO  threads.Version : JBoss Threads version 2.3.1.Final
+15:52:34.964 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 Accept', selector sun.nio.ch.WindowsSelectorImpl@6d02ea67
+15:52:34.964 DEBUG nio.WorkerThread : Started channel thread 'XNIO-1 I/O-1', selector sun.nio.ch.WindowsSelectorImpl@11728c6
+15:52:35.053 INFO  remoting3.EndpointImpl : JBoss Remoting version 5.0.5.Final
+15:53:13.811 DEBUG client.EJBInvocationHandler : Calling invoke(module = /MyEJB/MyNameBean, strong affinity = URI<http-remoting://localhost:8080>, weak affinity = URI<http-remoting://localhost:8080>): 
+15:53:14.619 DEBUG logging.DelegatingBasicLogger : Received MODULE_AVAILABLE(8) message for module /MyEJB
+15:53:21.222 ERROR assignment1.Main : error Couldnt load window
+15:54:01.157 INFO  assignment1.Main : Creating connection
+15:54:04.035 ERROR assignment1.Main : error Couldnt load window
+15:55:05.169 INFO  assignment1.Main : Creating connection
+15:55:06.656 ERROR assignment1.Main : error Couldnt load window
+16:03:02.307 INFO  assignment1.Main : Creating connection
+16:03:03.780 ERROR assignment1.Main : error Couldnt load window
+16:03:18.290 INFO  assignment1.Main : Creating connection
+16:03:24.878 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@6ab55e31[styleClass=root]
+16:03:31.379 ERROR assignment1.Main : error Couldnt load window
+16:07:46.811 INFO  assignment1.Main : Creating connection
+16:07:51.354 ERROR assignment1.Main : error Couldnt load window
+16:08:07.445 INFO  assignment1.Main : Creating connection
+16:08:15.247 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@6ab55e31[styleClass=root]
+16:08:19.891 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@6ab55e31[styleClass=root]
+16:08:23.153 INFO  Controller.AuthorListController : id is 0
+16:08:23.154 INFO  Controller.AuthorListController : id is 1
+16:08:23.156 INFO  Controller.AuthorListController : id is 2
+16:08:23.158 INFO  Controller.AuthorListController : id is 3
+16:08:23.159 INFO  Controller.AuthorListController : id is 4
+16:08:23.160 INFO  Controller.AuthorListController : id is 5
+16:08:23.161 INFO  Controller.AuthorListController : id is 6
+16:08:23.163 INFO  Controller.AuthorListController : id is 7
+16:08:23.163 INFO  Controller.AuthorListController : id is 8
+16:08:23.165 INFO  assignment1.UsefulFunctions : Checking if null, BorderPane@6ab55e31[styleClass=root]
+16:08:30.511 ERROR assignment1.Main : error Couldnt load window

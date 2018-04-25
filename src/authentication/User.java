@@ -4,22 +4,27 @@ import core.clientTest;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-public class User extends Application{
+public class User{
 	private static int sessionId;
 	
 	private static int access;
 	
 	private static User instance = null;
 	
-	protected User(int id, int access) {
-		this.sessionId = id;
-		this.access = access;
+	public void start(Stage arg0) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	private User() {
+		sessionId = -1;
+		access = -1;
 	}
 	
 	
 	 public static User getInstance() {
 	      if(instance == null) {
-	    	  instance = new User(-1,-1);
+	    	  instance = new User();
 	      }
 	      return instance;
 	   }
@@ -37,10 +42,5 @@ public class User extends Application{
 		return sessionId;
 	}
 
-	@Override
-	public void start(Stage arg0) throws Exception {
-		// TODO Auto-generated method stub
-		
-	}
 
 }

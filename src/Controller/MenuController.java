@@ -16,6 +16,7 @@ import DataBase.BookTableGateway;
 import DataBase.PublisherTableGateway;
 import Model.Author;
 import assignment1.UsefulFunctions;
+import authentication.User;
 import core.clientTest;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -44,6 +45,7 @@ public class MenuController extends ViewController {
 	
 	private Connection conn;
 	private clientTest bean;
+	User user;// = User.getInstance();
 	
 	private static Logger logger = LogManager.getLogger();
 
@@ -78,6 +80,7 @@ public class MenuController extends ViewController {
     		BookTableGateway bookGateway = new BookTableGateway(conn);
     		PublisherTableGateway publisherTableGateway = new PublisherTableGateway(conn);
     		
+    		user = User.getInstance();
     		
     		
         	if(event.getSource() == closeMenuItem){
@@ -87,7 +90,7 @@ public class MenuController extends ViewController {
         		loginHandler();
         	}else if(event.getSource() == logoutMenuItem) {
         		System.out.println("logout was clicked");
-        	}else if(event.getSource() == AddAuthorMenuItem){
+        	}else if(event.getSource() == AddAuthorMenuItem && user.checkAccess() == 1){
         		Author author = new Author(authorGateWay);
         		UsefulFunctions functions = UsefulFunctions.getInstance();
         		functions.SwitchView(functions.AuthorDetail,author);
