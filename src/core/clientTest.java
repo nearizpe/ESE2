@@ -68,6 +68,11 @@ public class clientTest extends Application{
 		return bean.login(usr, psw);
 	}
 	
+	public boolean callAccess(int sessionId,String func) {
+		System.out.println("callAccess called");
+		return bean.accessControl(sessionId, func);
+	}
+	
 	public static void main(String[] args) {
 		launch(args);
 	}

@@ -75,6 +75,7 @@ public class MenuController extends ViewController {
 
     @FXML
     void MenuHandler(ActionEvent event) {
+    	bean = bean.getInstance();
     	try {
     		AuthorTableGateway authorGateWay = new AuthorTableGateway(conn);
     		BookTableGateway bookGateway = new BookTableGateway(conn);
@@ -90,10 +91,12 @@ public class MenuController extends ViewController {
         		loginHandler();
         	}else if(event.getSource() == logoutMenuItem) {
         		System.out.println("logout was clicked");
-        	}else if(event.getSource() == AddAuthorMenuItem && user.checkAccess() == 1){
+        	}else if(event.getSource() == AddAuthorMenuItem){
+        		if(bean.callAccess(user.getSession(),"AddAuthor")) {
         		Author author = new Author(authorGateWay);
         		UsefulFunctions functions = UsefulFunctions.getInstance();
         		functions.SwitchView(functions.AuthorDetail,author);
+        		}
         	}
         	else if(event.getSource() == AuthorListMenuItem){
         		UsefulFunctions functions = UsefulFunctions.getInstance();

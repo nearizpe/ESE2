@@ -5,7 +5,7 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 
 public class User{
-	private static int sessionId;
+	public static int sessionId;
 	
 	private static int access;
 	
