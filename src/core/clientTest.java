@@ -70,7 +70,12 @@ public class clientTest extends Application{
 	
 	public boolean callAccess(int sessionId,String func) {
 		System.out.println("callAccess called");
+		System.out.println("++++++++++" + sessionId + "func " + func);
 		return bean.accessControl(sessionId, func);
+	}
+	public int callGetAccess(int sessionId) {
+		System.out.println("callGetAccess called");
+		return bean.getAccess(sessionId);
 	}
 	
 	public static void main(String[] args) {

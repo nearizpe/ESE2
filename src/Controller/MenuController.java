@@ -91,32 +91,51 @@ public class MenuController extends ViewController {
         		loginHandler();
         	}else if(event.getSource() == logoutMenuItem) {
         		System.out.println("logout was clicked");
+        		if(bean.callAccess(user.getSession(),"logout")) {
+        			logoutMessanger(1);
+        		}else{
+        			logoutMessanger(0);
+        		}
         	}else if(event.getSource() == AddAuthorMenuItem){
         		if(bean.callAccess(user.getSession(),"AddAuthor")) {
         		Author author = new Author(authorGateWay);
         		UsefulFunctions functions = UsefulFunctions.getInstance();
         		functions.SwitchView(functions.AuthorDetail,author);
+        		}else {
+        			unauthorizedMessage();
         		}
         	}
         	else if(event.getSource() == AuthorListMenuItem){
+        		if(bean.callAccess(user.getSession(),"list")) {
         		UsefulFunctions functions = UsefulFunctions.getInstance();
-        		//logger.info("Is it null ?" +authorGateWay);
         		functions.SwitchView(functions.AuthorList,authorGateWay.getAuthors());
+        		}else {
+        			unauthorizedMessage();
+        		}
         	}
         	else if(event.getSource() == AddBookListMenuItem){//book list
+        		if(bean.callAccess(user.getSession(),"list")) {
         		UsefulFunctions functions = UsefulFunctions.getInstance();
         		functions.SwitchView(functions.BookListView,null);
+        		}else {
+        			unauthorizedMessage();
+        		}
         	}  	
         	else if(event.getSource() == AddBookMenuItem){ //Book detail
+        		if(bean.callAccess(user.getSession(),"AddBook")) {
         		Book book = new Book(bookGateway);
         		UsefulFunctions functions = UsefulFunctions.getInstance();
         		functions.SwitchView(functions.BookDetail,book);
+        		}else {
+        			unauthorizedMessage();
+        		}
         	}
         	
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 			logger.error("couldnt find files. MenuController");
+			
 		}
 
     }
@@ -181,9 +200,12 @@ public class MenuController extends ViewController {
     	int sessionId;
     	if((sessionId = bean.callLogin(username.getText(), password.getText())) != -1) {
     		System.out.println("Succesful login session Id = "+ sessionId);
+    		user.setUser(sessionId, bean.callGetAccess(sessionId));
+    		//System.out.println("!!!!!!!!!!! " + user.getSession() + " " + user.checkAccess());
     	}else {
     		loginErrorMessage();
     	}
+    	
 		
 	}
 
@@ -193,10 +215,33 @@ public class MenuController extends ViewController {
 		alert.setTitle("Error!");
 		alert.setHeaderText(null);
 		alert.setContentText("Invalid username or password");
-
+		alert.showAndWait();
+	}
+	
+	private void unauthorizedMessage() {
+		Alert alert = new Alert(AlertType.INFORMATION);
+		alert.setTitle("Error!");
+		alert.setHeaderText(null);
+		alert.setContentText("You do not have authorized permission for this feature!");
 		alert.showAndWait();
 	}
 
+	private void logoutMessanger(int x) {
+		if(x == 1) {
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("Success!");
+			alert.setHeaderText(null);
+			alert.setContentText("You have successfully logged out!");
+			alert.showAndWait();
+		}else {
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("Error!");
+			alert.setHeaderText(null);
+			alert.setContentText("You are not logged in");
+			alert.showAndWait();
+		}
+	}
+	
 	public void setConnection(Connection conn){
     	this.conn = conn;
     }

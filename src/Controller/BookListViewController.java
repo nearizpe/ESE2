@@ -15,6 +15,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import assignment1.UsefulFunctions;
+import authentication.User;
+import core.clientTest;
 
 public class BookListViewController extends ViewController {
 
@@ -25,6 +27,8 @@ public class BookListViewController extends ViewController {
 	private int numOfPages = 0;
 	private int lastPage = 0;
 	private int currPage;
+	private clientTest bean;
+	User user;
 
 	@FXML
 	private Button SearchButton;
@@ -100,7 +104,9 @@ public class BookListViewController extends ViewController {
 	
 	@FXML
 	void DeleteHandler(ActionEvent event) {
-		if (SelectedBook != null){
+		user = User.getInstance();
+    	bean = bean.getInstance();
+		if (SelectedBook != null && bean.callAccess(user.getSession(), "BookDelete")){
 			try {
 				SelectedBook.getGateway().deleteBook(SelectedBook);
 				UsefulFunctions functions = UsefulFunctions.getInstance();

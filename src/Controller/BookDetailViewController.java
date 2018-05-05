@@ -17,6 +17,8 @@ import Book.Book;
 import Book.Publisher;
 import assignment1.Main;
 import assignment1.UsefulFunctions;
+import authentication.User;
+import core.clientTest;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert.AlertType;
@@ -29,7 +31,8 @@ public class BookDetailViewController extends ViewController{
 	
 	private Book book;
 	AuthorBook SelectedAuthor;
-
+	private clientTest bean;
+	User user;
 
 	@FXML
     private TextField tittleTextField;
@@ -90,6 +93,9 @@ public class BookDetailViewController extends ViewController{
     	msg.setTitle("Error!");
     	msg.setHeaderText("Format Error");
     	
+    	user = User.getInstance();
+    	bean = bean.getInstance();
+    	
     	Boolean valid = true;
     	
     	if(!book.isTittleValid()){
@@ -117,7 +123,7 @@ public class BookDetailViewController extends ViewController{
     		valid = false;
     	}
     	
-    	if (valid){
+    	if (valid && bean.callAccess(user.getSession(), "BDSave")){
     		logger.info("clicked save");
 
     		try {
@@ -159,6 +165,9 @@ public class BookDetailViewController extends ViewController{
 		msg.setTitle("Error!");
 		msg.setHeaderText("Format Error");
 
+		user = User.getInstance();
+    	bean = bean.getInstance();
+		
 		Boolean valid = true;
 		AuthorBook newAuthor = new AuthorBook();
 		newAuthor.setAuthor(authorComboBox.getSelectionModel().getSelectedItem());
@@ -172,7 +181,7 @@ public class BookDetailViewController extends ViewController{
 			valid = false;
 		}
 
-		if (valid) {
+		if (valid && bean.callAccess(user.getSession(), "AddAuthor")) {
 			logger.info("clicked Add author");
 			//call update authorbook
 			try {
@@ -228,8 +237,9 @@ public class BookDetailViewController extends ViewController{
 
 	@FXML
 	void DeleteAuthorHandler(ActionEvent event) {
-
-		if (SelectedAuthor != null){
+		user = User.getInstance();
+    	bean = bean.getInstance();
+		if (SelectedAuthor != null && bean.callAccess(user.getSession(), "AuthorBookDelete")){
 			try {
 			//call delete authorBook
 				book.getGateway().deleteAuthorBook(SelectedAuthor);

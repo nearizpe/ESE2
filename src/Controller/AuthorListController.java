@@ -17,6 +17,8 @@ import org.apache.logging.log4j.Logger;
 import Model.Author;
 import assignment1.Main;
 import assignment1.UsefulFunctions;
+import authentication.User;
+import core.clientTest;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
@@ -32,6 +34,9 @@ public class AuthorListController extends ViewController{
 	private ArrayList<Author> authors;
 	private int deleteKey = -1;
 
+	private clientTest bean;
+	User user;
+	
 	@FXML
     private TextField SelectedAuthor;
 	
@@ -50,8 +55,10 @@ public class AuthorListController extends ViewController{
 
     @FXML
 	void DeleteHandler(ActionEvent event) {
+    	user = User.getInstance();
+    	bean = bean.getInstance();
 		logger.info("delete clicked");
-		if (deleteKey > 0) {
+		if (deleteKey > 0 && bean.callAccess(user.getSession(), "AuthorDelete")) {
 			logger.info("Proper Delete Execution");
 			try{
 				authors.get(deleteKey).getGateway().deleteAuthor(authors.get(deleteKey));

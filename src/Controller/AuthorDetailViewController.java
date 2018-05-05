@@ -10,6 +10,9 @@ import java.time.LocalDate;
 import java.time.ZoneId;
 
 import assignment1.UsefulFunctions;
+import authentication.User;
+import core.clientTest;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -30,7 +33,9 @@ public class AuthorDetailViewController extends ViewController{
 	private static Logger logger = LogManager.getLogger(Main.class);
 	private final String dateFormat = "yyyy-MM-dd";
 	private Author author;
-
+	private clientTest bean;
+	User user;
+	
 	@FXML
     private TextField FirstName;
 
@@ -48,6 +53,8 @@ public class AuthorDetailViewController extends ViewController{
 
     @FXML
     void SaveHandler(MouseEvent event) {
+    	user = User.getInstance();
+    	bean = bean.getInstance();
     	Alert msg = new Alert(AlertType.INFORMATION);
     	msg.setTitle("Error!");
     	msg.setHeaderText("Format Error");
@@ -91,13 +98,13 @@ public class AuthorDetailViewController extends ViewController{
     		valid = false;
     	}
     	
-    	if (valid){
+    	if (valid && bean.callAccess(user.getSession(), "ADSave")){
     		logger.info("clicked save");
     		author.setFirstName(this.FirstName.getText());
     		author.setLastName(this.LastName.getText());
     		author.setGender(this.Gender.getValue());
     		author.setWebSite(this.Website.getText());
-    		LocalDate date ;
+    		LocalDate date;
     		logger.info(dateFormat);
     		
     			date = this.Birthday.getValue();
@@ -115,6 +122,11 @@ public class AuthorDetailViewController extends ViewController{
 				logger.error("couldnt update database");
 				//e.printStackTrace();
 			}
+    	}else {
+    		msg.setTitle("Error!");
+	    	msg.setContentText("You do not have access to this feature");
+    		msg.showAndWait();
+			logger.error("user doesnt have the write privelage level to save new author");
     	}
     	
     	
