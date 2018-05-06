@@ -239,14 +239,14 @@ public class MenuController extends ViewController {
     			}
     		}
     		//System.out.println("pub " + temp.getPublisherName().getValue().toString());
-    		ArrayList<Book> eh = new ArrayList<>();
+    		//ArrayList<Book> eh = new ArrayList<>();
     		bookList = bgw.getBooksByPub(temp.getId());
-    		for(int i = 1; i<5; i++) {
-    			eh.add(bookList.get(i));
-    		}
+    		//for(int i = 1; i<20;i++) {
+    		//	eh.add(bookList.get(i));
+    		//}
     		
     		//System.out.println("!!!! " + bookList.get(1).getTitle().toString());
-    		y.generateExcel(l, p, today.format(now), eh);
+    		y.generateExcel(l, p, today.format(now), bookList);
     	}
 	}
 
