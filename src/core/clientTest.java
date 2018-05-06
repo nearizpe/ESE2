@@ -78,6 +78,11 @@ public class clientTest extends Application{
 		return bean.getAccess(sessionId);
 	}
 	
+	public int callLogout(int sId) {
+		System.out.println("callGetAccess called");
+		return bean.logout(sId);
+	}
+	
 	public static void main(String[] args) {
 		launch(args);
 	}

@@ -23,6 +23,7 @@
             </Menu>
             <MenuItem fx:id="LoginMenuItem" mnemonicParsing="false" onAction="#MenuHandler" text="Login" />
             <MenuItem fx:id="logoutMenuItem" mnemonicParsing="false" onAction="#MenuHandler" text="Logout" />
+            <MenuItem fx:id="ReportMenuItem" mnemonicParsing="false" onAction="#MenuHandler" text="report" />
             <MenuItem fx:id="closeMenuItem" mnemonicParsing="false" onAction="#MenuHandler" text="Close" />
          </items>
       </Menu>

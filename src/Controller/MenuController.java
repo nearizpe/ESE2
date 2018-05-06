@@ -3,7 +3,11 @@ package Controller;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 import org.apache.logging.log4j.LogManager;
@@ -15,10 +19,13 @@ import DataBase.AuthorTableGateway;
 import DataBase.BookTableGateway;
 import DataBase.PublisherTableGateway;
 import Model.Author;
+import assignment1.GenerateExcel;
 import assignment1.UsefulFunctions;
 import authentication.User;
 import core.clientTest;
 import javafx.application.Platform;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 
 import javafx.fxml.FXML;
@@ -26,18 +33,24 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
 import javafx.scene.control.ButtonBar.ButtonData;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ChoiceDialog;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 import javafx.util.Pair;
 
 
@@ -46,6 +59,9 @@ public class MenuController extends ViewController {
 	private Connection conn;
 	private clientTest bean;
 	User user;// = User.getInstance();
+	private PublisherTableGateway pgtw;
+	private BookTableGateway bgw;
+	private ArrayList<Book> bookList;
 	
 	private static Logger logger = LogManager.getLogger();
 
@@ -66,6 +82,9 @@ public class MenuController extends ViewController {
 
     @FXML
     private MenuItem logoutMenuItem;
+    
+    @FXML
+    private MenuItem ReportMenuItem;
 
     @FXML
     private MenuItem closeMenuItem;
@@ -93,6 +112,7 @@ public class MenuController extends ViewController {
         		System.out.println("logout was clicked");
         		if(bean.callAccess(user.getSession(),"logout")) {
         			logoutMessanger(1);
+        		    User.setUser(-1, -1);
         		}else{
         			logoutMessanger(0);
         		}
@@ -130,6 +150,14 @@ public class MenuController extends ViewController {
         			unauthorizedMessage();
         		}
         	}
+        	else if(event.getSource() == ReportMenuItem){
+        		logger.info("report button clicked");
+        		if(bean.callAccess(user.getSession(), "Report")) {
+        			reportManager();
+        			//UsefulFunctions functions = UsefulFunctions.getInstance();
+            		//functions.SwitchView(functions.ReportPage,null);
+        		}
+        	}
         	
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -140,7 +168,89 @@ public class MenuController extends ViewController {
 
     }
 
-    private void loginHandler() {
+    
+    private void reportManager() {
+    	GenerateExcel y = new GenerateExcel();
+    	pgtw = new PublisherTableGateway(conn);
+    	ObservableList<String> pubChoices =  FXCollections.observableArrayList();
+    	ArrayList<Publisher> list = new ArrayList<Publisher>();
+    	//ChoiceDialog<String> pubdialog;
+    	TextField path = new TextField();
+    	ChoiceBox<String> pcb = new ChoiceBox<String>();
+    	DateTimeFormatter today = DateTimeFormatter.ofPattern("MM dd,yyyy HH:mm");
+    	LocalDateTime now = LocalDateTime.now();
+    	bookList = new ArrayList<>();
+    	today.format(now);
+    	bgw = new BookTableGateway(conn);
+    	
+    	
+    	
+    	list = pgtw.getPublishers();
+    	Dialog<Pair<String,ChoiceBox<String>>> tdialog = new Dialog<>();
+    	Button tb = new Button("Generate Process");
+    	
+    	ButtonType loginButtonType = new ButtonType("Generate Report", ButtonData.OK_DONE);
+    	tdialog.getDialogPane().getButtonTypes().addAll(loginButtonType, ButtonType.CANCEL);
+    	
+    	tdialog.setTitle("Report Genorator");
+    	tdialog.setHeaderText("Which records would you like to produce?");
+    	
+    	
+    	
+    	for(Publisher temp: list) {
+    	pubChoices.add(temp.getPublisherName().getValue());
+    	}
+    	
+    	pcb.setItems((ObservableList<String>) pubChoices);
+    	
+    	
+    	//pubdialog = new ChoiceDialog<>("Available Publishers",pubChoices);
+    	
+    	GridPane grid = new GridPane();
+    	grid.setHgap(10);
+    	grid.setVgap(10);
+    	grid.setPadding(new Insets(20, 150, 10, 10));
+    	
+    	path.setPromptText("Path Name");
+    	
+    	grid.add(new Label("Path:"), 0, 0);
+    	grid.add(path, 1, 0);
+    	grid.add(new Label("Publisher"),0,1);
+    	grid.add(pcb, 1, 1);
+    	//grid.add(tb, 0, 2);
+    	
+    	tdialog.getDialogPane().setContent(grid);
+    	Optional<Pair<String,ChoiceBox<String>>> result = tdialog.showAndWait();
+    	
+    	// Traditional way to get the response value.
+    	//Optional<String> result = dialog.showAndWait();
+    	String p = pcb.getValue();//result.get().getKey();
+    	String l = path.getText();
+    	Publisher temp = new Publisher(pgtw);
+    	
+    	if (result.isPresent() && p != null && !l.isEmpty()){
+    		for(Publisher t: list) {
+    			//System.out.println("1pub " + t.getPublisherName().getValue().toString());
+    			if(t.getPublisherName().getValue().toString().equals(p)) {
+    				temp.setId(t.getId());
+    				temp.setPublisherName(t.getPublisherName().getValue().toString());
+    				//System.out.println("1pub " + t.getPublisherName().getValue().toString());
+    				break;
+    			}
+    		}
+    		//System.out.println("pub " + temp.getPublisherName().getValue().toString());
+    		ArrayList<Book> eh = new ArrayList<>();
+    		bookList = bgw.getBooksByPub(temp.getId());
+    		for(int i = 1; i<5; i++) {
+    			eh.add(bookList.get(i));
+    		}
+    		
+    		//System.out.println("!!!! " + bookList.get(1).getTitle().toString());
+    		y.generateExcel(l, p, today.format(now), eh);
+    	}
+	}
+
+	private void loginHandler() {
     	bean = bean.getInstance();
     	Dialog<Pair<String, String>> dialog = new Dialog<>();
     	dialog.setTitle("Login");

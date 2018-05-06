@@ -16,6 +16,7 @@ import Controller.AuthorDetailViewController;
 import Controller.AuthorListController;
 import Controller.BookDetailViewController;
 import Controller.BookListViewController;
+import Controller.ReportPageController;
 import Controller.ViewController;
 import DataBase.AuthorTableGateway;
 import DataBase.BookTableGateway;
@@ -37,6 +38,7 @@ public class UsefulFunctions {
 	public static final int BookListView = 4;
 	public static final int AuditTrail = 5;
     public static final int AuthorAuditTrail = 6;
+    public static final int ReportPage = 7;
 
 	
 	private Connection conn;
@@ -100,6 +102,10 @@ public class UsefulFunctions {
 			case AuthorAuditTrail:
 				fxmlFile = this.getClass().getResource("/View/AuditTrailView.fxml");
 				controller = new AuditTrailController((Author)arg,(((Author) arg).getAuditTrail()));
+				break;
+			case ReportPage:
+				fxmlFile = this.getClass().getResource("/View/ReportPage.fxml");
+				controller = new ReportPageController();
 				break;
 			}
 			

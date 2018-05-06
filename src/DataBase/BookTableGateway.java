@@ -452,4 +452,53 @@ public class BookTableGateway {
 		return num;
 	}
 	
+	public ArrayList<Book> getBooksByPub(int id) {
+		ArrayList<Book> books = new ArrayList<>();
+		PreparedStatement stmt = null;
+		ResultSet rs = null;
+
+		try {
+			stmt = conn.prepareStatement("Select * From bookTable where publisher_id = ?");
+			stmt.setInt(1, id);
+			rs = stmt.executeQuery();
+			while (rs.next()) {
+				Book temp = new Book(this);
+				temp.setId(rs.getInt("id"));
+				temp.setTitle(rs.getString("tittle"));
+				temp.setSummary(rs.getString("summary"));
+				temp.setYearPublished(rs.getInt("year_published")); 
+				// Not sure how to set publisher yet Maybe have to get id and check what publisher it is and make it that?
+				//temp.setPublisher(rs.getInt("publisher_id"));
+				temp.setIsbn(rs.getString("isbn"));
+				temp.setDateAdded(rs.getDate("date_added").toLocalDate());
+				books.add(temp);
+				System.out.println(temp.getTitle());
+			}
+		} catch (SQLException e) {
+			System.out.println("DB QUERY ERROR!!");
+			e.printStackTrace();
+
+		} finally {
+			if (rs != null) {
+				try {
+					rs.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+
+		if (stmt != null) {
+			try {
+				stmt.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		return books;
+	}
+	
 }

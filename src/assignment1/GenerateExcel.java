@@ -37,7 +37,7 @@ public class GenerateExcel {
 			Label TitleLabel = new Label(0,0,"RoyaltyReport",arial15BoldFormatNoBorder); //position of cell and content of cell
 			Label PublisherNameLabel = new Label(0,1,"Publisher: "+pubName,arial15BoldFormatNoBorder);
 			Label dateLabel = new Label(0,2,"Report	generated on : "+date,arial10BoldFormatNoBorder);
-			Label BookTittleLabel = new Label(0,4,"Book Titles dsdsdsd",arial10BoldFormatNoBorder);
+			Label BookTittleLabel = new Label(0,4,"Book Titles",arial10BoldFormatNoBorder);
 			Label BookISNLabel = new Label(1,4,"ISBN",arial10BoldFormatNoBorder);
 			Label BookAuthorLabel = new Label(2,4,"Author",arial10BoldFormatNoBorder);
 			Label BookRoyaltyLabel = new Label(3,4,"Royalty",arial10BoldFormatNoBorder);
@@ -56,7 +56,8 @@ public class GenerateExcel {
 			for(Book temp: bookList){
 				Label bookTittle = new Label(0,i,temp.getTitle().getValue());
 				Label bookISBN = new Label(1,i,temp.getIsbn().getValue());
-
+				
+				
 				sheet.addCell(bookTittle);
 				sheet.addCell(bookISBN);
 
